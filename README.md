@@ -129,11 +129,14 @@ src/rag/retrieve.py     dense / BM25 / RRF hybrid, deduplicated by citation
 src/rag/answer.py       citation contract, cached system prompt
 src/eval/retrieval_eval.py   hit-rate measurement, no API needed
 src/eval/make_candidates.py  benchmark candidates + overlap guard
+src/eval/review.py      candidate -> Excel workbook -> benchmark round trip
 scripts/build_index_gpu.py   run this on Colab to index the full corpus
 app.py                  Gradio Space entry point
 docs/PLAN.md            the claim, contributions, and how results are reported
 docs/FINDINGS.md        dated findings log
-eval/gold/              benchmark                        [next step]
+eval/gold/candidates.jsonl   120 selected articles, stratified by category
+eval/gold/rishikim.csv       review workbook (open in Excel)
+eval/gold/questions.jsonl    the benchmark                [awaiting review]
 ```
 
 ## Data and licensing

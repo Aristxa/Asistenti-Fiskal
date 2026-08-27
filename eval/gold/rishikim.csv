@@ -1,0 +1,1569 @@
+﻿# UDHËZIME — mos e fshij këtë rresht, importi e kapërcen
+# 1. Lexo 'titulli_i_nenit' dhe 'teksti_i_nenit' në të djathtë.
+# 2. Shkruaj te 'pyetja' atë që do ta pyeste një tatimpagues i zakonshëm.
+#    MOS kopjo fjalët e nenit — përdor fjalor të thjeshtë, ndryshe testi matet i lehtë dhe s'provon asgjë.
+# 3. Kontrollo 'neni_gold': a përgjigjet vërtet ky nen? Nëse jo, korrigjoje.
+# 4. Vendos 'rishikuar' = po kur rreshti është gati.
+"# 5. Nëse neni nuk jep pyetje të dobishme, lëre 'rishikuar' = jo; do të hiqet."
+
+id;kategoria;pyetja;neni_gold;dokumenti;e_pergjigjshme;rishikuar;shenime;titulli_i_nenit;teksti_i_nenit
+fiskalizimi-14536-Neni28;fiskalizimi;;Neni 28;14536;po;jo;;Rregullat e përdorimit të faturave elektronike;"Neni 28
+Rregullat e përdorimit të faturave elektronike
+1. Faturat elektronike, të lëshuara sipas këtij ligji, duhet të jenë në përputhje me këtë
+ligj dhe specifikimet teknike të përcaktuara në Standardet Shqiptare (SSH), apo dokumente të
+tjera të barasvlershme me to.
+2. Vërtetësia e origjinës, integriteti i përmbajtjes dhe lexueshmëria e faturës, qoftë kjo
+në letër apo në formë elektronike, garantohen duke filluar nga momenti i lëshimit të saj deri në
+përfundimin e periudhës së ruajtjes së faturës.
+3. Vërtetësia e origjinës sigurohet në mënyrë të tillë që lëshuesi të jetë i identifikueshëm
+ndërsa integriteti i përmbajtjes nënkupton që përmbajtja e faturës nuk është ndryshuar.
+4. Tatimpaguesi, që lëshon fatura, garanton me anë të certifikatës elektronike termat
+dhe kushtet, sipas pikave 2 e 3 të këtij neni.
+5. Ministri përgjegjës për financat përcakton me udhëzim zbatimin e këtij neni.
+KR"
+fiskalizimi-14536-Neni42;fiskalizimi;;Neni 42;14536;po;jo;;Detyrime të tjera;"Neni 42
+Detyrime të tjera
+1. Përpara transportimit të mallrave nga një vend i ushtrimit të veprimtarisë së biznesit
+të tatimpaguesit te një tjetër, kodi QR i faturës shoqëruese duhet të printohet në letër dhe duhet
+të shoqërojë mallrat gjatë gjithë kohës së transportit, nga vendi i nisjes deri në destinacion.
+2. Me kërkesë të punonjësit të administratës tatimore, tatimpaguesi ose transportuesi
+duhet të tregojë kodin QR të faturës shoqëruese për inspektim.
+3. Kodi QR, i shtypur në letër, pas kryerjes së transportit mbahet në vendin e
+destinacionit të mallrave.
+4. Tatimpaguesi, që lëshon fatura shoqëruese, duhet t’i ruajë këto për, të paktën, 5 vjet,
+duke filluar nga fundi i vitit fiskal, të cilit i përkasin dokumentet ose në të cilin janë lëshuar
+faturat shoqëruese, në letër apo në formë elektronike.
+KREU XII
+DISPOZITA KALIMTARE DHE TË FUNDIT"
+fiskalizimi-13635-Neni1;fiskalizimi;;Neni 1;13635;po;jo;;Qëllimi i udhëzimit;"Neni 1 
+Qëllimi i udhëzimit 
+ 
+Ky udhëzim ka për qëllim të përcaktojë rregullat dhe procedurat për lëshimin e faturës dhe 
+zbatimin e procedurës së fiskalizimit, në përputhje me dispozitat ligjore të përcaktuara në 
+ligjin nr. 87/2019, datë 18.12.2019, ""Për faturën dhe sistemin e monitorimit të qarkullimit"" 
+(më tej referuar si “Ligji”). Ky udhëzim synon unifikimin dhe vendosjen e standardeve 
+bashkëkohore për të garantuar trajtim të drejtë, të barabartë dhe të paanshëm, si dhe 
+transparencë në zbatimin korrekt dhe të duhur të procedurave dhe rregullave uniforme të 
+përcaktuara nga Ligji. 
+Rregullat dhe procedurat e përcaktuara në këtë udhëzim kanë për qëllim të sqarojnë 
+kuptimin e dispozitave të Ligjit, të sigurojnë zbatimin e tyre të saktë dhe të njëtrajtshëm, si 
+dhe të inkurajojnë respektimin vullnetar nga ana e tatimpaguesit nëpërmjet edukimit të tij."
+fiskalizimi-11026-10;fiskalizimi;;10;11026;po;jo;;10. Nëse prodhuesi i zgjidhjes së software-it nuk është edhe zhvillues, atëherë prodhuesit e;"10. Nëse prodhuesi i zgjidhjes së software-it nuk është edhe zhvillues, atëherë prodhuesit e 
+zgjidhjes software-ike duhet të paraqesin edhe kontratën e noterizuar si bashkim i operatorëve 
+ekonomikë. Në këtë rast të gjitha shoqëritë që marrin pjesë në bashkimin e operatorëve 
+ekonomikë paraqesin dokumentet e kërkuara në pikën 8, të këtij vendimi, dhe vlerësimi i 
+kritereve kryhet për të gjithë pjesëmarrësit."
+fiskalizimi-8189-17;fiskalizimi;;17;8189;po;jo;;17. Lëshuesit dhe marrësit e një fature elektronike që krijojnë lidhje me platformën qendrore;"17. Lëshuesit dhe marrësit e një fature elektronike që krijojnë lidhje me platformën qendrore 
+të faturave në një mjedis prove/test dhe/ose pune janë të detyruar të zbatojnë specifikimet e 
+duhura, në përputhje me specifikimet teknike të shkëmbimit të të dhënave, të përmendura në 
+pikën 11, të këtij vendimi, të cilat rregullojnë mënyrën dhe kushtet e aksesimit (hyrjes) dhe të 
+përdorimit të mjedisit të provës/testit dhe punës. 
+VI. ORGANET QË NGARKOHEN PËR ZBATIM"
+fiskalizimi-14536-Neni1;fiskalizimi;;Neni 1;14536;po;jo;;Objekti i ligjit;"Neni 1
+Objekti i ligjit
+1. Objekti i këtij ligji është përcaktimi i parimeve, rregullave, kritereve, detyrimeve,
+afateve dhe procedurave që duhet të ndiqen nga tatimpaguesit dhe prodhuesit e mirëmbajtësit
+e zgjidhjeve software-ike, lidhur me lëshimin e faturës, faturën shoqëruese dhe faturën
+elektronike, përmbajtjen e faturave, regjistrimin e të dhënave dhe procedurën e fiskalizimit të
+lëshimit të faturave, marrjen e informacionit të pagesave, cerfitikimin dhe mbikëqyrjen e
+zbatimit të këtij ligji.
+2. Dispozitat e këtij ligji garantojnë vijimësinë e funksionimit të pajisjeve fiskale
+përpara hyrjes në fuqi të këtij ligji."
+fiskalizimi-8169-Neni2;fiskalizimi;;Neni 2;8169;po;jo;;Fatura elektronike;"Neni 2 
+Fatura elektronike 
+ 
+1. Fatura elektronike duhet të jetë në përputhje me Standardet Shqiptare (SSH) dhe 
+Dokumentat Shqiptare të Standardizimit (DS) në fuqi (përfshirë këtu korrigjimet, ndryshimet dhe 
+amendimet e tyre), të publikuara nga Drejtoria e Përgjithshme e Standardizimit e Shqipërisë 
+(DPS) dhe të cilat janë adoptime të standardeve evropiane (EN) dhe specifikimeve teknike (TS), 
+të publikuara nga Komiteti Evropian për Standardizimin (CEN). Për referencë është standardi 
+SSH EN 16931-1 “Faturimi elektronik – pjesa 1: Modeli semantik i të dhënave të elementeve 
+thelbësore të një fature elektronike”. 
+2. Lëshuesi i faturës elektronike duhet të sigurojë që të dhënat e vendosura në faturën 
+elektronike pasqyrojnë furnizimin real. 
+3. Lëshuesi dhe marrësi i faturës elektronike duhet të sigurojnë autenticitetin e origjinës, 
+integritetin e përmbajtjes dhe lexueshmërinë e fatur"
+fiskalizimi-8169-Neni10;fiskalizimi;;Neni 10;8169;po;jo;;Regjistrimi i lëshuesve dhe marrësve të faturave elektronike në platformën qendrore të;"Neni 10 
+Regjistrimi i lëshuesve dhe marrësve të faturave elektronike në platformën qendrore të 
+faturave për qëllimin e shkëmbimit të faturave elektronike 
+ 
+1. Në mënyrë që të shkëmbejnë faturat elektronike përmes platformës qendrore të faturave, 
+lëshuesi dhe marrësi i faturës elektronike duhet të paraqesin informacion shtesë elektronikisht 
+përmes platformës qendrore të faturave. 
+2. Lëshuesit dhe marrësit e faturave elektronike që janë regjistruar në regjistrin e Administratës 
+Tatimore në përputhje me nenin 13 të ligjit, si tatimpagues që lëshojnë fatura, caktohen 
+automatikisht në të njëjtin regjistër si lëshues dhe marrës të faturave elektronike. 
+3. Lëshuesit dhe marrësit e faturave elektronike të cilëve iu referohet pika 2 e këtij neni dhe 
+marrësit e faturës elektronike të cilëve iu referohet neni 11 i këtij udhëzimi që kanë njësi të 
+ndryshme biznesi me të cilat do të lidhet "
+fiskalizimi-8169-Neni11;fiskalizimi;;Neni 11;8169;po;jo;;Regjistrimi i marrësve të faturave elektronike;"Neni 11 
+Regjistrimi i marrësve të faturave elektronike 
+ 
+1. Marrësi i faturës elektronike, përveç detyrimeve të përcaktuara në nenin 10 të këtij 
+udhëzimi, duhet të regjistrohet në regjistrin e Administratës Tatimore përmes platformës 
+qendrore të faturave si marrës i faturave elektronike brenda 24 orëve para fillimit të marrjes së 
+faturave elektronike përmes kësaj platforme, në mënyrë që të marrë një faturë elektronike përmes 
+platformës qendrore të faturave. 
+2. Marrësi i faturave elektronike, sipas pikës 1 të këtij neni, është i detyruar të marrë një 
+certifikatë elektronike, në përputhje me nenin 19 të ligjit, për të pasur mundësi që të përdorë 
+platformën qendrore të faturave, për qëllim të shkëmbimit të faturave elektronike."
+fiskalizimi-14536-Neni45;fiskalizimi;;Neni 45;14536;po;jo;;Mbrojtja e të dhënave;"Neni 45
+Mbrojtja e të dhënave
+1. Dispozitat e këtij ligji zbatohen duke respektuar dispozitat e ligjit në fuqi për
+mbrojtjen e të dhënave personale.
+
+28
+2. Të dhënat personale, të mbledhura për qëllim të lëshimit të faturës dhe kryerjes së
+regjistrimeve të pagesave, mund të përdoren vetëm për këtë qëllim dhe për qëllim të këtij ligji
+ose për qëllime të tjera, që janë në përputhje me qëllimin e mbledhjes së këtyre të dhënave.
+3. Marrëdhëniet e ndërsjella ndërmjet blerësit ose klientit dhe ndërmjetësve të
+teknologjisë së informacionit ose tatimpaguesve, që lëshojnë fatura, dhe ofruesve të
+shërbimeve të teknologjisë së informacionit, apo paguesit të faturës elektronike dhe
+ndërmjetësit financiar, në rolin e administratorit dhe përpunuesit të të dhënave personale, të
+cilat përpunohen gjatë procedurës së lëshimit, marrjes, dërgimit, ruajtjes dhe përpunimit të
+faturave dhe procedurës së pagesa"
+fiskalizimi-11026-19;fiskalizimi;;19;11026;po;jo;;19. Prodhuesi i zgjidhjes së programit (software) duhet të integrojë kodin e tij dhe kodin e;"19. Prodhuesi i zgjidhjes së programit (software) duhet të integrojë kodin e tij dhe kodin e 
+zgjidhjes së software-it në të njëjtën zgjidhje software-ike dhe duhet t’i dorëzojë ato 
+automatikisht në administratën tatimore, si më poshtë vijon: 
+a) Pas regjistrimit të parë të pajisjes elektronike të parave për pagesa në dorë, duhet të 
+dorëzohet kodi i prodhuesit të software-it dhe kodi i zgjidhjes së software-it, së bashku me 
+informacionet e tjera të përcaktuara; 
+b) Në secilin mesazh, së bashku me informacionet e tjera të shënimeve për transferimin e 
+depove ose kuponat e transportit, duhet të dorëzohet kodi i zgjidhjes së software-it (gjatë 
+fiskalizimit të secilës faturë shoqëruese ose kuponit të transportit); 
+c) Në secilin mesazh, së bashku me informacione të tjera në lidhje me pagesën e faturës 
+elektronike pa para në dorë, do të dorëzohet kodi i zgjidhjes së software-it (gjatë nj"
+fiskalizimi-13635-Neni36;fiskalizimi;;Neni 36;13635;po;jo;;Njoftimi për faturën;"Neni 36 
+Njoftimi për faturën 
+ 
+1. Në përputhje me nenin 33 të Ligjit, tatimpaguesi që lëshon fatura është i detyruar të 
+paraqesë një njoftim në secilën nga vendet e ushtrimit të veprimtarisë së biznesit të tij (vendet 
+fikse), në çdo pajisje elektronike të faturimit ose në ndonjë vend tjetër të dukshëm për 
+
+50 
+ 
+konsumatorin, lidhur me detyrimin e tatimpaguesit për të lëshuar faturën dhe detyrimin e 
+blerësit për ta marrë dhe mbajtur atë. 
+2. Forma dhe përmbajtja e njoftimit sipas pikës 1 të këtij neni janë bashkëngjitur në 
+Shtojcën 5 të këtij Udhëzimi. 
+3. Nëse blerësi është një tatimpagues, person fizik ose juridik, për qëllime tatimore, në 
+bazë të ligjit për tatimin mbi vlerën e shtuar në Republikën e Shqipërisë është i detyruar të 
+marrë faturën dhe ta ruajë atë për 5 vite të plota kalendarike, duke filluar nga viti pas vitit që 
+u lëshua fatura. 
+4. Me kërkesë të një punonjës"
+kontributet-e-sigurimeve-326-11;kontributet-e-sigurimeve;;11;326;po;jo;;11. Për të gjithë punëmarrësit në personat juridikë (privatë, të përbashkët, publikë) dhe në;"11. Për të gjithë punëmarrësit në personat juridikë (privatë, të përbashkët, publikë) dhe në 
+personat fizikë (përjashtuar punonjësit e papaguar të familjes së të vetëpunësuarit, me të cilët 
+ai punon e bashkëjeton), paga maksimale mujore për efekt të llogaritjes së kontributeve 
+vazhdon të jetë sipas vendimit të Këshillit të Ministrave nr.167, datë 29.3.2006 ""Për disa 
+
+DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR 2011 
+Udhezim Nr.10, date 21.6.2007 
+
+çështje në zbatim të ligjit nr.7703, datë 11.5.1993 ""Për sigurimet shoqërore në Republikën e 
+Shqipërisë"", të ndryshuar dhe të ligjit nr.7870, datë 13.10.1994 ""Për sigurimet shëndetësore 
+në Republikën e Shqipërisë"", të ndryshuar"", sipas të cilit aktualisht kjo pagë është 65.700 
+(gjashtëdhjetë e pesë mijë e shtatëqind) lekë."
+kontributet-e-sigurimeve-335-11;kontributet-e-sigurimeve;;11;335;po;jo;;11. Të vetëpunësuarit në bujqësi, nga data 1.8.2014 e në vazhdim, të derdhin;"11. Të vetëpunësuarit në bujqësi, nga data 1.8.2014 e në vazhdim, të derdhin 
+kontribut vjetor për sigurimet shoqërore, në masën 33 000 (tridhjetë e tre mijë) lekë, me 
+përjashtimtë të vetëpunësuarve, që banojnë në rrethet Bulqizë, Dibër, Gramsh, Has, 
+Kolonjë, Kukës, Librazhd, Malësi e Madhe, Mat, Mirditë, Pukë, Skrapar, Tepelenë dhe 
+Tropojë, për të cilët masa e kontributit vjetor është 25 300 (njëzet e pesë mijë e treqind) 
+lekë."
+kontributet-e-sigurimeve-14440-Neni23;kontributet-e-sigurimeve;;Neni 23;14440;po;jo;;Dispozita kalimtare;"Neni 23 
+Dispozita kalimtare 
+ 
+1. Ky ligj zbatohet ndaj personave, të cilët, me vendim të Këshillit të Ministrave, janë të 
+detyruar të paguajnë kontributet e sigurimeve shoqërore dhe shëndetësore në organet tatimore. 
+2. Këshilli i Ministrave përcakton grupet e personave, të cilët detyrohen të paguajnë 
+kontributet e sigurimeve shoqërore dhe shëndetësore në organet tatimore, si dhe afatet dhe procedurat 
+përkatëse. 
+3. Të gjitha kontributet, që lindin para datës së hyrjes në fuqi të këtij ligji, mblidhen në 
+përputhje me ligjet nr.7703, datë 11.5.1993 “Për sigurimet shoqërore në Republikën e Shqipërisë”, i 
+ndryshuar dhe nr.7870, datë 13.10.1994 “Për sigurimet shëndetësore në Republikën e Shqipërisë”, i 
+ndryshuar. 
+4. Personat, të cilët nuk janë të detyruar të paguajnë kontributet e sigurimeve shoqërore dhe 
+shëndetësore në organet tatimore, do t'i paguajnë këto kontribute në Institut"
+kontributet-e-sigurimeve-14664-6.3;kontributet-e-sigurimeve;;6.3;14664;po;jo;;6.3 Për rastet e konstatuara nga zyra lidhur me shkeljen e afatit të deklarimit të punonjësve, që fillojnë punë;"6.3 Për rastet e konstatuara nga zyra lidhur me shkeljen e afatit të deklarimit të punonjësve, që fillojnë punë 
+për herë të parë te tatimpaguesi apo të punësuar rishtazi, tatimpaguesi punëdhënës, përveç detyrimit për 
+pagimin e shumës së detyrimeve tatimore dhe të kontributeve të papaguara të sigurimeve shoqërore e 
+shëndetësore, detyrohet të paguajë gjobë, sipas nenit 113 të ligjit nr. 9920, datë 19.5.2008 “Për procedurat 
+tatimore në Republikën e Shqipërisë”, të ndryshuar, për çdo deklaratë të dorëzuar jashtë afatit sipas 
+përcaktimeve në nenin 119. Kushti për deklarimin e punonjësve të paktën një ditë kalendarike përpara fillimit 
+të punës nuk përfshin administratorin e shoqërisë të saporegjistruar në Qendrën Kombëtare të Regjistrimit. 
+Në këtë rast deklarimi i administratorit në administratën tatimore bëhet dy ditë pune pas regjistrimit në 
+Qendrën Kombëtare të Regjistrimit, nëpërmj"
+kontributet-e-sigurimeve-14433-Neni19;kontributet-e-sigurimeve;;Neni 19;14433;po;jo;;Drejtori i Përgjithshëm;"Neni 19
+Drejtori i Përgjithshëm
+(Ndryshuar me ligjin nr. 184/2013, 28.12.2013)
+1. Drejtori i Përgjithshëm zgjidhet nga këshilli administrativ ndërmjet jo më pak se tri
+kandidaturave të paraqitura nga anëtarët e këtij këshilli, sipas kritereve dhe rregullave të
+përcaktuara në statutin e Fondit.
+2. Këshilli zgjedh Drejtorin e Përgjithshëm, me votim të fshehtë, me 2/3 e votave të
+të gjithë anëtarëve të tij.
+3. Koha e ushtrimit të detyrës së Drejtorit të Përgjithshëm është 5 vjet.
+4. Paga e Drejtorit të Përgjithshëm caktohet me vendim të Këshillit të Ministrave.
+5. Drejtori i Përgjithshëm raporton para këshillit administrativ.
+6. Këshilli administrativ vendos për shkarkimin e Drejtorit të Përgjithshëm në këto
+raste:
+a) nëse dënohet me vendim të formës së prerë, për kryerjen e një vepre penale;
+b) nëse shkel dispozitat e statutit, vendimet e këshillit administrativ dhe legjislacionin
+në fuqi."
+kontributet-e-sigurimeve-14664-5.6;kontributet-e-sigurimeve;;5.6;14664;po;jo;;5.6 Deklarimi për herë të parë pas regjistrimit nga personi juridik apo fizik i të dhënave për punonjësit e;"5.6 Deklarimi për herë të parë pas regjistrimit nga personi juridik apo fizik i të dhënave për punonjësit e 
+deklaratës “Listëpagesa e kontributeve të sigurimeve shoqërore, shëndetësore dhe tatimit mbi të ardhurat nga 
+punësimi”, përfshirë sipas përkatësisë, administratorin, vetë personin fizik apo punonjësin e papaguar të 
+familjes me të cilin ai punon e bashkëjeton ligjërisht, si dhe ndryshimet (shtesa ose paksime) në numrin e 
+personave të një listëpagese ekzistuese, bëhen vetëm me anë të deklarimit elektronik të të dhënave të rubrikave 
+të deklaratës “Deklarata e të punësuarve për herë të parë, atyre rishtazi, si dhe e të larguarve nga puna”."
+kontributet-e-sigurimeve-14664-3.4.1;kontributet-e-sigurimeve;;3.4.1;14664;po;jo;;3.4.1 Kontributi i sigurimit shoqëror suplementar llogaritet, deklarohet dhe administrohet në mbështetje;"3.4.1 Kontributi i sigurimit shoqëror suplementar llogaritet, deklarohet dhe administrohet në mbështetje 
+të ligjit nr. 8097, datë 21.3.1996 “Për pensionet shtetërore suplementare të personave që kryejnë funksione 
+kushtetuese dhe të punonjësve të shtetit”, të ndryshuar”, të ligjit nr. 10142, datë 15.5.2009 “Për sigurimin 
+shoqëror suplementar të ushtarakëve të Forcave të Armatosura, të punonjësve të Policisë së Shtetit, të Gardës 
+së Republikës, të Shërbimit Informativ të Shtetit, të Policisë së Burgjeve, të Policisë së Mbrojtjes nga Zjarri 
+dhe të Shpëtimit e të punonjësve të Shërbimit të Kontrollit të brendshëm në Republikën e Shqipërisë”, të 
+ndryshuar, të ligjit nr.10139, datë 15.5.2009 “Për pensionet shtetërore suplementare të punonjësve të 
+universiteteve, të shkollave të larta, Qendrës së Studimeve Albanologjike, Akademisë së Shkencave dhe të 
+gjitha institucioneve të tjera kërki"
+kontributet-e-sigurimeve-14444-4;kontributet-e-sigurimeve;;4;14444;po;jo;;4. Ngarkohen Ministria e Mirëqenies Sociale dhe Rinisë, Ministria e Financave, Ministria e Shëndetësisë,;"4. Ngarkohen Ministria e Mirëqenies Sociale dhe Rinisë, Ministria e Financave, Ministria e Shëndetësisë,
+Instituti i Sigurimeve Shoqërore, Fondi i Sigurimit të Detyrueshëm të Kujdesit Shëndetësor dhe Drejtoria
+e Përgjithshme e Tatimeve të nxjerrin udhëzimet e nevojshme, në zbatim të këtij vendimi.
+Ky vendim hyn në fuqi pas botimit në Fletoren Zyrtare dhe i shtrin efektet nga data 1.1.2015.
+KRYEMINISTRI
+Edi Rama"
+kontributet-e-sigurimeve-14433-Neni23;kontributet-e-sigurimeve;;Neni 23;14433;po;jo;;Burimet e financimit;"Neni 23
+Burimet e financimit
+Fondi ka burimet e financimit si më poshtë:
+a) kontributet e sigurimit të detyrueshëm shëndetësor, sipas pikës 1 të nenit 5 të këtij
+ligji;
+b) kontributin e sigurimit të detyrueshëm shëndetësor prej Buxhetit të Shtetit nga
+personat ekonomikisht joaktivë, sipas pikës 2 të nenit 5 të këtij ligji;
+c) kontributet e sigurimit shëndetësor vullnetar, sipas pikës 3 të nenit 5 të këtij ligji;
+ç) transfertat nga Ministria e Shëndetësisë për subvencionimin e një pjese të pagesave
+të drejtpërdrejta, sipas pikës 2 të nenit 11 të këtij ligji;
+d) transfertat nga Ministria e Shëndetësisë për shërbimet e kërkuara nga ajo, përtej
+atyre të buxhetuara ose të kontraktuara nga Fondi;
+dh) transfertat e miratuara në Buxhetin e Shtetit për balancimin e buxhetit të Fondit
+ose për kompensimin e mosrealizimit të kontributeve në procesin e zbatimit të buxhetit.
+e) burime të tjera, dhurim"
+kontributet-e-sigurimeve-14440-Neni12;kontributet-e-sigurimeve;;Neni 12;14440;po;jo;;Vendi i pagesës;"Neni 12 
+Vendi i pagesës 
+ 
+1. Kontributet paguhen në bankat, të cilat kanë marrëveshje me Drejtorinë e Përgjithshme të 
+Tatimeve, me Institutin e Sigurimeve Shoqërore dhe me Fondin e Sigurimit të Detyrueshëm të 
+Kujdesit Shëndetësor 
+2. Pagesa në valutë këmbehet në lekë, sipas kursit zyrtar të këmbimit ditën kur bëhet pagesa. 
+3. Procedurat për pagesën e kontributeve përcaktohen në udhëzimin e Ministrit të Financave, 
+në zbatim të këtij ligji."
+kontributet-e-sigurimeve-14444-10;kontributet-e-sigurimeve;;10;14444;po;jo;;10. Të vetëpunësuarit në bujqësi, të cilët nuk arrijnë të plotësojnë kushtin minimal të periudhës së;"10. Të vetëpunësuarit në bujqësi, të cilët nuk arrijnë të plotësojnë kushtin minimal të periudhës së
+sigurimit, për të përfituar pension mund të kryejnë pagesa kontributesh edhe pas plotësimit të moshës për
+pension, por me kusht që ato t’u korrespondojnë periudhave para plotësimit të moshës për pension dhe
+
+për këto periudha do të paguhet sipas masës së kontributit të përcaktuar me vendim të Këshillit të
+Ministrave, për vitin kur kryhet pagesa."
+kontributet-e-sigurimeve-14664-9.9;kontributet-e-sigurimeve;;9.9;14664;po;jo;;9.9 Për të gjitha rastet e përmendura në pikat 9.1 deri 9.8 më sipër administrata tatimore kryen verifikimet;"9.9 Për të gjitha rastet e përmendura në pikat 9.1 deri 9.8 më sipër administrata tatimore kryen verifikimet 
+e vlerësimet përkatëse. Të dhënat e nevojshme për të verifikuar kontributet e deklaruara për personat e 
+dypunësuar nga tatimpaguesit përkatës, janë të disponueshme për punonjësit e administratës tatimore në 
+sistemin informatik të deklarimit elektronik të të dhënave të listëpagesës. Për personat, të cilët gjatë të njëjtit 
+muaji kanë punuar njëkohësisht në dy ose më shumë tatimpagues sistemi informatik bën evidentimin e 
+punonjësve sipas tatimpaguesve ku kanë punuar gjatë muajit përkatës, bazuar kjo në numrin personal të 
+letërnjoftimit të deklaruar në listëpagesa."
+lojrat-e-fatit-14452-Neni66;lojrat-e-fatit;;Neni 66;14452;po;jo;;Shitja e pasurisë së konfiskuar;"Neni 66
+Shitja e pasurisë së konfiskuar
+1. Pasuria e sekuestruar, pasi konfiskohet në përputhje me pikën 5, të nenit 63, të këtij ligji, shitet
+në ankand publik, i cili kryhet në përputhje më procedurat dhe kushtet e parashikuara në ligjin “Për
+ankandin publik”.
+2. Të ardhurat nga shitjet përdoren fillimisht për të paguar shpenzimet e shitjes, më pas për të
+paguar koston administrative, gjobat dhe interesin, në përputhje me dispozitat e këtij ligji.
+
+46
+3. Shuma e mbetur i kthehet subjektit, brenda pesë ditëve pune nga data e përfundimit të
+ankandit."
+lojrat-e-fatit-14452-Neni12;lojrat-e-fatit;;Neni 12;14452;po;jo;;Financimi dhe buxheti i Autoritetit të Mbikëqyrjes së Lojërave të Fatit;"Neni 12
+Financimi dhe buxheti i Autoritetit të Mbikëqyrjes së Lojërave të Fatit
+1. AMLF-ja financohet nga të ardhurat e veta, të cilat sigurohen nga pagesat që bëjnë
+organizatorët e lojërave të fatit, sipas pikës 1, të nenit 14, të këtij ligji, si dhe të ardhurat e siguruara nga
+vjelja e gjobave dhe kamatëvonesave të vendosura sipas nenit 53 të këtij ligji.
+2. AMLF-ja, jo më vonë se tre muaj para fillimit të çdo viti financiar, i paraqet ministrit të
+
+10
+Financave planin e të ardhurave dhe të shpenzimeve për vitin e ardhshëm, të shoqëruar edhe me
+realizimin e pritshëm të këtyre treguesve për vitin në vazhdim. Ministri i Financave miraton planin e
+shpenzimeve të parashikuara për vitin e ardhshëm.
+3. AMLF-ja mban llogari të plota dhe të sakta të shpenzimeve faktike, në përputhje me
+legjislacionin shqiptar të kontabilitetit.
+4. Të ardhurat e siguruara nga vjelja e gjobave dhe e kamatëvonesë"
+lojrat-e-fatit-14452-Neni51;lojrat-e-fatit;;Neni 51;14452;po;jo;;Përgjegjësia e organizatorit për monitorimin on-line;"Neni 51
+Përgjegjësia e organizatorit për monitorimin on-line
+1. Çdo organizator, përfaqësues ligjor, punonjës i tij apo çdo person tjetër, i cili shkel ndonjë nga
+dispozitat e këtij kreu, në lidhje me çdo kundërshtim, mosrespektim të dispozitave të këtij kreu dhe/ose
+bllokimin, heqjen, shkatërrimin ose çaktivizimin e pajisjeve përkatëse të lojërave, sistemit qendror, pajisje
+në lidhje me to ose çdo pajisje ose software të lidhura me to, do të jetë përgjegjës për këtë veprim dhe
+AMLF-ja do të procedojë me masa administrative, sipas parashikimeve të nenit 53, të këtij ligji.
+2. Organizatori ka detyrimin ta ruajë, ta mirëmbajë dhe të mos lejojë ndërhyrje në sistemin që
+lidhet me monitorimin on-line nga AMLF-ja dhe është përgjegjëse për çdo ndërhyrje në sistemin qendror
+të monitorimit.
+KREU XI
+DETYRIMET TATIMORE
+
+37"
+lojrat-e-fatit-14452-Neni24;lojrat-e-fatit;;Neni 24;14452;po;jo;;Kushtet fizike dhe teknike për pranimin e basteve;"Neni 24
+Kushtet fizike dhe teknike për pranimin e basteve
+(Riformuluar pikat 1 dhe 2 me ligjin nr. 18/2024, datë 15.2.2024)
+1. Organizatori pranon pagesat dhe autorizon tërheqjet për bastet sportive online vetëm
+nëpërmjet agjentëve financiarë. Procedurat dhe standardet në lidhje me kryerjen e pagesave dhe
+mënyrën e pranimit apo tërheqjes së tyre kryhen në përputhje me marrëveshjen specifike të
+organizatorit të lojës së fatit me agjentin financiar përkatës, në përputhje me veprimtaritë financiare
+për të cilat agjenti financiar është licencuar nga Banka e Shqipërisë, sipas parashikimeve të udhëzimit
+të ministrit përgjegjës për financat.
+2. Me vendim të Këshillit të Ministrave pas marrjes së mendimit të Agjencisë Kombëtare të
+Shërbimit të Informacionit dhe Autoriteti Kombëtar i Certifikimit Elektronik dhe Sigurisë
+Kibernetike përcaktohen standardet që kanë të bëjnë me kushtet teknike të sis"
+lojrat-e-fatit-747-15;lojrat-e-fatit;;15;747;po;jo;;15. Në rast se AMLF pas shqyrtimit konstaton se dokumentacioni është në përputhje me;"15. Në rast se AMLF pas shqyrtimit konstaton se dokumentacioni është në përputhje me 
+parashikimet e këtij udhëzimi, ligjit nr. 155/2015 “Për lojërat e fatit në Republikën e Shqipërisë” dhe 
+legjislacionit në fuqi, lëshon miratimin paraprak për shitjen, lënien peng, dhurimin dhe çdo forme tjetër të 
+disponimit të aksioneve, aseteve, pasurisë apo makinave të organizatorit të lejuar për zhvillimin e lojërave 
+të fatit duke njoftuar me shkrim aplikuesin."
+lojrat-e-fatit-14452-Neni41;lojrat-e-fatit;;Neni 41;14452;po;jo;;Ndalimet për kazinonë;"Neni 41
+Ndalimet për kazinonë
+1. Nëse lojërat e fatit, që zhvillohen në kazino, bien në kundërshtim ose cenojnë interesin e
+përgjithshëm publik, AMLF-ja revokon licencën për zhvillimin e tyre ose ndërpret pa paralajmërim
+procedurat për dhënien e licencës për organizatorin, që është në proces aplikimi.
+2. Rastet kur cenohet interesi i përgjithshëm publik, në kuptim të pikës 1, të këtij neni, dhe kur
+duhet të zbatohen këto masa, janë:
+a) mashtrimi i publikut;
+b) pastrimi i parave dhe/ose financimi i terrorizmit;
+c) cenimi i rendit publik dhe nxitja e kriminalitetit."
+lojrat-e-fatit-748-2;lojrat-e-fatit;;2;748;po;jo;;2. Organizatorët, që kanë marrë miratimin për dhënien e lejes për ushtrimin e veprimtarisë në fushën;"2. Organizatorët, që kanë marrë miratimin për dhënien e lejes për ushtrimin e veprimtarisë në fushën 
+e lojërave të fatit nga Autoriteti i Mbikëqyrjes së Lojërave të Fatit (këtu e më poshtë referuar si “AMLF”), 
+në momentin e importimit të mjeteve të lojërave të fatit për qëllime tregtare, përveç dokumentacionit për 
+procedurën e çlirimit për qarkullim të lirë të mjeteve të lojërave të fatit, duhet të paraqesin pranë degëve 
+doganore: 
+a) miratimin paraprak lëshuar nga AMLF-ja për lejimin e importimit të mjeteve të lojërave të fatit rast 
+pas rasti, ku përfshihet informacioni i mëposhtëm: 
+i) emri i subjektit; 
+ii) numri i licencës së ushtrimit të veprimtarisë në fushën e lojërave të fatit; 
+iii) numrin unik të identifikimit të subjektit; 
+iv) listën e mjeteve të lojërave të fatit me kodet tarifore, përshkrimin dhe sasinë."
+lojrat-e-fatit-14452-Neni27/4;lojrat-e-fatit;;Neni 27/4;14452;po;jo;;Ndryshimi i të dhënave;"Neni 27/4
+Ndryshimi i të dhënave
+(Shtuar me ligjin nr. 18/2024, datë 15.2.2024)
+Mbajtësi i licencës është i detyruar të njoftojë AMFL-në brenda dhjetë ditëve pune për të gjitha
+ndryshimet dhe devijimet nga masat e planifikuara më herët në planin e zhvillimit të aktivitetit.
+Subjekti i licencuar i drejtohet AMFL-së me një informacion me shkrim, duke përshkruar çdo fakt e
+rrethanë që ka sjellë ndryshime apo devijime nga planifikimi. AMFL-ja mbikëqyr veprimtarinë e
+subjektit të licencuar dhe informon ministrin përgjegjës për financat duke zbatuar parashikimet e
+këtij ligji.
+KREU V
+ORGANIZIMI I LOTARISË KOMBËTARE
+
+23"
+lojrat-e-fatit-14452-Neni39;lojrat-e-fatit;;Neni 39;14452;po;jo;;Identifikimi i klientëve të kazinosë dhe verifikimi i identifikimit të tyre;"Neni 39
+Identifikimi i klientëve të kazinosë dhe verifikimi i identifikimit të tyre
+1. Hyrja në kazino dhe pjesëmarrja në lojë do të lejohen vetëm për personat mbi 21 vjeç, të cilët
+janë të detyruar të identifikohen me dokument identifikimi.
+2. Të dhënat identifikuese të lojtarëve, të regjistruara sipas pikës 3, të nenit 6, të ruhen nga
+operatori për të paktën 3 vjet. Ruajtja e tyre të bëhet në përputhje me legjislacionin në fuqi për mbrojtjen
+e të dhënave personale.
+3. Të dhënat, sipas pikës 2, të këtij neni, janë konfidenciale dhe operatori nuk mund t’ua bëjë
+publike palëve të treta, përveçse kur parashikohet ndryshe me ligj.
+4. Organizatori duhet të ofrojë siguri fizike për lojtarët dhe klientët në përputhje me dispozitat
+ligjore në fuqi.
+5. Personi i veshur me uniformë, me funksione publike, mund të hyjë në një kazino vetëm për
+arsye profesionale të ushtrimit të detyrës dhe për asnjë"
+lojrat-e-fatit-14452-Neni38;lojrat-e-fatit;;Neni 38;14452;po;jo;;Rregullorja e lojërave të fatit për kazino;"Neni 38
+Rregullorja e lojërave të fatit për kazino
+1. Organizatori përgatit për secilën lojë, që do të luhet në kazino, rregulloren, të cilën ua bën të
+njohur pjesëmarrësve në lojëra.
+2. Rregulloret e lojërave përfshijnë, kryesisht:
+a) rregullat për mënyrën e pjesëmarrjes në lojë dhe përcaktimin e maksimumit dhe të minimumit
+të shumës, që paguhet për çdo lojë;
+b) kushtet për lejimin e hyrjes së personave në kazino;
+c) orën e hapjes dhe të mbylljes së kazinosë.
+3. Miratimi i rregullores së paraqitur nga i licencuari bëhet nga AMLF-ja, në përputhje me kriteret
+e përcaktuara në rregulloren e miratuar për këtë qëllim."
+lojrat-e-fatit-747-5;lojrat-e-fatit;;5;747;po;jo;;5. Shoqëritë e licencuara në fushën e lojërave të fatit me qëllim marrjen e miratimit nga AMLF-ja;"5. Shoqëritë e licencuara në fushën e lojërave të fatit me qëllim marrjen e miratimit nga AMLF-ja 
+përpara shitjes, lënies peng, dhurimit, si dhe çdo formë tjetër të disponimit të aksioneve, duhet të 
+paraqesin dokumentacionin e mëposhtëm: 
+a) njoftimin nga shoqëria e licencuar në fushën e lojërave të fatit për shitjen, transferimin, lënien peng, 
+dhurimin apo çdo forme tjetër të disponimit të aksioneve të shoqërisë, 
+b) vendimin e organeve drejtuese të shoqërisë që miratojnë shitjen, lënien peng, dhurimin apo çdo 
+formë tjetër të disponimit, të aksioneve të tyre, sipas parashikimeve të legjislacionit në fuqi për tregtarët 
+dhe shoqëritë tregtare dhe dispozitave të statutit të shoqërisë; 
+c) vërtetim nga organet tatimore, sipas legjislacionit në fuqi, që shoqëria nuk ka detyrime tatimore të 
+papaguara ndaj shtetit; 
+d) dokument që vërteton që shoqëria nuk është në proces likuidimi dhe/os"
+lojrat-e-fatit-14452-Neni29;lojrat-e-fatit;;Neni 29;14452;po;jo;;Procedura e hapjes së garës për Lotarinë Kombëtare;"Neni 29
+Procedura e hapjes së garës për Lotarinë Kombëtare
+(Ndryshuar pikat 1,2, zëvendësuar fjalë në pikën 3 me ligjin nr. 18/2024, datë 15.2.2024)
+1. AMLF-ja shpall hapjen e garës për dhënien e licencës për Lotarinë Kombëtare, me
+propozim të Komisionit të Licencave.
+2. Këshilli i Ministrave miraton kriteret e vlerësimit, afatet, procedurën e konkurrimit dhe
+metodologjinë e pikëzimit për dhënien e licencës për “Lotarinë Kombëtare.
+3. AMLF-ja publikon njoftimin për konkurrim në lojërat e fatit për Lotari Kombëtare, të paktën
+në një gazetë të huaj me qarkullim ndërkombëtar, në dy gazeta, që botohen në vendin tonë, në dy numra
+radhazi, si dhe në Buletinin e Njoftimeve Publike.
+4. Njoftimi duhet të përmbajë:
+a) vendin, datën dhe orën e paraqitjes së dokumenteve;
+b) gjuhën e paraqitjes së dokumenteve;
+c) mënyrën e paraqitjes së dokumenteve;
+ç) vendin, orën dhe datën e shqyrtimit të dokumente"
+marreveshje-nderkombetare-376-1;marreveshje-nderkombetare;;1;376;po;jo;;1. Ne Shqiperi:;"1. Ne Shqiperi: 
+ 
+ a) Kur nje rezident i Shqiperise realizon te ardhura ose 
+zoteron kapitale te cilat, ne perputhje me dispozitat e kesaj 
+Marreveshje mund te tatohen ne Turqi, Shqiperia do te lejoje nje 
+reduktim nga tatimi i saj mbi te ardhurat e ketij rezidenti, te 
+nje shume te barabarte me tatimin mbi te ardhurat te paguar ne 
+Turqi, dhe nje reduktim nga tatimi i saj mbi kapitalin e atij 
+rezidenti, te nje shume te barabarte me tatimin mbi kapitalin te 
+paguar ne Turqi. Megjithate, ky reduktim nuk do te kaloje ate 
+pjese te tatimit shqiptar mbi te ardhurat ose kapitalin te 
+llogaritur para dhenies se reduktimit qe i atribuohet sipas 
+rastit, te ardhurave ose kapitalit qe mund te tatohet ne Turqi. 
+ 
+ b) Kur ne perputhje me çdo dispozite te kesaj Marreveshje te 
+ardhurat e realizuara ose kapitali i zoteruar nga nje rezident i 
+Shqiperise perjashtohet nga tatimi ne Shqiperi, ne llog"
+marreveshje-nderkombetare-351-Neni13;marreveshje-nderkombetare;;Neni 13;351;po;jo;;Fitimet e kapitalit;"Neni 13 
+
+Fitimet e kapitalit 
+1. Fitimet e nxjerra nga një rezident i një shteti kontraktues nga tjetërsimi i pasurisë së 
+paluajtshme të referuar në nenin 6 dhe të ndodhur në shtetin tjetër kontraktues, mund të tatohen 
+në atë shtet tjetër. 
+2. Fitimet nga tjetërsimi i pasurisë së luajtshme që përbëjnë pjesë të pasurisë së biznesit të një 
+selie fikse, që një ndërmarrje e një shteti kontraktues ka në shtetin tjetër kontraktues ose të një 
+pasurie të luajtshme që ka lidhje me një bazë fikse në dispozicion të një rezidenti të një shteti 
+kontraktues në shtetin tjetër kontraktues, për qëllim të kryerjes së shërbimeve personale të 
+pavarura, duke përfshirë këto fitime nga tjetërsimi i kësaj selie të përhershme (vetëm ose me të 
+gjithë ndërmarrjen) ose të kësaj baze fikse, mund të tatohen në atë shtet tjetër. 
+3. Fitimet nga tjetërsimi i anijeve ose avionëve që operojnë në trafikun ndërkomb"
+marreveshje-nderkombetare-372-Neni8;marreveshje-nderkombetare;;Neni 8;372;po;jo;;Transporti ndërkombëtar;"Neni 8 
+Transporti ndërkombëtar 
+ 
+1. Fitimet e një ndërmarrjeje të një shteti kontraktues nga operimi i anijeve dhe avionëve në trafikun 
+ndërkombëtar janë të tatueshme vetëm në atë shtet. 
+2. Dispozitat e paragrafit 1 zbatohen, gjithashtu, për fitimet nga pjesëmarrja në një ortakëri, biznes të 
+përbashkët ose agjenci operuese ndërkombëtare. 
+3. Interesat nga fondet në lidhje me operimin e anijeve ose avionëve në trafik ndërkombëtar 
+konsiderohen si fitime të nxjerra nga operimi i këtyre anijeve dhe avionëve dhe dispozitat e nenit 11 
+
+nuk zbatohen në lidhje me këtë interes. 
+4. Për qëllimet e këtij neni, fitimet e nxjerra nga operimi i anijeve ose avionëve në trafikun 
+ndërkombëtar përfshijnë: 
+ 
+a) fitimet që rrjedhin nga dhënia me qira e anijeve ose avionëve bosh; dhe 
+b) fitimet nga përdorimi, mirëmbajtja ose dhënia me qira e kontejnerëve (duke përfshirë trailerat dhe 
+pajisjet përk"
+marreveshje-nderkombetare-366-4;marreveshje-nderkombetare;;4;366;po;jo;;4. Dispozitat e paragrafëve 1 dhe 2 të këtij Neni nuk do të zbatohen;"4. Dispozitat e paragrafëve 1 dhe 2 të këtij Neni nuk do të zbatohen 
+nëse pronari përfitues i honorareve, duke qenë rezident i një Shteti 
+Kontraktues, ushtron biznes në Shtetin tjetër Kontraktues ku krijohen 
+honoraret, nëpërmjet një selie të përherëshme të vendosur aty, ose kryen në 
+atë Shtet tjetër shërbime personale të pavarura nga një bazë fikse të 
+vendosur aty, dhe e drejta ose prona për të cilën paguhen honoraret është 
+efektivisht e lidhur me: a) këtë seli të përherëshme ose bazë fikse, ose b) 
+aktivitete biznesi që i referohen nënparagrafit c) të paragrafit 1 të Nenit 7. 
+Në këtë rast do të zbatohen dispozitat e Nenit 7 ose Nenit 14, sipas rastit."
+marreveshje-nderkombetare-367-2;marreveshje-nderkombetare;;2;367;po;jo;;2. Konventa do të hyjë në fuqi në datën e njoftimit më të vonshëm;"2. Konventa do të hyjë në fuqi në datën e njoftimit më të vonshëm 
+që i referohet paragrafit 1 dhe dispozitat e saj do të kenë efekt 
+lidhur me të ardhurat e realizuara ose kapitalin e zotëruar më ose 
+pas 1 Janarit të vitit kalendarik që pason atë të hyrjes në fuqi 
+të Konventës. 
+ 
+Për qëllime të Nenit 27 (Shkëmbimi i Informacionit), dispozitat do 
+të kenë efekt më ose pas datës në të cilën Konventa hyn në fuqi. 
+ 
+ 
+ 
+ NENI 30 
+ 
+ PERFUNDIMI 
+ 
+Kjo Konventë do të mbetet në fuqi deri në denoncimin nga njëri Shtet 
+Kontraktues. Secili Shtet Kontraktues mund të përfundojë Konventën, 
+duke dhënë njoftimin me shkrim të përfundimit nëpërmjet kanalave 
+diplomatike, të paktën 6 muaj përpara përfundimit të çdo viti 
+kalendarik që fillon pas përfundimit të një periudhe prej pesë vitesh 
+nga data e hyrjes së saj në fuqi. Në rast të tillë, Konventa do të 
+pushojë së pasuri efekt lidhur me të ardh"
+marreveshje-nderkombetare-355-5;marreveshje-nderkombetare;;5;355;po;jo;;5. Pavarësisht nga dispozitat e paragrafeve 1 dhe 2, kur një person -i;"5. Pavarësisht nga dispozitat e paragrafeve 1 dhe 2, kur një person -i 
+ndryshëm nga një agjent me status të pavarur ndaj të cilit zbatohet paragrafi 
+6- vepron në një Shtet Kontraktues emër të një sipërmarrje të Shtetit tjetër 
+Kontraktues, ajo sipërmarrje do të konsiderohet se ka një seli të përhershme 
+në Shtetin Kontraktues të përmendur në fillim lidhur me çdo aktivitet që ai 
+person ndërmerr për sipërmarrjen, nëse ai person dhe ka dhe zakonisht ushtron 
+në atë Shtet autoritetin për të përfunduar kontrata në emër të sipërmarrjes, 
+përveç kur aktivitetet e këtij personi kufizohen në ato të përmendura në 
+paragrafin 4, të cilat edhe kur ushtrohen nëpërmjet një vendi fiks bisnesi, 
+nuk do ta bënin këtë vend fiks bisnesi një seli të përhershme sipas 
+dispozitave të atij paragrafi."
+marreveshje-nderkombetare-337-4;marreveshje-nderkombetare;;4;337;po;jo;;4. Ne lidhje me paragrafin 3 te Nenit 17:;"4. Ne lidhje me paragrafin 3 te Nenit 17: 
+ 
+Nenkuptohet qe paragrafi 3 i Nenit 17 do te zbatohet edhe ndaj enteve ligjore te cilat 
+kryejne aktivitete si orkestra, teater, grupe baleti, si dhe anetareve te ketyre enteve 
+kulturore, ne rast se ente te tilla jane te tipit jo fitimprures dhe ne rast se ky kusht eshte 
+vertetuar nga autoritetet kompetente te Shtetit Kontraktues te residences se tyre."
+marreveshje-nderkombetare-375-2;marreveshje-nderkombetare;;2;375;po;jo;;2. Dispozitat e paragrafit 1 nuk do të zbatohen ndaj të ardhurave,;"2. Dispozitat e paragrafit 1 nuk do të zbatohen ndaj të ardhurave, 
+që nuk janë të ardhura nga pasuria e paluajtshme të përcaktuara në 
+paragrafin 2 të Nenit 6, nëse përfituesi i këtyre të ardhurave, duke 
+qenë rezident i një Shteti Kontraktues, ushtron aktivitet në Shtetin 
+tjetër Kontraktues nëpërmjet një selie të përhershme të vendosur 
+aty, ose kryen në atë Shtet tjetër shërbime personale të pavarura 
+nga një bazë fikse e vendosur aty, dhe e drejta ose pasuria lidhur 
+me të cilën paguhet shpërblimi është efektivisht e lidhur me këtë 
+seli të përhershme ose bazë fikse. Në këtë rast do të zbatohen 
+dispozitat e Nenit 7 ose Nenit 14, si të paraqitet rasti."
+marreveshje-nderkombetare-361-Neni29;marreveshje-nderkombetare;;Neni 29;361;po;jo;;Përfundimi;"Neni 29 
+Përfundimi 
+ 
+1. Kjo Marrëveshje do të mbetet në fuqi derisa të përfundohet nga një Shtet Kontraktues. Secili 
+Shtet Kontraktues mund t'i japë fund Marrëveshjes nëpërmjet kanaleve diplomatike, duke dhënë 
+një njoftim në lidhje me përfundimin të paktën gjashtë muaj para fundit të çdo viti kalendarik që 
+fillon pas skadimit të një periudhe prej pesë vjetësh nga data e hyrjes së saj në fuqi. 
+ 
+2. Marrëveshja do të pushojë së pasuri efekt: 
+a) në rast të tatimeve të mbajtura në burim, në lidhje me të ardhurat që rrjedhin në datën ose pas 
+datës 1 janar në vitin kalendarik të ardhshëm, pas vitit në të cilin është dhënë njoftimi; 
+b) në lidhje me tatimet e tjera mbi të ardhurat dhe tatimet mbi kapitalin, në lidhje me tatimet e 
+kërkuara për çdo vit të tatueshëm që fillon në datën ose pas datës 1 janar në vitin kalendarik të 
+ardhshëm pas vitit në të cilin është dhënë njoftimi. 
+Në dë"
+marreveshje-nderkombetare-344-Neni21;marreveshje-nderkombetare;;Neni 21;344;po;jo;;Studentët dhe praktikantët;"Neni 21 
+Studentët dhe praktikantët 
+1. Pagesat që merr një student ose praktikant biznesi, i cili është ose ishte menjëherë para 
+vizitës në Shtetin Kontraktues rezident i Shtetit tjetër Kontraktues dhe që është i pranishëm në 
+Shtetin e parë Kontraktues vetëm për qëllimin e arsimimit dhe trajnimit të tij, për qëllimin e 
+jetesës, arsimimit ose trajnimit nuk tatohen në atë Shtet Kontraktues, me kusht që këto pagesa 
+rrjedhin nga burime jashtë atij Shteti Kontraktues. 
+2. Në lidhje me grantet, bursat dhe shpërblimin nga punësimi që nuk mbulohen nga paragrafi 1, 
+një student ose praktikant biznesi i përshkruar në paragrafin 1 gjithashtu ka të drejtën gjatë 
+arsimimit ose trajnimit për të njëjtat përjashtime, uljeje dhe zbritje në lidhje me tatimet që 
+vendosen për rezidentët e Shtetit Kontraktues që ai viziton."
+marreveshje-nderkombetare-342-2;marreveshje-nderkombetare;;2;342;po;jo;;2. Kur një Shtet Kontraktues përfshin në fitimet e një;"2. Kur një Shtet Kontraktues përfshin në fitimet e një 
+sipërmarrje të atij Shteti - dhe i taton normalisht - fitime për 
+të cilat një sipërmarje e Shtetit tjetër Kontraktues është 
+rënduar me tatim në atë Shtet tjetër dhe fitimet e përfshira në 
+këtë mënyrë janë fitime që do të ishin realizuar nga sipërmarrja 
+e Shtetit të përmendur në fillim nëse konditat e krijuara midis 
+dy sipërmarrjeve kanë qenë ato që do të vendoseshin midis 
+sipërmarrjeve të pavarura, atëhere ai Shtet tjetër do të bejë 
+
+një rregullim në masën e duhur të shumës së tatimit të vendosur 
+atje mbi këto fitime. Në përcaktimin e rregullimeve të tilla 
+duhet t'i kushtohet vëmendje edhe dispozitave të tjera të kësaj 
+Konvente dhe autoritetet kompetente të Shteteve Kontraktuese, 
+nëse është e nevojshme, do të konsultohen me njëri tjetrin."
+marreveshje-nderkombetare-353-3;marreveshje-nderkombetare;;3;353;po;jo;;"3. Në funksion të këtij Neni, termi ""dividentë"" nënkupton të";"3. Në funksion të këtij Neni, termi ""dividentë"" nënkupton të 
+ardhurat nga aksionet e çdo lloji, aksione të themelimit ose të 
+drejta të tjera, që nuk janë kërkesa (tituj) borxhi, pjesmarrja 
+në fitime, si edhe të ardhurat nga të drejta të tjera 
+korporative që i nënështrohen të njëjtit trajtim tatimor si të 
+ardhurat nga aksionet nga ligjet e Shtetit rezidente e të cilit 
+është kompania që bën shpërndarjen e dividentëve."
+procedurat-tatimore-253-4.6;procedurat-tatimore;;4.6;253;po;jo;;4.6 Pas miratimit të “e-user”-it, ai mund të përdorë një password (fjalëkalim) të përkohshëm për;"4.6 Pas miratimit të “e-user”-it, ai mund të përdorë një password (fjalëkalim) të përkohshëm për 
+të pasur akses në shërbimin që është i regjistruar. “e-user”-i ka të drejtë, të ndryshojë 
+passwordin (fjalëkalim) e përkohshëm të hyrjes për herë të parë në shërbimin “e-tax” 
+4.7 “User ID” së bashku me passwordin (fjalëkalimin), përdoren për të pasur akses në 
+regjistrimin n shërbimin “e-tax” të “e-user”-it."
+procedurat-tatimore-14432-106.1.7;procedurat-tatimore;;106.1.7;14432;po;jo;;106.1.7 Nëqoftëse administrata tatimore ka nxjerrë disa vendime administrative lidhur;"106.1.7 Nëqoftëse administrata tatimore ka nxjerrë disa vendime administrative lidhur
+me të njëjtin tatimpagues, për secilin prej tyre mund të bëhet ankim më vete. Tatimpaguesi mund
+të apelojë dy vendime apo akte në të njëjtin apelim kur ato plotësojnë kërkesat për apelim në
+
+103
+bazë të këtij Udhëzimi. Gjatë procedurës së ankimit, Drejtoria e Apelimit Tatimor ose Komisioni
+për Shqyrtimin e Apelimeve Tatimore ka të drejtë të grupojë së bashku disa ankime me kusht që
+kjo gjë të çojë në uljen e kostos dhe rritjen e efektivitetit të procedurës së ankimit."
+procedurat-tatimore-14532-Neni11;procedurat-tatimore;;Neni 11;14532;po;jo;;Negocimi i marrëveshjeve ndërkombëtare;"Neni 11
+Negocimi i marrëveshjeve ndërkombëtare
+1. Ministria e Financave është, sipas rastit, autoritet nënshkrues apo palë në negociatat,
+që zhvillohen për të gjitha marrëveshjet ndërkombëtare, me efekte tatimore.
+2. Autoriteti nënshkrues dhe miratues i këtyre marrëveshjeve vepron në përputhje me
+ligjin “Për lidhjen e marrëveshjeve dhe traktateve ndërkombëtare”.
+KREU II
+
+6
+PARIMET, ORGANIZIMI DHE PERSONELI I ADMINISTRATËS TATIMORE"
+procedurat-tatimore-14423-3;procedurat-tatimore;;3;14423;po;jo;;3. Për identifikimin e punonjësve, që deklarohen në deklaratë, përdoret numri personal i;"3. Për identifikimin e punonjësve, që deklarohen në deklaratë, përdoret numri personal i
+letërnjoftimit të çdo individi, sipas ligjit nr. 8952, datë 10.10.2002, “Për letërnjoftimin e shtetasve
+shqiptarë”, të ndryshuar. Ministria e Financave, Ministria e Shëndetësisë, Ministria e Brendshme dhe
+Agjencia Kombëtare Shoqërisë së Informacionit, me udhëzime të përbashkëta, të përcaktojnë rregullat
+e komunikimit online për përdorimin e bazës së të dhënave për numrin personal të letërnjoftimit të
+shtetasve. Ndërkohë, vetëm për punonjësit e huaj të përdoret numri i sigurimit dhe, në rastet kur nuk
+
+ekziston një i të tillë, të përdoret numri i identifikimit personal, që punonjësi ka në pasaportën e tij."
+procedurat-tatimore-245-8.1;procedurat-tatimore;;8.1;245;po;jo;;8.1. Ky nen bën përkufizimin e disa termave të përgjithshme të përdorura në marrëveshje. Kështu :;"8.1. Ky nen bën përkufizimin e disa termave të përgjithshme të përdorura në marrëveshje. Kështu : 
+ 
+- 
+termi “person” përdoret në një kuptim të gjerë dhe përfshin individët, personat fizikë 
+tregtarë, personat juridikë (përfshirë shoqëritë dhe ortakëritë); 
+- 
+termi “Shoqëri” (kompani) përfshin çdo person juridik apo ent ligjor që trajtohet si subjekt 
+veçantë për qëllime tatimore; 
+- 
+termi “trafik (transport) ndërkombëtar” përfshin aktivitetet e transportit me anije, avjonë, 
+apo mjete të transportit rrugor që operohen në transportin ndërkombëtar të mallrave apo 
+pasagjerëve (midis shteteve kontraktuese) nga një kompani që është rezidente e njerit 
+shtet kontraktues; 
+- 
+termi “Nënështetas i një Shteti Kontrktues” nënkupton individët apo personat fizikë që 
+zotërojnë nënshtetësinë e një Shteti Kontraktues në bazë të ligjeve të atij shteti, apo 
+personat juridikë që e marrin statusin s"
+procedurat-tatimore-1947-17;procedurat-tatimore;;17;1947;po;jo;;17. Nëse dokumenti administrativ elektronik, i përftuar si më sipër, do të printohet, të dhënat e vulës;"17. Nëse dokumenti administrativ elektronik, i përftuar si më sipër, do të printohet, të dhënat e vulës 
+elektronike duhet të konvertohen vizualisht sipas formatit të mëposhtëm: 
+Paraqitja grafike e vulës fizike të institucionit / (nëse është e aplikueshme) Emri i institucionit lëshues 
+Data dhe ora e vulosjes - sipas vulës kohore - timestamp 
+
+DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR 2017 
+Vendim Nr. 495, datë 13.09.2017 
+ 
+ 
+4 
+
+Vlerën në hexadecimal / enkodim në string alfanumerik të hash të dokumentit apo vulës elektronike, të 
+shfaqur në format të lexueshëm text apo në kod 1- apo dydimensional. 
+Për qëllime të vërtetimit të vlefshmërisë së dokumentit: adresën elektronike në të cilën dokumenti 
+administrativ elektronik aksesohet përgjatë kohëzgjatjes së ciklit jetësor të tij, URL sipas specifikimeve të 
+RFC 3986."
+procedurat-tatimore-14432-22.1;procedurat-tatimore;;22.1;14432;po;jo;;22.1 Procedurat për shkeljet dhe masat disiplinore të nëpunësve të administratës tatimore;"22.1 Procedurat për shkeljet dhe masat disiplinore të nëpunësve të administratës tatimore
+qendrore që janë nëpunës civilë, bëhen në përputhje me ligjin për nëpunësin civil. Për ushtrimin
+e këtij funksioni në Drejtorinë e Përgjithshme të Tatimeve ngrihet një Komision Disiplinor në
+përbërje të të cilit janë 4 anëtarë nga administrata tatimore dhe një anëtar nga Departamenti i
+Administratës Publike. Funksionet, kompetencat dhe procedura e funksionimit të këtij
+Komisioni janë në përputhje me dispozitat e legjislacionit për nëpunësin civil."
+procedurat-tatimore-5563-4.4;procedurat-tatimore;;4.4;5563;po;jo;;4.4 Nëse tatimpaguesi ankues/kërkues nuk ka marrë përgjigje apo zgjidhje nga hallka e parë;"4.4 Nëse tatimpaguesi ankues/kërkues nuk ka marrë përgjigje apo zgjidhje nga hallka e parë 
+brenda 30 ditëve nga dita e depozitimit të shkresës kërkuese, mund t’i kërkojë apo të njoftojë 
+me shkrim Avokatin e Tatimpaguesve, në lidhje me procedurën të cilën konteston dhe 
+pretendon që shkel të drejtat apo interesat e tij. Dita e depozitimit të kërkesës në organin 
+tatimor do të konsiderohet: 
+ 
+a) Dita e dhjetë pas nisjes së kërkesës me rrugë postare, duke filluar nga dita e dorëzimit të 
+saj në zyrën e shërbimit postar; 
+ 
+b) Dita e konfirmimit të marrjes dorazi të kërkesës nga zyra e protokollit përkatës në 
+drejtorinë rajonale tatimore apo Drejtorisë së Përgjithshme të Tatimeve, kur kërkesa 
+dorëzohet dorazi nga tatimpaguesi apo grupi i tatimpaguesve; 
+ 
+c) Dita e dërgimit të kërkesës me postë elektronike (email), në rast se kërkesa dërgohet në 
+rrugë elektronike. Në këtë rast, kërkesa"
+procedurat-tatimore-245-28.3;procedurat-tatimore;;28.3;245;po;jo;;28.3. Metoda e kreditimit: Në bazë të parimit të kreditimit, shteti i rezidencës llogarit tatimin në bazë të;"28.3. Metoda e kreditimit: Në bazë të parimit të kreditimit, shteti i rezidencës llogarit tatimin në bazë të 
+të ardhurave globale të tatimpaguesit, përfshirë të ardhurat nga shteti i burimit, të cilat sipas 
+Marrëveshjes mund të jenë tatuar në Shtetin tjetër, dhe më pas lejon kreditimin (reduktimin) e tatimit të 
+paguar në vendin e burimit. Parimi i kreditimit gjithashtu përmban dy metoda: a) “kreditim i plotë” kur 
+shteti i rezidencës lejon kreditimin e shumës totale të tatimit që mund të jetë paguar në shtetin tjetër, 
+dhe b) “kreditim i zakonshëm” kur shteti i rezidencës lejon kreditimin e tatimit të paguar në shtetin tjetër 
+deri në masën e tatimit të vet për të ardhurat e realizuara në shtetin tjetër. 
+ 
+Zakonisht në Marrëveshjet që ne kemi përfunduar është preferuar metoda e kreditimit të 
+zakonshëm, ndërsa nga vendet e tjera, sipas rastit, është përdorur metoda e përjashtimit, os"
+procedurat-tatimore-14480-8;procedurat-tatimore;;8;14480;po;jo;;8. Dhënie ndihme financiare prej 16 000 (gjashtëmbëdhjetë mijë) lekësh për aplikuesit e ndihmës ekonomike,;"8. Dhënie ndihme financiare prej 16 000 (gjashtëmbëdhjetë mijë) lekësh për aplikuesit e ndihmës ekonomike,
+të cilët rezultojnë aplikues që nga muaji korrik 2019 e deri në muajin prill 2020, të cilët nuk kanë përfituar
+ndihmë ekonomike dhe, aktualisht, nuk përfitojnë as nga fondi 6 për qind akorduar bashkive, përveç rasteve që
+janë përjashtuar nga skema e ndihmës ekonomike, sipas nenit 15, të ligjit nr.57/2019, “Për asistencën sociale në
+Republikën e Shqipërisë”.
+
+2
+II.
+KRITERET
+DHE
+DOKUMENTACIONI
+PËR
+PËRFITIMIN
+E
+NDIHMËS
+FINANCIARE PËR TË PUNËSUARIT AKTUALË DHE ATA TË LARGUAR NGA PUNA
+SI PASOJË E COVID-19"
+procedurat-tatimore-229-5;procedurat-tatimore;;5;229;po;jo;;5. Ky dokument synon të njoftojë të gjitha palët që kanë interesa me këtë tatimpagues.;"5. Ky dokument synon të njoftojë të gjitha palët që kanë interesa me këtë tatimpagues. 
+ 
+Në_________, më_________, dita e_________, ora_________ 
+Firma e Drejtorit rajonal të tatimeve 
+Vula e institucionit 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR 2014 
+Vendim Nr. 1234, date 16.12.2009 
+
+REPUBLIKA E SHQIPËRISË 
+ 
+ 
+ 
+ 
+MINISTRIA E FINANCAVE 
+ 
+ 
+ 
+ 
+Drejtoria e Përgjithshme e Tatimeve 
+ 
+ 
+ 
+ 
+Drejtoria rajonale tatimore__________ 
+ 
+ 
+ 
+ 
+Drejtoria e mbledhjes 
+ 
+Nr.. prot, 
+ 
+ 
+ 
+datë 
+më,…,….09 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Format 
+NJOFTIM I PËR VENDOSJEN E BARRËS HIPOTEKORE 
+ 
+Nga: Drejtoria rajonale tatimore____________ 
+Adresa____________ 
+Për: Zyrën e regjistrimit të pasurive të paluajtshme 
+
+Për njoftim: Zyrës Qendrore të Regjistrimit të Pasurive të Paluajtshme"
+procedurat-tatimore-14432-65.7.1;procedurat-tatimore;;65.7.1;14432;po;jo;;65.7.1 Në zbatim të pikës 7 të nenit 65 të ligjit, në rastin e personave fizikë, detyrimi për;"65.7.1 Në zbatim të pikës 7 të nenit 65 të ligjit, në rastin e personave fizikë, detyrimi për
+të dorëzuar deklaratat tatimore ndërpritet në çastin e aplikimit të tyre për çregjistrim në Qendrën
+
+54
+Kombëtare të Biznesit. Bazuar në protokollin e komunikimit elektronik të të dhënave, lidhur
+midis Drejtorisë së Përgjithshme të Tatimeve dhe Qendrës Kombëtare të Biznesit, informacioni
+për aplikimin për çregjistrim të tatimpaguesit person fizik merret “on line” nga sistemi informatik
+i administratës tatimore. Mbi bazën e këtij informacioni, sistemi informatik i tatimeve, duke
+filluar nga muaji që pason muajin e aplikimit të personit fizik për çregjistrim, nuk gjenëron më
+deklaratat tatimore të tij për të gjithë llojet e tatimeve."
+sinjalizimi-14540-Neni26;sinjalizimi;;Neni 26;14540;po;jo;;Raportimi;"Neni 26
+Raportimi
+1. ILDKPKI-ja publikon çdo vit raport për zbatimin e këtij ligji, në të cilin përfshihen numri i
+rasteve të sinjalizuara, rezultatet e trajtimit të tyre, koha mesatare e trajtimit të rasteve, si dhe masat
+e marra për zbatimin e mekanizmave të mbrojtjes kundër veprimeve hakmarrëse.
+2. Raporti vjetor nuk përmban të dhëna që mund të zbulojnë identitetin e sinjalizuesve ose të
+personave të përfshirë.
+3. Raporti publikohet në faqen zyrtare të ILDKPKI-së.
+4. ILDKPKI-ja publikon periodikisht të dhëna të përmbledhura për ecurinë e sinjalizimeve dhe
+masat mbrojtëse të ndërmarra, në përputhje me legjislacionin për mbrojtjen e të dhënave personale.
+KREU VI
+
+15
+SHKELJET DHE MASAT ADMINISTRATIVE"
+sinjalizimi-11511-Neni23;sinjalizimi;;Neni 23;11511;po;jo;;Kundërvajtje dhe masa administrative;"Neni 23 
+Kundërvajtje dhe masa administrative 
+ 
+ 
+1. Shkelja e dispozitave të këtij ligji, kur nuk përbën vepër penale, përbën kundërvajtje 
+administrative dhe dënohet me gjobë si më poshtë: 
+ 
+a) moscaktimi i njësisë përgjegjëse nga organizata, në përputhje me pikën 1, të nenit 10, 
+të këtij ligji, dënohet me gjobë 100 000 lekë; 
+ 
+b) çdo veprim hakmarrjeje ndaj sinjalizuesit, të marrë nga organizata sipas nenit 18, të 
+këtij ligji, përfshirë refuzimin për të vepruar sipas pikës 3, të nenit 18, të këtij ligji, dënohet me 
+gjobë nga 300 000 lekë deri në 500 000 lekë; 
+ 
+c) shkelja e parimeve të hetimit të sinjalizimit nga punonjësi, sipas shkronjave “a”, “b”, 
+“c” dhe “ç”, të pikës 1, të nenit 12, të këtij ligji, dënohet me gjobë nga 100 000 deri në 300 000 
+lekë; 
+ 
+ç) 
+shkelja e detyrimit për ruajtjen e konfidencialitetit, sipas nenit 15, të këtij ligji, 
+dënohet me gjobë nga 150 000 "
+sinjalizimi-11511-Neni12;sinjalizimi;;Neni 12;11511;po;jo;;Parimet e përgjithshme të hetimit administrativ;"Neni 12 
+Parimet e përgjithshme të hetimit administrativ 
+ 
+ 
+1. Në kryerjen e funksioneve të saj, njësia përgjegjëse ose ILDKPKI-ja duhet: 
+ 
+a) të veprojë me ndershmëri, paanshmëri dhe efikasitet, duke pasur parasysh interesat 
+legjitimë të sinjalizuesit; 
+ 
+b) të veprojë në mënyrë të pavarur nga pikëpamja politike dhe çdo influencë tjetër e padrejtë 
+që mund të pengojë realizimin e detyrave, sipas këtij ligji; 
+ 
+c) të shmangë çdo konflikt interesi të mundshëm dhe të deklarojë menjëherë tek organizata 
+ose ILDKPKI-ja konfliktin e interesit përpara fillimit të hetimit administrativ të një sinjalizimi; 
+ 
+ç) të marrë të gjitha masat e përshtatshme për të mbrojtur dokumentacionin dhe provat 
+lidhur me sinjalizimin nga zhdukja, fshehja, ndryshimi, falsifikimi dhe veprime të tjera, të cilat synojnë 
+asgjësimin e tyre; 
+ 
+d) të ruajë konfidencialitetin e informacionit dhe të mbrojë të dhëna"
+sinjalizimi-14542-Neni7;sinjalizimi;;Neni 7;14542;po;jo;;Ankimi;"Neni 7
+Ankimi
+(Ndryshuar me ligjin nr. 106, datë 30.11.2017)
+Ankimi i taksapaguesit në nivel vendor, kundër vendimit apo veprimit të zyrës së
+taksave, bëhet te struktura vendore e apelimit tatimor, sipas kritereve dhe rregullave të
+
+4
+vendosura nga këshilli bashkiak, në përputhje me nenin 4 të këtij ligji. Taksapaguesi ka të drejtë
+të ankohet në gjykatë kundër vendimit të strukturës së apelimit tatimor në bashki."
+sinjalizimi-14542-Neni36;sinjalizimi;;Neni 36;14542;po;jo;;Fillimi i ushtrimit të kompetencave;"Neni 36
+Fillimi i ushtrimit të kompetencave
+(Shtuar pika 3 dhe 4 me ligjin nr. 181/2013, datë 28.12.2013)
+1. Ushtrimi i kompetencave të këtij ligji nga bashkitë dhe qarqet fillon në datën 1 janar
+2007.
+2. Organet tatimore të pushtetit qendror, nga njëra anë dhe bashkitë, nga ana tjetër,
+bashkëpunojnë për të bërë kalimin e kompetencave për administrimin e taksës vendore mbi
+biznesin e vogël dhe të të gjithë dokumentacionit përkatës, si dhe për mënyrën e procedimit,
+brenda vitit kalendarik 2006.
+
+15
+Çdo bashki kompensohet financiarisht, në përpjesëtim me koston e ulur të shpenzimeve
+administrative të administratës tatimore qendrore, për shkak të kalimit të kompetencave të
+administrimit në pushtetin vendor. Ky kompensim përdoret nga bashkitë për të përballuar
+koston administrative shtesë për administrimin e kësaj takse.
+3. Për vitin 2014, tatimpaguesi parapaguan tatimin e thjeshtuar mbi fit"
+sinjalizimi-14542-Neni29;sinjalizimi;;Neni 29;14542;po;jo;;Përjashtime nga pagimi i taksës mbi kalimin e së drejtës së pronësisë;"Neni 29
+Përjashtime nga pagimi i taksës mbi kalimin e së drejtës së pronësisë
+për pasuritë e paluajtshme
+1. Përjashtohen nga pagimi i taksës mbi kalimin e së drejtës së pronësisë për pasuritë e
+paluajtshme:
+a) Enti Kombëtar i Banesave, Ministria e Financave dhe organet e qeverisjes qendrore
+e njësitë e vetëqeverisjes vendore;
+b) personat, të cilët janë subjekt i tatimit mbi të ardhurat vetjake, në mbështetje të ligjit
+nr.8438, datë 28.12.1998 ""Për tatimin mbi të ardhurat"";
+c) subjektet, që dhurojnë pasuri të paluajtshme, kur përfitues të drejtpërdrejtë janë:
+i) institucionet dhe entet shtetërore e publike, qendrore e vendore;
+ii) bashkësitë fetare ose organizatat jofitimprurëse, kur dhurimi lidhet me atë pjesë të
+
+12
+veprimtarisë së tyre pa qëllim fitimi. Në këto raste dhuruesi, pasi ka marrë vërtetimin nga
+këshilli bashkiak për përjashtimin nga taksa, bën regjistrimin e pasurisë së palu"
+sinjalizimi-11511-Neni22;sinjalizimi;;Neni 22;11511;po;jo;;Raportimi;"Neni 22 
+Raportimi 
+ 
+ 
+1. Njësia përgjegjëse zbaton detyrat e ngarkuara nga ILDKPKI-ja për lehtësimin dhe 
+zhvillimin e procesit të sinjalizimit, si dhe i paraqet ILDKPKI-së çdo vit, jo më vonë se data 15 
+
+janar e vitit pasardhës, raport me shkrim për sinjalizimet e regjistruara, mënyrat e ndjekura për 
+hetimin administrativ të sinjalizimeve dhe mbrojtjen e sinjalizuesve. 
+ 
+2. ILDKPKI-ja publikon çdo vit raport për zbatimin e këtij ligji. Në këtë informacion 
+përfshihen numri i rasteve të sinjalizuara, rezultatet e rasteve, shkalla e ndërgjegjësimit dhe 
+besimit te mekanizmat e sinjalizimit nga publiku, koha e përcaktuar për shqyrtimin e rasteve dhe 
+zbatimin e mekanizmave të mbrojtjes nga hakmarrja. 
+KREU VII 
+SHKELJET DHE MASAT ADMINISTRATIVE"
+sinjalizimi-14542-Neni22/4;sinjalizimi;;Neni 22/4;14542;po;jo;;Përgjegjësitë e Drejtorisë së Përgjithshme të Taksës së Pasurisë;"Neni 22/4
+Përgjegjësitë e Drejtorisë së Përgjithshme të Taksës së Pasurisë
+(Shtuar me ligjin nr. 106, datë 30.11.2017; ndryshuar shkronja “c” me ligjin nr. 95/2018,
+datё 3.12.2018)
+Drejtoria e Përgjithshme e Taksës së Pasurisë:
+a) menaxhon regjistrin qendror të bazës së të dhënave të pasurive të paluajtshme
+(Kadastra Fiskale);
+b) udhëheq, nga pikëpamja metodologjike, në lidhje me administrimin e taksës mbi
+pasuritë e paluajtshme;
+c) vlerëson vlerën e pasurisë së paluajtshme për ndërtesat me metodat e përcaktuara me
+vendim të Këshillit të Ministrave, si dhe detyrimin për taksën e pasurisë ndërtesë.
+Këshilli i Ministrave vendos kritere dhe rregulla në lidhje me procedurat dhe elementet
+që përdoren për vlerësimin alternativ të detyrimit të taksës."
+sinjalizimi-14542-Neni36/1;sinjalizimi;;Neni 36/1;14542;po;jo;;Dispozitë tranzitore;"Neni 36/1
+Dispozitë tranzitore
+(Shtuar me aktin normativ nr. 3, datë 2.10.2019; shtuar paragrafi i dytë me aktin normativ nr.
+11, datë 27.3.2020; shtuar paragraf me ligjin nr. 67/2023, datë 21.7.2023)
+Personat që aplikojnë për t’u pajisur me leje për rindërtimin, riparimin apo restaurimin
+e ndërtesave të destinuara për qëllime banimi, të dëmtuara si pasojë e tërmetit të datës 21 shtator
+2019, përjashtohen nga detyrimi për pagesën e taksës së ndikimit në infrastrukturë.
+Përjashtimisht parashikimeve të nenit 15, të këtij ligji, pagesat e kësteve të parapagimit
+të tatimit të thjeshtuar mbi fitimin kryhen pranë bankave të nivelit të dytë dhe Postës Shqiptare,
+sh.a., për llogari të administratës tatimore, për tremujorin e parë dhe të dytë të vitit 2020 brenda
+datës 20 tetor 2020, ndërsa për tremujorin e tretë dhe të katërt të vitit 2020 brenda datës 20
+dhjetor 2020.
+Për subjektet që janë në p"
+sinjalizimi-14542-Neni23/1;sinjalizimi;;Neni 23/1;14542;po;jo;;Taksa mbi truallin;"Neni 23/1
+Taksa mbi truallin
+(Shtuar me ligjin nr. 142/2015, datë 17.12.2015; ndryshuar referenca e aneksit në pikat 1 dhe
+2 me ligjin nr. 95/2018, datё 3.12.2018)
+1. Baza e taksës mbi truallin është sipërfaqja e truallit, në metër katror, në pronësi apo
+përdorim të taksapaguesit. Sipërfaqja e truallit në pronësi përcaktohet sipas dokumenteve që e
+vërtetojnë atë. Në rast të mungesës së dokumentacionit të pronësisë, përdoruesi i truallit bën
+një vetëdeklarim të sipërfaqes së truallit në përdorim, pranë bashkisë ku ndodhet trualli.
+Kategoritë minimale të truallit jepen në aneksin 2, që i bashkëlidhet këtij ligji. Për çdo kategori
+minimale të truallit, këshilli bashkiak mund të miratojë nënkategorizime.
+2. Niveli i taksës caktohet në lekë për metër katror. Detyrimi i taksës llogaritet si
+shumëzim i nivelit të taksës me bazën e tatueshme. Nivelet treguese të taksës, për çdo kategori
+minimale"
+sinjalizimi-11511-Neni10;sinjalizimi;;Neni 10;11511;po;jo;;Sinjalizimi i brendshëm dhe njësitë përgjegjëse;"Neni 10 
+Sinjalizimi i brendshëm dhe njësitë përgjegjëse 
+ 
+ 
+1. Pranë çdo autoriteti publik, i cili ka më shumë se 80 të punësuar, dhe subjekti privat, i cili 
+ka më shumë se 100 të punësuar, caktohet një njësi përgjegjëse, e cila regjistron, heton 
+administrativisht dhe shqyrton sinjalizimet, sipas këtij ligji. 
+ 
+2. Njësia përgjegjëse mund të përbëhet nga një ose më shumë persona, sipas përbërjes dhe 
+strukturës së organizatës, të trajnuar posaçërisht në fushën e mbrojtjes së sinjalizuesve. 
+
+ 
+3. ILDKPKI-ja përcakton me udhëzim strukturën, kriteret e përzgjedhjes dhe trajnimin e 
+punonjësve të njësisë përgjegjëse të subjekteve private. Këshilli i Ministrave përcakton me vendim 
+marrëdhëniet e punës, strukturën dhe kriteret e përzgjedhjes së punonjësve të njësisë përgjegjëse në 
+autoritetet publike."
+sinjalizimi-11511-Neni24;sinjalizimi;;Neni 24;11511;po;jo;;Nxjerrja e akteve nënligjore;"Neni 24 
+Nxjerrja e akteve nënligjore 
+ 
+ 
+1. Ngarkohet ILDKPKI-ja që, brenda dy muajve nga hyrja në fuqi e këtij ligji, të nxjerrë aktet 
+nënligjore në zbatim të pikës 3, të nenit 10; pikës 10, të nenit 13; pikës 8, të nenit 19; dhe shkronjës 
+“a”, të nenit 21, të këtij ligji. 
+ 
+2. Ngarkohet Këshilli i Ministrave që, brenda dy muajve nga hyrja në fuqi e këtij ligji, të 
+nxjerrë aktet nënligjore në zbatim të pikës 3, të nenit 10, të këtij ligji. 
+ 
+3. Ngarkohet Komisioneri për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave 
+Personale që, brenda dy muajve nga hyrja në fuqi e këtij ligji, të nxjerrë aktet nënligjore në zbatim të 
+pikës 3, të nenit 16, të këtij ligji. 
+ 
+4. Ngarkohen subjektet private dhe autoritetet publike, në përputhje me udhëzimet e 
+ILDKPKI-së, që, brenda gjashtë muajve nga data e hyrjes në fuqi të këtij ligji, të miratojnë 
+rregulloren e parashikuar në nenin 13, "
+taksat-kombetare-14491-2.8.4;taksat-kombetare;;2.8.4;14491;po;jo;;2.8.4 Institucionet përgjegjëse për mbledhjen e taksës:;"2.8.4 Institucionet përgjegjëse për mbledhjen e taksës:
+Administrata Doganore është përgjegjëse për mbledhjen e:
+a) Taksës së materialeve/artikujve plastikë dhe e ambalazheve plastike të importuara;
+b) Taksës së lëndëve të para në forma primare, të importuara në krerët 3901 deri në 3914, të
+NKM-së, dhe që përdoren për prodhimin në vend të produkteve të plastikës;
+c) Taksës së ambalazheve prej qelqi të importuara;
+Administrata Tatimore është përgjegjëse për mbledhjen e:
+d) Taksës së ambalazheve prej qelqi të prodhuara në vend."
+taksat-kombetare-304-26;taksat-kombetare;;26;304;po;jo;;26. Subjekti i peshkimit, i cili, pas rakordimit me zyrën doganore mbikëqyrëse, rezulton;"26. Subjekti i peshkimit, i cili, pas rakordimit me zyrën doganore mbikëqyrëse, rezulton 
+me tejkalim të kufirit 80% të vlerës së gazoilit të furnizuar (konsumuar) ndaj vlerës së 
+produktit të peshkimit të faturuar në shitje për periudhën e rakorduar, për t’u rifutur në 
+skemën e përfitimit të furnizimit me karburant (gazoil) për peshkim, duhet të vërtetojë 
+me dokumentacion plotësues (kredi në bankë, biznes tjetër, etj.) financimin e humbjes 
+në aktivitetin e peshkimit. Në rast të kundërt, duhet të paguajë për llogari të autoriteteve 
+doganore, të gjithë vlerën e plotë të akcizës, taksës së qarkullimit dhe taksës së 
+karbonit për sasinë e tejkaluar të faturimit (konsumit) të karburantit (gazoil). Nga data e 
+shlyerjes së detyrimeve të mësipërme, subjektit të peshkimit i lind e drejta të rifutet në 
+skemë, për një periudhë tjetër 6-mujore."
+taksat-kombetare-14490-Neni6;taksat-kombetare;;Neni 6;14490;po;jo;;Transferimi i të ardhurave nga taksat dhe tarifat kombëtare në drejtorinë;"Neni 6
+Transferimi i të ardhurave nga taksat dhe tarifat kombëtare në drejtorinë
+rajonale tatimore dhe në llogaritë e njësive të qeverisjes vendore
+(ndryshuar me ligjin nr. 178/2013, datë 28.12.2013; ndryshuar me ligjin nr. 86/2014, datë
+17.7.2014)
+
+8
+Agjentët e taksave deklarojnë dhe transferojnë të ardhurat nga taksat dhe tarifat
+për llogari të drejtorisë rajonale tatimore, në përputhje me nenet 4, 4/1 dhe 11/2, të këtij
+ligji. Për detyrimet e patransferuara të taksave dhe tarifave, për agjentët zbatohen
+sanksione në përputhje me nenin 117, të ligjit nr. 9920, datë 19.5.2008, “Për procedurat
+tatimore në Republikën e Shqipërisë”, të ndryshuar."
+taksat-kombetare-9085-5;taksat-kombetare;;5;9085;po;jo;;5. Për shërbimin e kryer, DPSHTRR mban 5% komision të llogaritur mbi masën e tarifave që ka;"5. Për shërbimin e kryer, DPSHTRR mban 5% komision të llogaritur mbi masën e tarifave që ka 
+arkëtuar dhe deklaron dhe paguan në llogarinë e drejtorisë rajonale tatimore ku është e regjistruar 
+95% të shumës së arkëtuar. 
+ 
+DPSHTRR vetëllogarit shumën që përfiton nga komisioni duke shumzuar përqindjen e 
+komisionit të përcaktuar me këtë udhëzim të përbashkët me vlerën e arkëtimeve nga tarifat për 
+periudhën tatimore dhe mban drejtpërsëdrejti vlerën e komisionit që përfiton si dhe deklaron dhe 
+paguan në llogari të Drejtorisë Rajonale Tatimore, shumën e mbetur, pasi zbritet vlera e 
+komisionit që përfiton."
+taksat-kombetare-304-23;taksat-kombetare;;23;304;po;jo;;23. Në rast se vlera e të gjitha faturave të karburantit (gazoil) të konsumuar të faturuar;"23. Në rast se vlera e të gjitha faturave të karburantit (gazoil) të konsumuar të faturuar 
+për peshkimin për një 6-mujor është më e vogël ose e barabartë me 80% të vlerës 
+totale të faturave të produkteve të peshkimit të shitura me TVSH për këtë periudhë, zyra 
+doganore mbikëqyrëse nënshkruan aktin e rakordimit me subjektin e peshkimit dhe ky i 
+fundit mundet të vijojë furnizimin me karburant (gazoil) për peshkimin deri në njoftimin 
+zyrtar për ndërprerjen e tij nga autoritetet doganore."
+taksat-kombetare-9085-2015;taksat-kombetare;;2015;9085;po;jo;;2015 Tarifat Kombëtare dhe Udhëzimet;"2015 Tarifat Kombëtare dhe Udhëzimet 
+ 
+ 
+ 
+ 
+ 
+MINISTRI I FINANCAVE 
+ 
+Shkëlqim Cani 
+ 
+KRYETAR I KËSHILLIT DREJTUES TË 
+ 
+AUTORITETIT TË KOMUNIKIMEVE 
+ 
+ELEKTRONIKE DHE POSTAR 
+ 
+Piro Xhixho 
+ 
+ 
+ 
+Agjenti AMA 
+ 
+UDHËZIM 
+ 
+Nr.32, datë 29/12/2014/2014 
+ 
+“PËR PËRCAKTIMIN E TARIFËS SË SHËRBIMIT PËR SHËRBIMET E 
+TRANSMETIMEVE RADIOTELEVIZIVE“ 
+ 
+ 
+Në mbështetje të nenit 102 pika 4 të Kushtetutës dhe të nenit 11 të ligjit nr.9975, datë 28.7.2008 
+""Për taksat kombëtare"", Ministri i Financave dhe Drejtori i Përgjithshëm i AMA-s 
+ 
+ 
+ 
+UDHËZOJNË:"
+taksat-kombetare-14491-2.15;taksat-kombetare;;2.15;14491;po;jo;;2.15 Taksa për importimin dhe prodhimin e krem qumështit është në vlerën 150 lekë/litër.;"2.15 Taksa për importimin dhe prodhimin e krem qumështit është në vlerën 150 lekë/litër.
+Taksat e përcaktuara në paragrafët 2.12 deri në 2.15 zbatohen si për sasitë e importuara nga personat e
+tatueshëm, ashtu edhe për sasitë e prodhuara në vend.
+Për qumështin pluhur, pijet e homogjenizuara, hirrën e qumështit dhe kremin e qumështit të importuar, importuesi
+e paguan taksën pranë degëve doganore ku kryhen procedurat e çlirimit për qarkullim të lirë, në momentin e kryerjes së
+këtyre procedurave.
+Për këto produkte të prodhuara në vend, deklarimi dhe pagesa e taksës në administratën tatimore bëhet nga çdo
+tatimpagues prodhues së bashku me dorëzimin e deklaratës së taksave kombëtare, brenda datës 15 të muajit
+pasardhës për muajin paraardhës.
+Transferimi nga Administrata Doganore i të ardhurave të arkëtuara nga taksa, në llogarinë e të ardhurave të
+Administratës Tatimore bëhet brenda datës 15 "
+taksat-kombetare-304-20;taksat-kombetare;;20;304;po;jo;;20. Zyra doganore mbikëqyrëse krijon regjistrin/dosjen përkatëse për çdo pritës të;"20. Zyra doganore mbikëqyrëse krijon regjistrin/dosjen përkatëse për çdo pritës të 
+regjistruar/subjekt i peshkimit. Regjistri përmban të gjitha të dhënat e këtyre subjekteve, 
+si dhe të dhëna mbi deklaratat IM4 apo DSHA sipas rastit, datat e furnizimit, sasinë dhe 
+vlerën e produktit të peshkimit të shitur me faturë tatimore, sasinë dhe vlerën e 
+karburantit (gazoil) të furnizuar, si dhe sasinë dhe vlerën e karburantit (gazoil) të 
+konsumuar."
+taksat-kombetare-9085-18;taksat-kombetare;;18;9085;po;jo;;18. Veprime të tjera noteriale 200;"18. Veprime të tjera noteriale 200 
+ 
+ 
+ 
+ 
+Agjenti DPSHTRR 
+ 
+ 
+ 
+UDHËZIM 
+ 
+Nr.34 , datë 29/12/2014 
+ 
+“PËR 
+PËRCAKTIMIN 
+E 
+TARIFËS 
+SË 
+SHËRBIMIT 
+PËR 
+PAJISJEN 
+ME 
+LEJEDREJTIMI“ 
+ 
+Në mbështetje të nenit 102 pika 4 të Kushtetutës dhe të nenit 11 të ligjit nr.9975, datë 28.7.2008 
+""Për taksat kombëtare"", Ministri i Financave dhe Ministri i Punëve Publike, Transportit dhe 
+Telekomunikacionit 
+ 
+UDHËZOJNË:"
+taksat-kombetare-9085-2015;taksat-kombetare;;2015;9085;po;jo;;2015 Tarifat Kombëtare dhe Udhëzimet;"2015 Tarifat Kombëtare dhe Udhëzimet 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+UDHËZIMET PËR TARIFAT KOMBËTARE 
+ 
+UDHËZIM 
+ 
+Nr .29, datë 18/12/ 2014 
+ 
+”PËR PËRCAKTIMIN E TARIFËS SË SHËRBIMIT PËR PËRDORIMIN E 
+APARATEVE TELEVIZIVE” 
+ 
+Agjenti OSHEE; 
+Fletore Zyrtare 196/2014 
+ 
+ 
+ 
+ 
+UDHËZIM 
+ 
+Nr .30, datë 23/12/2014 
+ 
+”PËR PËRCAKTIMIN E TARIFËS SË SHËRBIMIT PËR SHËRBIMET E 
+RADIOKOMUNIKACIONIT” 
+ 
+Agjenti AKEP; 
+Fletore Zyrtare 196/2014 
+ 
+ 
+ 
+ 
+UDHËZIM 
+ 
+Nr.32, datë 29/12/2014/2014 
+ 
+“PËR PËRCAKTIMIN E TARIFËS SË SHËRBIMIT PËR SHËRBIMET E 
+ 
+TRANSMETIMEVE RADIOTELEVIZIVE“ 
+ 
+Agjenti AMA ; 
+Fletore Zyrtare 206/2015 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+
+DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR"
+taksat-kombetare-301-Neni5;taksat-kombetare;;Neni 5;301;po;jo;;Taksapaguesve të mjeteve rrugore, debitorë ndaj Drejtorisë së Përgjithshme të;"Neni 5 
+Taksapaguesve të mjeteve rrugore, debitorë ndaj Drejtorisë së Përgjithshme të 
+Tatimeve, për taksën vjetore të qarkullimit rrugor të mjeteve dhe debitorë ndaj 
+njësive të qeverisjes vendore, për taksën e regjistrimit të përvitshëm të mjeteve, u 
+falen detyrimet e prapambetura me kusht që: 
+pronarët e mjeteve, që nuk janë në qarkullim, të kenë kryer, brenda 6 muajve nga 
+hyrja në fuqi e këtij ligji, veprimet përkatëse të ç’regjistrimit, sipas nenit 102 të ligjit 
+nr.8378, datë 22.7.1998 ""Kodi Rrugor i Republikës së Shqipërisë"", të ndryshuar; 
+
+DREJTORIA E PËRGJITHSHME E TATIMEVE - LEGJISLACIONI TATIMOR 2014 
+Ligj Nr. 9986 datë 11.09.2008 
+
+pronarët e mjeteve, që janë në qarkullim, të kenë kryer, brenda 6 muajve nga hyrja 
+në fuqi e këtij ligji, veprimet përkatëse të pagesës së detyrimeve, me të gjithë 
+komponentët, për vitin 2008, sipas ligjit nr.8977, datë 12.12.2002 ""Për sistemi"
+taksat-kombetare-14491-1.1;taksat-kombetare;;1.1;14491;po;jo;;1.1 Ligji “Për taksat kombëtare” përcakton llojet e taksave dhe tarifave kombëtare që zbatohen në;"1.1 Ligji “Për taksat kombëtare” përcakton llojet e taksave dhe tarifave kombëtare që zbatohen në
+Republikën e Shqipërisë, nivelin e taksave kombëtare, mënyrën e pagesës te drejtoritë rajonale tatimore të taksave dhe
+tarifave kombëtare, transferimin e të ardhurave nga taksat te njësitë e qeverisjes vendore, përjashtimet nga pagesat e
+taksave dhe tarifat kombëtare, si dhe sanksionet.
+Termat “taksë”, “tarifë”, “taksapagues”, “agjenti i taksave dhe tarifave” kanë kuptimin e dhënë në nenin 2
+të ligjit."
+taksat-vendore-316-2;taksat-vendore;;2;316;po;jo;;2. Të ardhurat gjithsej dhe të ardhurat e tatueshme;"2. Të ardhurat gjithsej dhe të ardhurat e tatueshme 
+ 
+Të ardhurat gjithsej nga veprimtaria e biznesit të vogël nënkuptojnë çdo lloj të ardhure, të 
+realizuar gjatë periudhës tatimore dhe përfshijnë, pa u kufizuar vetëm në to, të ardhurat e 
+realizuara nga furnizimi i mallrave dhe shërbimeve, të ardhurat nga pjesëmarrjet, të ardhurat 
+nga interesat, të ardhurat nga shfrytëzimi i pasurisë së luajtshme e të paluajtshme. Të 
+ardhurat e tatueshme apo fitimi i tatueshëm rezulton si diferencë e të ardhurave gjithsej të 
+realizuar gjatë periudhës tatimore me shpenzimet e njohura."
+taksat-vendore-316-8.4;taksat-vendore;;8.4;316;po;jo;;8.4. Llogaritja e kësteve të detyrimit tatimor në mungesë të deklaratës së tatimpaguesit.;"8.4. Llogaritja e kësteve të detyrimit tatimor në mungesë të deklaratës së tatimpaguesit. 
+ 
+Për tatimpaguesit, subjekte të tatimit të thjeshtuar mbi fitimin e biznesit të vogël,të cilët nuk 
+kanë dorëzuar deklaratën e tatimit të thjeshtuar mbi fitimin të vitit paraardhës deri në datën 
+10 shkurt të vitit pasardhës, Drejtoria Rajonale Tatimorellogarit vetë shumën e detyrimit 
+tatimor të tatimit të thjeshtuar mbi fitimin të tatimpaguesit dhe mbi këtë bazë përcakton 
+këstet tremujore që duhet të paguhen nga ai. Drejtoria Rajonale Tatimorenjofton 
+tatimpaguesin për këstet e tatimit që ai duhet të paguaj për çdo tremujor. Llogaritja e 
+detyrimit tatimor në mungesë të deklaratës vjetore, bëhet duke u bazuar në metodat 
+alternative të parashikuara në nenet 71 dhe 72 të Ligjit Nr. 9920, datë 19.05.2008 “Për 
+procedurat tatimore në Republikën e Shqipërisë”, i ndryshuar, si dhe në pikat 71 dhe 72"
+taksat-vendore-314-Neni4;taksat-vendore;;Neni 4;314;po;jo;;Shpallja e zonave ekonomike;"Neni 4 
+Shpallja e zonave ekonomike 
+1. Në bazë të studimeve rajonale dhe të strategjisë së zhvillimit ekonomik të vendit, ministri 
+përgjegjës për ekonominë i paraqet Këshillit të Ministrave propozimin për krijimin e një zone 
+ekonomike. 
+
+DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR 2014 
+ Ligj Nr. 9789, date 19.7.2007 
+
+ 
+2. Këshilli i Ministrave miraton me vendim shpalljen e një zone ekonomike. 
+3. Shpallja e çdo zone ekonomike përfshin: 
+a) statusin e zonës (zonë e lirë ose park industrial); 
+b) kufijtë e zonës; 
+c) llojet e veprimtarive, që do të zhvillohen në të; 
+ç) periudhën e funksionimit të zonës; 
+d) mënyrën e dhënies së zonës (qira, koncesion etj.); 
+dh) procedurën e përzgjedhjes së zhvilluesit të zonës. 
+4. Veprimtaria ekonomike e zonës fillon pas përfundimit të ndërtimit të kufijve rrethues, të portave të 
+hyrjes e të daljes dhe të funksionimit të pikës doga"
+taksat-vendore-12693-Neni4;taksat-vendore;;Neni 4;12693;po;jo;;Mënyra e pagesës së detyrimit tatimor;"Neni 4 
+Mënyra e pagesës së detyrimit tatimor 
+ 
+Pagesa e detyrimit tatimor do të bëhet në çdo bankë të nivelit të dytë, me përshkrimin e veprimit 
+“Dega e thesarit për llogari të _________________________”. 
+Taksapaguesi do të paguajë sipas kësteve dhe datave të mëposhtme: 
+ 
+ 
+Kësti 
+ 
+Detyrimi për t’u paguar sipas llojit 
+ 
+ 
+Data për t’u paguar 
+Taksa/tarifa 
+Taksa/tarifa 
+Taksa/tarifa 
+Taksa/tarifa 
+ 
+1 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+ 
+ 
+ 
+ 
+5"
+taksat-vendore-317-6;taksat-vendore;;6;317;po;jo;;6. Pagesa e taksës vendore mbi biznesin e vogël;"6. Pagesa e taksës vendore mbi biznesin e vogël 
+ 
+ 
+Pagesat e taksës vendore mbi biznesin e vogël bëhen sipas kësteve të përcaktuara 
+nga zyra e taksave në bashki apo komunë. Taksa paguhet në çdo degë banke dhe në çdo 
+zyrë postare perzente në territorin e bashkisë apo të komunës ose në arkën e vetë bashkisë 
+apo të komunës përkatëse. 
+ 
+ 
+Pagesa e detyrimeve bëhet Brenda datës së përcaktuar në ligj, për 3-mujorin e parë 
+Brenda datës 20 të muajit prill, për 3- mujorin e dytë Brenda datës 20 korrik, për 3-mujorin e 
+tretë Brenda datës 20 tetor dhe për 3-mujorin e katërt brenda datës 20 janar."
+taksat-vendore-317-2.1;taksat-vendore;;2.1;317;po;jo;;2.1. Niveli Tregues i Taksës;"2.1. Niveli Tregues i Taksës 
+ 
+ 
+Nivelet treguese të taksës vendore mbi biznesin e vogël, të dhëna në aneksin 5 të 
+Ligjit, janë orientuese. Shuma faktike e tatimit për t’u paguar për çdo kategori biznesi 
+përcaktohet nga organi legjislativ (këshilli i bashkisë ose komunës) në të cilën ndodhet 
+biznesi. Këshilli i Bashkisë ose komunës mund të ndryshojë nivelin orientues të taksës të 
+
+DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR 2014 
+Udhezim Nr. 655/1, date 06.02.2007 
+
+përcaktuar në aneksin 5, duke e rritur ose ulur ate deri në 30%. Kështu për shembull, nëse 
+niveli orientues i taksës është 100.000 lekë, niveli faktik mund të vendoset ndërmjet 70.000 
+dhe 130.000 lekë."
+taksat-vendore-317-1;taksat-vendore;;1;317;po;jo;;1. Të përgjithshme;"1. Të përgjithshme 
+ 
+ 
+Taksa vendore mbi biznesin e vogël zbatohet nda çdo subjekti, kur e ardhura bruto 
+vjetore (qarkullim) gjatë vitit fiskal është më e vogël ose e barabartë me 8.000.000 
+(tetëmilionë) lekë. 
+ 
+Taksa Vendore mbi Biznesin e Vogël, duke filluar nga data 1 janar 2007, administrohet 
+nga zyra e taksave të njësive të qeverisjes vendore (të bashkive apo komunave). Për qëllimet 
+e këtij Ligji, një njoftim i lëshuar nga zyra e taksave në bashki apo në komunë, konsiderohet i 
+marrë : 
+ 
+në datën kur njoftimi është dërguar dorazi në ambjentet e biznesit apo te banimit 
+ të tatimpaguesit; ose 
+ 
+7 ditë nga data në të cilën njoftimi është postuar."
+taksat-vendore-316-18;taksat-vendore;;18;316;po;jo;;18. Tatimi i thjeshtuar mbi fitimin me shkallë tatimore standarde është shuma e tatimit të thjeshtuar;"18. Tatimi i thjeshtuar mbi fitimin me shkallë tatimore standarde është shuma e tatimit të thjeshtuar 
+mbi fitimin e llogaritur me shkallën tatimore standarde sipas vitit ushtrimor përkatës,e përcaktuar në 
+bazë të ligjit për sistemin e taksave vendore. (Rub.[17] x shkallen tatimore%), por jo më e vogël se 
+25.000 lekë ose jo më e vogël se pjesa e proporcionale e vlerës prej 25.000 lekë për periudhën që 
+ushtron aktivitet, si rezultat i regjistrimit ose çregjistrimit te tij brenda vitit te deklarimit."
+taksat-vendore-316-7.2;taksat-vendore;;7.2;316;po;jo;;7.2. Tatimpaguesit, subjekte të tatimit të thjeshtuar mbi fitimin për biznesin e vogël që;"7.2. Tatimpaguesit, subjekte të tatimit të thjeshtuar mbi fitimin për biznesin e vogël që 
+realizojnë një qarkullim nga 2 deri në 8 milionë lekë në vit, çdo blerje të tyre janë të detyruar 
+ta justifikojnë me: 
+ 
+a) faturë tatimore me TVSH, kur blerja është kryer te personat e regjistruar si tatimpagues të 
+TVSH-së. 
+ 
+b) faturë të thjeshtë tatimore, kur blerja është kryer te personat e regjistruar si tatimpagues 
+të tatimit të thjeshtuar mbi fitimin dhe nuk janë tatimpagues të TVSH-së."
+taksat-vendore-316-9.1;taksat-vendore;;9.1;316;po;jo;;9.1. Të gjithë tatimpaguesit, subjekte të tatimit të thjeshtuar mbi fitimin e biznesit të vogël,;"9.1. Të gjithë tatimpaguesit, subjekte të tatimit të thjeshtuar mbi fitimin e biznesit të vogël, 
+përfshirë: 
+ 
+ 
+tatimpaguesit që realizojnë qarkullim nga 2 deri në 8 milionë lekë në vit dhe paguajnë 
+katër këste parapagimesh të detyrimit tatimor në vit, 
+ 
+ 
+tatimpaguesit që realizojnë qarkullim nga zero deri në 2 milionë lekë në vit dhe 
+paguajnë një shumë fikse detyrimi tatimor në vit, 
+ 
+janë të detyruar që, brenda datës 10 shkurt të vitit pasardhës, të dorëzojnë formularin e 
+“Deklarimit të Tatimit të Thjeshtuar mbi Fitimin” për vitin raportues. Deklarata e Tatimit të 
+Thjeshtuar mbi Fitimin përmban informacion në lidhje me të ardhurat gjithsej, shpenzimet 
+gjithsej, shpenzimet e zbritshme, të ardhurat neto të tatueshme, tatimin për t'u paguar, si 
+dhe informacione të tjera të kërkuara në deklaratë."
+taksat-vendore-319-2;taksat-vendore;;2;319;po;jo;;2. Tatimpaguesi duhet të dorëzojë pranë zyrës së taksave të bashkisë apo të komunës, ku;"2. Tatimpaguesi duhet të dorëzojë pranë zyrës së taksave të bashkisë apo të komunës, ku 
+është I regjistruar, brenda datës 31 mars 2011, formularin e rimbursimit të pagesës për pajisjen 
+fiskale sipas formatit bashkëlidhur këtij vendimi, së bashku me dokumentacionin, si më poshtë 
+vijon: 
+ 
+a) Kopjen e mandatpagesës së bërë për blerjen e pajisjes së parë fiskale ose kuponin tatimor, 
+të shoqëruara me kopjen e faturës së blerjes; 
+ 
+b) Kopjen e kontratës me një nga “Shoqëritë e autorizuara” nga Ministri i Financave për ofrimin 
+dhe mirëmbajtjen e pajisjeve fiskale në rastin e pajisjeve fiskale, ose shoqërinë shitëse, në 
+rastin e taksimetrave; 
+ 
+c) Kopjen e njoftim-vlerësimit tatimor për vitin ushtrimor 2010, të lëshuar nga zyra e taksave të 
+bashkisë ose të komunës. 
+ç) Deklaratën e vendosjes në punë të pajisjes fiskale."
+taksat-vendore-316-4.1;taksat-vendore;;4.1;316;po;jo;;4.1 Për tatimpaguesit, subjekte të tatimit të thjeshtuar mbi fitimin e biznesit të vogël, me;"4.1 Për tatimpaguesit, subjekte të tatimit të thjeshtuar mbi fitimin e biznesit të vogël, me 
+qarkullim vjetor nga 2 deri në 8 milionë lekë, aplikohet shkalla tatimore 7,5 % mbi fitimin e 
+tatueshëm. Fitimi i tatueshëm nënkupton fitimin neto, pra diferencën e të ardhurave bruto 
+me shpenzimet e zbritshme të biznesit, siç përcaktohet në ligj dhe në këtë Udhëzim. Në çdo 
+rast, për çdo tatimpagues dhe lloj veprimtarie, tatimi i llogaritur për këtë kategori, nuk mund 
+të jetë më i vogël se 25.000 lekë në vit, ose jo më e vogël se pjesa e proporcionale e vlerës 
+prej 25.000 lekë për periudhën e kryerjes sëveprimtarisë, kur tatimpaguesit regjistrohen, 
+çregjistrohen apo kalojnë në regjistrin pasiv, gjatë vitit. 
+ 
+Shembull : 
+ 
+Nëse në fund të vitit fiskal 201X, tatimpaguesi realizon një qarkullim vjetor prej 2.800.000 
+lekë dhe fitimi i tij i tatueshëm është 200.000 lekë, atëherë detyrimi i t"
+tatimi-mbi-te-ardhurat-281-8.3;tatimi-mbi-te-ardhurat;;8.3;281;po;jo;;8.3 Në rastet kur çështjet indirekte (të tilla si: zbritshmëria e shpenzimeve, zbatueshmëria e;"8.3 Në rastet kur çështjet indirekte (të tilla si: zbritshmëria e shpenzimeve, zbatueshmëria e 
+tatimit në burim, ekzistenca e selisë së përhershme, atribuimi i fitimit tek njësia e 
+përhershme e kështu me rradhë) identifikohen në fazën e para-dorëzimit, fazën e aplikimit 
+
+apo vlerësimit, këto çështje mund t’i paraqiten DPT-së për t’u marrë në konsideratë për 
+hartimin e një rregulloreje në avancë në pajtueshmëri me nenin 36/7, të ligjit nr. 8438, datë"
+tatimi-mbi-te-ardhurat-12027-Neni30/1;tatimi-mbi-te-ardhurat;;Neni 30/1;12027;po;jo;;Deklarimi dhe pagesa nga persona joresidentë specifikë;"Neni 30/1 
+ 
+Deklarimi dhe pagesa nga persona joresidentë specifikë 
+1. Një personi joresident, të përcaktuar sipas shkronjës “ç”, të pikës 1, të nenit 16, të këtij 
+ligji, i kërkohet të përgatisë një deklaratë të të ardhurave të tatueshme, sipas udhëzimit të 
+ministrit përgjegjës për financat. Deklarata duhet të dorëzohet sipas afatit të përcaktuar në nenin 
+29 të këtij ligji. 
+2. Në kohën e paraqitjes së deklaratës, sipas pikës 1, të këtij neni, personi joresident duhet 
+të paguajë shumën e tatimit të deklaruar. Nenet 30 dhe 37, të këtij ligji, nuk zbatohen për këto 
+raste. 
+ 
+(Ndryshuar me Ligj nr. 94/2018, dt. 03.12.2018 Botuar në FL.Z. nr. 183, dt. 21.12.2018.)"
+tatimi-mbi-te-ardhurat-7309-7;tatimi-mbi-te-ardhurat;;7;7309;po;jo;;7. Individi ose përfaqësuesi i tij aplikon online për shërbimin e rivlerësimit të pasurisë,;"7. Individi ose përfaqësuesi i tij aplikon online për shërbimin e rivlerësimit të pasurisë, 
+nëpërmjet portalit qeveritar e-Albania. Në mënyrë që të pajiset me dokumentin zyrtar që 
+pasqyron regjistrimin e rivlerësimit, ai duhet të aplikojë edhe për shërbimin e pajisjes me 
+kopje të kartelës së pasurisë së paluajtshme ose të vërtetimit (për pasuritë që nuk i janë 
+nënshtruar regjistrimit fillestar). 
+Aplikimi për shërbimet i drejtohet drejtorisë/zyrës vendore të ASHK-së që është 
+kompetente për territorin ku gjendet pasuria e paluajtshme."
+tatimi-mbi-te-ardhurat-14596-35;tatimi-mbi-te-ardhurat;;35;14596;po;jo;;35. Të ardhurat e tatueshme pa të ardhurat nga dividendi dhe marrëdhëniet e punësimit;"35. Të ardhurat e tatueshme pa të ardhurat nga dividendi dhe marrëdhëniet e punësimit
+plotësohet për diferencën midis të {ardhurave të tatueshme bruto nga rubrikat [4], [6] deri në
+rubrikën [13], rubrikën [15] dhe rubrikat [17] deri në rubrikën [21]} me zbritjet për kontributin në
+skemën e pensioneve private nga të ardhurat e tjera përveç të ardhurave nga dividendi dhe
+marrëdhëniet e punësimit rubrika [29] ."
+tatimi-mbi-te-ardhurat-281-6.2;tatimi-mbi-te-ardhurat;;6.2;281;po;jo;;6.2. Me përfundimin e fazës së parë të procedurës së MҪA, në përputhje me pikën 9.1., në;"6.2. Me përfundimin e fazës së parë të procedurës së MҪA, në përputhje me pikën 9.1., në 
+momentin e fillimit të fazës 2, aplikimit zyrtar, tatimpaguesi duhet të ketë paguar tarifën 
+administrative si më poshtë: 
+a) Në rastin e një marrëveshje të njëanshme të çmimit në avancë, 300.000 lekë; 
+b) Në rastin e një marrëveshje dypalëshe të çmimit në avancë 1.200.000 lekë, dhe, 
+c) Në rastin e një marrëveshje shumëpalëshe të çmimit në avancë 1.200.000 lekë."
+tatimi-mbi-te-ardhurat-13180-3;tatimi-mbi-te-ardhurat;;3;13180;po;jo;;3. Shkalla tatimore prej 5% aplikohet vetëm për atë pjesë të aktivitetit të personit juridik, që;"3. Shkalla tatimore prej 5% aplikohet vetëm për atë pjesë të aktivitetit të personit juridik, që 
+përcaktohet në pikën 2, të kreut I, të këtij vendimi. Për çdo aktivitet tjetër ekonomik në fushën e 
+teknologjisë së informacionit të ushtruar nga personi juridik, si: tregtim pajisjeje, por jo vetëm, 
+zbatohet shkalla tatimore për tatimfitimin, sipas pikës 1, të nenit 28, të ligjit nr. 8438, datë 
+28.12.1998, të ndryshuar."
+tatimi-mbi-te-ardhurat-14126-15.6;tatimi-mbi-te-ardhurat;;15.6;14126;po;jo;;15.6 Dokumentacioni i transferimit të çmimit duhet të dorëzohet në gjuhën shqipe ose;"15.6 Dokumentacioni i transferimit të çmimit duhet të dorëzohet në gjuhën shqipe ose
+angleze. Gjithsesi, kur dokumentacioni është dorëzuar në gjuhën angleze, në vijim të kërkesës për
+përkthim nga administrata tatimore, duhet të jetë i shoqëruar me përkthimin e legalizuar në
+gjuhën shqipe. Shpenzimi i përkthimit mbulohet nga tatimpaguesi shqiptar dhe duhet të
+dorëzohet brenda 45 ditëve nga kërkesa për përkthim."
+tatimi-mbi-te-ardhurat-286-7.3;tatimi-mbi-te-ardhurat;;7.3;286;po;jo;;7.3 Në mungesë të transaksioneve të brendshme të;"7.3 Në mungesë të transaksioneve të brendshme të 
+krahasueshme të pakontrolluara, autoritetet tatimore do të 
+pranojnë përdorimin 
+e transaksioneve 
+të huaja të 
+krahasueshme të pakontrolluara me kusht që të analizohet 
+ndikimi i diferencave gjeografike dhe faktorëve të tjerë mbi 
+treguesin financiar që po ekzaminohet sipas metodës së 
+përshtatshme, të transferimit të çmimit, dhe, kur është e 
+përshtatshme, të kryhen veprime rregulluese të 
+krahasueshmërisë."
+tatimi-mbi-te-ardhurat-14577-2.2;tatimi-mbi-te-ardhurat;;2.2;14577;po;jo;;2.2 Kur pasuria e paluajtshme, objekt rivlerësimi, ndodhet në një zonë që i është nënshtruar;"2.2 Kur pasuria e paluajtshme, objekt rivlerësimi, ndodhet në një zonë që i është nënshtruar
+regjistrimit fillestar, por kjo pasuri nuk figuron e regjistruar në regjistrin kadastral, subjekti
+fillimisht duhet të aplikojë nëpërmjet portalit unik qeveritar e-Albania për regjistrimin e kësaj
+pasurie, në përputhje me parashikimet e ligjit nr. 111/2018, “Për kadastrën”, dhe të VKM-në
+nr. 389/2020, “Për miratimin e listës dhe tarifave të shërbimeve kadastrale”, të ndryshuar,
+duke depozituar titullin e pronësisë dhe dokumentacionin provues për regjistrim. Vetëm pas
+regjistrimit të kësaj pasurie në regjistron kadastral, subjektit i lind e drejta të aplikojë për
+rivlerësimin e kësaj pasurie, sipas përcaktimeve dhe brenda afatit të parashikuar në këtë
+udhëzim.
+
+4"
+tatimi-mbi-te-ardhurat-14596-10.3;tatimi-mbi-te-ardhurat;;10.3;14596;po;jo;;10.3 Llojet dhe kategoritë e të ardhurave në natyrë, por pa u kufizuar vetëm në to mund të;"10.3 Llojet dhe kategoritë e të ardhurave në natyrë, por pa u kufizuar vetëm në to mund të
+përfshijnë:
+- pagesat në lidhje me shërbimet e kryera apo mallrat e furnizuara për të punësuarin, të
+vetëpunësuarit apo tregtarin jo në para, por në aktive të tjera të ndryshme nga paratë;
+- aktivet (mallra, inventar etj.) të dhuruara të punësuarit nga punëdhënësi;
+- qira të paguara të punëmarrësit nga punëdhënësi;
+- pagesa për trajtime estetike, operacione plastike etj. të kësaj natyre;
+- pagesa për trajtime mjekësore, kur nuk është parashikuar ndryshe në këtë ligj dhe udhëzim;
+- pagesa për udhëtime private, akomodim privat pushime etj. të kësaj natyre, të paguara në favor
+të të punësuarit nga punëdhënësi, por që nuk lidhen me marrëdhëniet e punës dhe me realizimin
+e detyrave (shërbimet jashtë qendrës së punës, transporti, dietat, akomodimi);
+- aktive të tjera të luajtshme apo të paluajtshme të pë"
+tatimi-mbi-te-ardhurat-14670-Neni23;tatimi-mbi-te-ardhurat;;Neni 23;14670;po;jo;;Përgjegjësitë;"Neni 23
+Përgjegjësitë
+(Ndryshuar fjalë në pikën 2 dhe shtuar fjali në pikën 3 me ligjin nr. 87/2026, datë
+16.7.2026)
+1. Organi i drejtimit ekzekutiv të njësisë ekonomike dhe organi mbikëqyrës, në varësi të
+kompetencave që u njeh ligji, janë përgjegjës solidarë për të siguruar që pasqyrat financiare vjetore
+dhe raporti i ecurisë së veprimtarisë/raporti i konsoliduar i ecurisë së veprimtarisë të njësisë
+ekonomike, të hartohen dhe të publikohen në përputhje me kërkesat e këtij ligji, aktet në zbatim të tij
+dhe standardet e miratuara të kontabilitetit.
+2. Auditimi ligjor i pasqyrave financiare nuk e përjashton organin e drejtimit ekzekutiv dhe atë
+mbikëqyrës të njësisë ekonomike nga përgjegjësitë, të parashikuara në pikën 1 të këtij neni.
+3. Pasqyrat financiare nënshkruhen nga përfaqësuesi ligjor i njësisë ekonomike dhe personi
+përgjegjës për hartimin e pasqyrave financiare. Personi përgjegj"
+tatimi-mbi-te-ardhurat-14577-2;tatimi-mbi-te-ardhurat;;2;14577;po;jo;;2. Individi mund të zgjedhë vullnetarisht nëse rivlerësimin e pasurisë do ta bëjë pranë;"2. Individi mund të zgjedhë vullnetarisht nëse rivlerësimin e pasurisë do ta bëjë pranë
+drejtorisë vendore të Agjencisë Shtetërore të Kadastrës (DVASHK), apo me një ekspert të
+licencuar nga institucionet përkatëse për vlerësimin e pasurive të paluajtshme. Për të përfituar
+nga rivlerësimi, nëpërmjet pasqyrimit të tij në regjistrin e pasurive të paluajtshme, individi
+duhet të paguajë më parë tatimin e rivlerësimit (5% e bazës së tatueshme) dhe tarifën e
+kryerjes së shërbimit, sipas ligjit dhe këtij udhëzimi."
+tatimi-mbi-vleren-e-shtuar-14534-Neni29;tatimi-mbi-vleren-e-shtuar;;Neni 29;14534;po;jo;;Furnizimi i shërbimeve të telekomunikacionit, të transmetimit dhe shërbimeve elektronike;"Neni 29
+Furnizimi i shërbimeve të telekomunikacionit, të transmetimit dhe shërbimeve elektronike
+ndaj personave të patatueshëm
+1. Në përjashtim nga pika 2, e nenit 24, të këtij ligji, pavarësisht se ku është i vendosur personi i
+tatueshëm furnizues i shërbimeve të mëposhtme, vendi i furnizimit të këtyre shërbimeve është në
+vendin ku personi i patatueshëm, i cili merr shërbimin, është i vendosur, ka adresën e përhershme apo
+banon zakonisht. Këto shërbime janë të detajuara si më poshtë:
+a) furnizimi i shërbimeve të telekomunikacionit;
+b) furnizimi i shërbimeve të transmetimit të radios dhe ato televizive;
+c) furnizimi i website-ve, web-hosting, mirëmbajtjes në distancë të programeve dhe pajisjeve;
+ç) furnizimi me software dhe përditësimi i tyre;
+d) furnizimi i imazheve, teksteve dhe informacioneve dhe vlefshmëria e bazës të të dhënave
+
+11
+(database);
+dh) furnizimi me muzikë, filma dhe lojë"
+tatimi-mbi-vleren-e-shtuar-418-1.1;tatimi-mbi-vleren-e-shtuar;;1.1;418;po;jo;;1.1. Është e organizuar dhe e strukturuar për kryerjen e një ose më shumë veprimtarive në arsim;"1.1. Është e organizuar dhe e strukturuar për kryerjen e një ose më shumë veprimtarive në arsim 
+dhe shëndetësi, si veprimtari kryesore të saj. Arsimi dhe shëndetësia janë veprimtari të përfitimit 
+publik vetëm nëse ofrojnë, për grupe ose persona në nevojë, shërbime të rëndësishme, falas ose 
+me çmim më të ulët se vlera e tregut. Zhvillimi ekonomik përbën veprimtari të përfitimit publik 
+vetëm nëse ndërmerret, kryesisht, në përfitim të grupeve ose personave në nevojë."
+tatimi-mbi-vleren-e-shtuar-14534-Neni11;tatimi-mbi-vleren-e-shtuar;;Neni 11;14534;po;jo;;Furnizime shërbimi;"Neni 11
+Furnizime shërbimi
+Konsiderohen gjithashtu si furnizime shërbimi:
+a) kalimi i një pasurie të patrupëzuar (jomateriale), pavarësisht nëse përfaqësohet ose jo me titull
+pronësie;
+b) transaksionet mbi aksionet, pjesëmarrjet në shoqëri, obligacionet dhe titujt e tjerë, të ndryshëm
+nga ata të përcaktuar në nenin 8, të këtij ligji;
+c) operacionet e ndërtimit, kryerja e procesit të ndërtimit, si dhe të mirëmbajtjes;
+ç) detyrimi për të mos kryer një veprim apo për të lejuar/toleruar një veprim apo një situatë;
+d) kryerja e shërbimeve në zbatim të një urdhri të dhënë nga/ose në emër të një autoriteti publik apo
+
+5
+në zbatim të ligjit."
+tatimi-mbi-vleren-e-shtuar-427-Neni5;tatimi-mbi-vleren-e-shtuar;;Neni 5;427;po;jo;;Regjistrimi;"Neni 5 
+ 
+Regjistrimi 
+1. Personi, që kërkon të regjistrohet, detyrohet të ndjekë rrugën e përcaktuar në 
+ligjet nr.9723, datë 3.5.2007 “Për Qendrën Kombëtare të Regjistrimit”, të 
+ndryshuar, dhe nr.9920, datë 19.5.2008 “Për procedurat tatimore në Republikën e 
+Shqipërisë”. 
+2. Administrata tatimore, sipas procedurave të përcaktuara në ligjin nr.9920, datë 
+19.5.2008 “Për procedurat tatimore në Republikën e Shqipërisë” ka të drejtë të 
+regjistrojë një person të tatueshëm edhe nëse ai nuk ka kërkuar të regjistrohet."
+tatimi-mbi-vleren-e-shtuar-427-Neni28;tatimi-mbi-vleren-e-shtuar;;Neni 28;427;po;jo;;Detyrimet mbi furnizimet;"Neni 28 
+ 
+Detyrimet mbi furnizimet 
+1. Vlera e tatueshme e furnizimit përfshin tarifat, tatimet dhe detyrimet e pagueshme si 
+rezultat i furnizimit përveç TVSH të pagueshëm për këtë furnizim në bazë të këtij ligji. 
+2. Personi që kryen furnizime të tatueshme detyrohet të njoftojë në mënyrë të dukshme 
+nëpërmjet shpalljes, kontratës a reklamës nëse çmimi i mallrave ose i shërbimeve për t'u 
+furnizuar ose çmimi që duhet të paguhet për furnizimin përfshin apo nuk e përfshin TVSHnë, përveç rasteve që Ministri i Financave në udhëzim ka të drejtë ta përcaktojë ndryshe. 
+3. Në rast se furnizimi i tatueshëm kryhet pa një shumë të ndarë e të identifikuar si nje 
+pagesë e TVSH-së, vlera e tatueshme e tij është shuma që, së bashku me TVSH të 
+paguëshëm mbi këtë shumë në bazë të këtij ligji, është e barabartë me pagesën që i bëhet 
+furnizuesit. 
+4. Për mallrat, të cilat pesojne humbje gjate tranzit"
+tatimi-mbi-vleren-e-shtuar-423-3.2;tatimi-mbi-vleren-e-shtuar;;3.2;423;po;jo;;3.2 Tatimpaguesit e përcaktuar në shkronjën “b” të pikës 1 të këtij vendimi, paraqesin:;"3.2 Tatimpaguesit e përcaktuar në shkronjën “b” të pikës 1 të këtij vendimi, paraqesin: 
+a) një kërkesë me shkrim, së cilës, kur kryhen veprime për herë të parë pranë autoriteteve 
+doganore, i bashkëngjitet edhe një fotokopje e certifikatës së NUIS/NIPT-it; 
+ b) kopje të ekstraktit të Qendrës Kombëtare të Regjistrimit (QKR), ku të jetë specifikuar se 
+aktiviteti ekonomik është në fushën e përpunimit aktiv. Verifikimi nëse ka ose jo autorizimin e 
+lëshuar nga autoriteti doganor si tatimpagues në regjimin e përpunimit aktiv kryhet brenda 
+strukturave doganore; 
+ c) kopje të planit të investimit, përfshirë preventivin, për të gjithë kohëzgjatjen e investimit; 
+ç) kopje të planit të investimit, përfshirë preventivin, për vitin kur kryhen importet; 
+d) të dhëna për llojin dhe sasinë e makinerive e të pajisjeve që do të importohen dhe për 
+periudhën e instalimit; 
+dh) kopje të aktit të pronësi"
+tatimi-mbi-vleren-e-shtuar-14534-Neni6;tatimi-mbi-vleren-e-shtuar;;Neni 6;14534;po;jo;;Organet publike;"Neni 6
+Organet publike
+1. Organet e pushtetit qendror dhe vendor dhe organe të tjera të së drejtës publike nuk konsiderohen
+si persona të tatueshëm për veprimtari ose për veprime që ushtrojnë për qëllim dhe në ushtrimin e
+funksionit të tyre si autoritete publike edhe atëherë kur përfitojnë taksa, tarifa, kontribute dhe pagesa.
+2. Nëse këto organe kryejnë veprimtari apo veprime të tilla si ato të përcaktuara në pikën 1, të këtij
+neni, dhe të qenit person jo i tatueshëm shkakton shtrembërim të konkurrencës, atëherë konsiderohen
+persona të tatueshëm për këto veprimtari apo veprime.
+3. Në çdo rast organet e përcaktuara në pikën 1, të këtij neni, konsiderohen si persona të tatueshëm
+
+3
+nëse kryejnë veprimtaritë e renditura në aneksin 1 bashkëlidhur këtij ligji kur këto veprimtari nuk janë
+të papërfillshme.
+KREU III
+TRANSAKSIONET E TATUESHME
+SEKSIONI 1
+FURNIZIMI I MALLRAVE"
+tatimi-mbi-vleren-e-shtuar-427-Neni37;tatimi-mbi-vleren-e-shtuar;;Neni 37;427;po;jo;;Deklaratat për periudhat tatimore;"Neni 37 
+ 
+Deklaratat për periudhat tatimore 
+1. Çdo person i tatueshem detyrohet: 
+a) të bëjë një deklaratë, në bazë të nenit 32 të këtij ligji, për çdo periudhë tatimore jo më 
+vonë se 14 ditë pas përfundimit të periudhës tatimore me të cilën ajo lidhet; 
+b) të paguajë TVSH për atë periudhë, në ose para datës së detyrueshme të deklaratës. 
+2. Deklarata e bërë sipas pikës 1 bëhet në atë forme dhe përmban atë informacion siç 
+përcaktohet nga Ministri i Financave."
+tatimi-mbi-vleren-e-shtuar-14534-Neni72;tatimi-mbi-vleren-e-shtuar;;Neni 72;14534;po;jo;;31;"Neni 72
+
+31
+Llogaritja e koeficientit të zbritjes së TVSH-së
+1. Koeficienti i zbritjes së TVSH-së llogaritet nga raporti i mëposhtëm:
+a) në numërues, shumën totale të vëllimit të xhiros vjetore, pa TVSH-në, lidhur me transaksionet
+që sjellin të drejtën e zbritjes, sipas neneve 69 dhe 70, të këtij ligji.
+b) në emërues, shumën totale të vëllimit të xhiros vjetore, pa TVSH-në, lidhur me transaksionet e
+përfshira në numërues dhe me transaksionet që nuk sjellin të drejtën e zbritjes.
+2. Në ndryshim nga pika 1, e këtij neni, për llogaritjen e koeficientit të zbritjes së TVSH-së, nuk
+merren parasysh shumat e mëposhtme:
+a) vlera e qarkullimit të realizuar nga furnizimet e mallrave kapitale, të përdorura nga personi i
+tatueshëm për nevoja të biznesit së tij;
+b) vlera e qarkullimit, të realizuar nga transaksione financiare dhe të pasurive të paluajtshme nëse
+këto transaksione janë rastësore;
+c) vl"
+tatimi-mbi-vleren-e-shtuar-414-1.2;tatimi-mbi-vleren-e-shtuar;;1.2;414;po;jo;;1.2 Përkufizime “Kontraktor i nivelit 1” nënkupton një kontraktor të drejtpërdrejtë;"1.2 Përkufizime “Kontraktor i nivelit 1” nënkupton një kontraktor të drejtpërdrejtë 
+të shoqërisë koncesionare, siç është emëruar nga shoqëria koncesionare në 
+përputhje me nenin 2.8.5 të kontratës së koncesionit, të ndryshuar. 
+
+DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR 2014 
+Udhezim Nr. 20, date 17.6.2013 
+
+“Kontraktor i nivelit 2” nënkupton një kontraktor të drejtpërdrejtë të çdo 
+kontraktori të nivelit 1 siç është emëruar nga shoqëria koncesionare në përputhje 
+me nenin 2.8.5 të kontratës së koncesionit, të ndryshuar. “Shoqëria koncesionare” 
+nënkupton shoqërinë Devoll Hydropower sh.a. me numër unik të identifikimit të 
+subjektit (NIPT) K82418002C. 
+ 
+Termat e tjerë të përdorur në këtë udhëzim do të kenë të njëjtin kuptim që i është 
+dhënë në kontratën e koncesionit ndërmjet Ministrisë së Ekonomisë, Tregtisë dhe 
+Energjetikës, si autoritet kontraktues dhe EVN AG, St"
+tatimi-mbi-vleren-e-shtuar-414-5.6;tatimi-mbi-vleren-e-shtuar;;5.6;414;po;jo;;5.6 E njëjta procedurë do të zbatohet për furnizimet e kontraktorit të nivelit 1 të;"5.6 E njëjta procedurë do të zbatohet për furnizimet e kontraktorit të nivelit 1 të 
+kryera për shoqërinë koncesionare. Në faturën e lëshuar nga kontraktori i nivelit 1 
+për shoqërinë koncesionare nuk do të llogaritet dhe pasqyrohet TVSH-ja. 
+Kontraktori i nivelit 1 do të deklarojë këtë faturë në librin e shitjeve në kolonën 
+[10] “Eksporte/furnizime me 0%”. Shoqëria koncesionare do të lëshojë faturë 
+tatimore shitjeje për vete (autofaturim), e cila do të deklarohet në librat e TVSH-së, 
+siç përcaktohet në paragrafin 5.4 më sipër."
+tatimi-mbi-vleren-e-shtuar-14534-Neni87;tatimi-mbi-vleren-e-shtuar;;Neni 87;14534;po;jo;;Përfaqësuesi tatimor;"Neni 87
+Përfaqësuesi tatimor
+Në rastet që i referohen pikës 1, të nenit 86, të këtij ligji, kur personi përgjegjës për pagesën e TVSHsë është një person i tatueshëm që nuk është i vendosur në Republikën e Shqipërisë, vend në të cilin
+duhet të paguhet TVSH-ja, në zbatim të këtij neni, ky person duhet të caktojë një përfaqësues tatimor
+në Republikën e Shqipërisë si person përgjegjës për pagesën e TVSH-së, përveç kur personi, të cilit i
+janë furnizuar mallrat ose shërbimet, është një person i tatueshëm, i regjistruar në Republikën e
+Shqipërisë dhe i nënshtrohet pikës 2, të nenit 86, të këtij ligji."

@@ -41,6 +41,19 @@ DEFINITION_ONLY = re.compile(
     r"^(për qëllime të këtij ligji|në kuptim të këtij ligji|përkufizime)", re.I
 )
 
+# Every Albanian legal act closes with the same formulaic provisions: who is
+# charged with implementation, when it enters into force, what it repeals. They
+# are articles, but nobody asks a question about them, and including them would
+# spend the author's review time on rows that cannot become useful benchmark
+# entries.
+BOILERPLATE = re.compile(
+    r"(?i)(^\s*ngarkoh"
+    r"|hyn në fuqi"
+    r"|fletoren zyrtare"
+    r"|shfuqizoh"
+    r"|^\s*ky (vendim|ligj|udhëzim) )"
+)
+
 DRAFT_PROMPT = """Je duke ndërtuar një bazë testimi për një sistem pyetje-përgjigje \
 mbi legjislacionin tatimor shqiptar.
 
@@ -87,6 +100,8 @@ def is_substantive(chunk: dict) -> bool:
     if "(" in chunk.get("label", ""):   # a fragment of a split article
         return False
     if DEFINITION_ONLY.search(chunk.get("heading", "")):
+        return False
+    if BOILERPLATE.search(chunk["text"][:300]):
         return False
     return bool(chunk.get("heading"))
 
