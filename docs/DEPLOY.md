@@ -97,3 +97,31 @@ casual abuse, which is what a public demo needs.
 
 The citation contract lives in a cached system prompt, so the repeated part of
 every request is billed at roughly a tenth of the input rate.
+
+
+## Building the index on Colab
+
+The corpus is published as a public dataset so the notebook needs no upload:
+**https://huggingface.co/datasets/aristeaaa/asistenti-fiskal-korpus**
+
+Colab's upload button opens a native OS file dialog, which cannot be driven by
+automation and is awkward by hand for a 9 MB file. Publishing the corpus removes
+the step entirely and has a second benefit: the corpus becomes citable and the
+index reproducible by anyone, which is part of what the thesis claims.
+
+New notebook, Runtime -> T4 GPU, then one cell:
+
+```python
+!wget -q https://huggingface.co/datasets/aristeaaa/asistenti-fiskal-korpus/resolve/main/build_index_gpu.py
+exec(open("build_index_gpu.py").read())
+```
+
+Download the resulting `index.zip`, unzip into `data/processed/`, then locally:
+
+```bash
+python -m src.index.build --bm25-only     # lexical index + restoration map
+python scripts/prepare_space.py           # stage the Space
+```
+
+Note: a free account allows one GPU session. "Too many sessions" means another
+notebook holds it — Runtime -> Manage sessions -> Terminate.

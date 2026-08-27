@@ -15,11 +15,13 @@ HOW TO RUN
 1. https://colab.research.google.com → New notebook
    Runtime → Change runtime type → **T4 GPU** → Save
 
-2. Left sidebar → Files (folder icon) → Upload →
-   `data/processed/chunks.jsonl.gz`   (8 MB, compressed from 45 MB)
+2. Paste these two lines into a cell and run. The corpus is pulled from the Hub,
+   so nothing needs uploading:
 
-3. Paste this entire file into a cell and run it. ~10 min including the model
-   download.
+       !wget -q https://huggingface.co/datasets/aristeaaa/asistenti-fiskal-korpus/resolve/main/build_index_gpu.py
+       exec(open("build_index_gpu.py").read())
+
+   ~10 min including the model download.
 
 4. Download `index.zip` from the Files pane (right-click → Download).
    Unzip it so you have `data/processed/index/article/…` and `…/fixed/…`.
@@ -62,14 +64,28 @@ CANDIDATE_INPUTS = [
 ]
 
 
+# Colab cannot be handed a local file by automation — its upload button opens a
+# native OS dialog outside the page — so the corpus is published to the Hub and
+# fetched here instead. It is public legislation, and a downloadable corpus is
+# part of what makes the thesis reproducible.
+CORPUS_URL = (
+    "https://huggingface.co/datasets/aristeaaa/asistenti-fiskal-korpus/"
+    "resolve/main/chunks.jsonl.gz"
+)
+
+
 def find_input() -> Path:
     for path in CANDIDATE_INPUTS:
         if path.exists():
             return path
-    raise SystemExit(
-        "Nuk u gjet 'chunks.jsonl.gz'.\n"
-        "Ngarkoje nga paneli Files majtas (data/processed/chunks.jsonl.gz)."
-    )
+
+    print("korpusi nuk u gjet lokalisht; po shkarkohet nga Hugging Face ...")
+    import urllib.request
+
+    target = Path("chunks.jsonl.gz")
+    urllib.request.urlretrieve(CORPUS_URL, target)
+    print(f"  u shkarkua {target} ({target.stat().st_size / 1e6:.1f} MB)")
+    return target
 
 
 def load_chunks(path: Path) -> list[dict]:
