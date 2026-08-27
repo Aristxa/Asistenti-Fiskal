@@ -14,6 +14,7 @@ data/processed/**
 # Track it with git-lfs: the full bge-m3 index is ~130 MB.
 !data/processed/index/
 !data/processed/index/**
+build/
 .cache/
 .pytest_cache/
 .DS_Store
