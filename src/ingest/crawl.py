@@ -51,6 +51,17 @@ CATEGORIES: dict[int, str] = {
     591: "sinjalizimi",
 }
 
+# Three categories list no documents directly: they are index pages whose
+# documents live one level down, at c/6/{parent}/{child}/{slug}.
+SUBCATEGORY = re.compile(r"^c/6/(\d+)/(\d+)/([\w-]+)")
+
+# Everything under "Arshiva e Akteve Ligjore" is superseded law kept for reference.
+# It is collected for completeness and marked, but excluded from the retrieval
+# index by default: citing a repealed 2017 provision as if it were current is the
+# most damaging thing this system could do, and it would look identical to a
+# correct answer.
+ARCHIVAL_ROOTS = {497}
+
 MAGIC = {
     b"%PDF": "pdf",
     b"PK\x03\x04": "docx",
@@ -64,6 +75,8 @@ class Record:
     title: str
     category_id: int
     category: str
+    parent_category_id: int | None
+    archival: bool
     url: str
     filetype: str
     sha256: str
@@ -95,13 +108,15 @@ def load_manifest() -> dict[int, Record]:
     return seen
 
 
-def list_documents(client: httpx.Client, cat_id: int, slug: str) -> list[tuple[int, str]]:
-    """Return (doc_id, title) for every document linked from a category page."""
-    resp = client.get(f"{BASE}/c/6/{cat_id}/{slug}")
+def _fetch_category(client: httpx.Client, path: str) -> HTMLParser:
+    resp = client.get(f"{BASE}/{path}")
     resp.raise_for_status()
+    return HTMLParser(resp.text)
 
+
+def _documents_on(tree: HTMLParser) -> dict[int, str]:
     found: dict[int, str] = {}
-    for node in HTMLParser(resp.text).css("a"):
+    for node in tree.css("a"):
         href = node.attributes.get("href") or ""
         match = re.search(r"shkarko\.php\?id=(\d+)", href)
         if not match:
@@ -111,6 +126,42 @@ def list_documents(client: httpx.Client, cat_id: int, slug: str) -> list[tuple[i
         # A document can be linked more than once; keep the most descriptive text.
         if len(title) > len(found.get(doc_id, "")):
             found[doc_id] = title
+    return found
+
+
+def _subcategories_on(tree: HTMLParser, cat_id: int) -> list[tuple[int, str]]:
+    """Child category pages of `cat_id`, as (id, slug)."""
+    out: dict[int, str] = {}
+    for node in tree.css("a"):
+        match = SUBCATEGORY.match(node.attributes.get("href") or "")
+        if match and int(match.group(1)) == cat_id:
+            out[int(match.group(2))] = match.group(3)
+    return sorted(out.items())
+
+
+def list_documents(client: httpx.Client, cat_id: int, slug: str) -> list[tuple[int, str]]:
+    """Return (doc_id, title) for every document under a category.
+
+    Follows one level of subcategories, because three categories carry no
+    documents of their own and would otherwise be silently skipped.
+    """
+    tree = _fetch_category(client, f"c/6/{cat_id}/{slug}")
+    found = _documents_on(tree)
+
+    for child_id, child_slug in _subcategories_on(tree, cat_id):
+        time.sleep(DELAY_SECONDS)
+        try:
+            child_tree = _fetch_category(client, f"c/6/{cat_id}/{child_id}/{child_slug}")
+        except httpx.HTTPError as exc:
+            print(f"    subcategory {child_id} {child_slug} failed: {exc}")
+            continue
+        child_docs = _documents_on(child_tree)
+        if child_docs:
+            print(f"    + {child_slug}: {len(child_docs)} documents")
+        for doc_id, title in child_docs.items():
+            if len(title) > len(found.get(doc_id, "")):
+                found[doc_id] = title
+
     return sorted(found.items())
 
 
@@ -171,6 +222,8 @@ def crawl(categories: dict[int, str] | None = None, limit_per_category: int | No
                         title=title,
                         category_id=cat_id,
                         category=slug,
+                        parent_category_id=None,
+                        archival=cat_id in ARCHIVAL_ROOTS,
                         url=f"{BASE}/shkarko.php?id={doc_id}",
                         filetype=kind,
                         sha256=digest,

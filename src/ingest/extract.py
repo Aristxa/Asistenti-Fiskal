@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import re
+import zipfile
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
@@ -78,6 +79,40 @@ def normalise(text: str) -> str:
 def read_pdf(path: Path) -> str:
     with fitz.open(path) as doc:
         return normalise("\n".join(page.get_text() for page in doc))
+
+
+def read_docx(path: Path) -> str:
+    """Extract text from a Word file by reading its XML directly.
+
+    A .docx is a zip holding word/document.xml. Paragraph ends become newlines
+    before tags are stripped, so the structural segmentation downstream still has
+    lines to work with.
+
+    Not every zip the site serves is a Word file — one download is an archive of
+    XSD schemas. Checking for word/document.xml distinguishes them, which
+    magic-byte sniffing alone cannot.
+    """
+    if not zipfile.is_zipfile(path):
+        raise ValueError("not a zip container")
+    with zipfile.ZipFile(path) as archive:
+        if "word/document.xml" not in archive.namelist():
+            raise ValueError("zip is not a Word document")
+        xml = archive.read("word/document.xml").decode("utf-8", "ignore")
+
+    xml = xml.replace("</w:p>", "\n").replace("<w:br/>", "\n").replace("<w:tab/>", " ")
+    return normalise(re.sub(r"<[^>]+>", "", xml))
+
+
+def read_document(path: Path) -> str:
+    """Dispatch on file type. Raises if nothing readable can be produced."""
+    if path.suffix == ".pdf":
+        return read_pdf(path)
+    if path.suffix in (".docx", ".doc"):
+        # The `.doc` label is a magic-byte guess and is sometimes wrong: at least
+        # one file sniffed as OLE is really a Word XML package, so the zip path is
+        # tried regardless of the extension.
+        return read_docx(path)
+    raise ValueError(f"unsupported type {path.suffix}")
 
 
 def detect_regime(text: str) -> str:
@@ -182,13 +217,26 @@ def build(min_chars: int = 120) -> None:
     documents, chunks = [], []
     regimes: dict[str, int] = {}
 
-    for pdf in sorted(RAW.glob("*.pdf"), key=lambda p: int(p.stem)):
-        doc_id = int(pdf.stem)
+    sources = sorted(
+        (p for p in RAW.iterdir()
+         if p.suffix in (".pdf", ".docx", ".doc") and p.stem.isdigit()),
+        key=lambda p: int(p.stem),
+    )
+
+    skipped = []
+    for source in sources:
+        doc_id = int(source.stem)
         meta = manifest.get(doc_id, {})
+        if source.stat().st_size == 0:
+            skipped.append((doc_id, "empty file"))
+            continue
         try:
-            text = read_pdf(pdf)
+            text = read_document(source)
         except Exception as exc:
-            print(f"  {doc_id}: extraction failed ({exc})")
+            skipped.append((doc_id, str(exc)[:60]))
+            continue
+        if len(text) < 200:
+            skipped.append((doc_id, f"only {len(text)} chars of text"))
             continue
 
         regime = detect_regime(text)
@@ -231,10 +279,25 @@ def build(min_chars: int = 120) -> None:
                 cite=label, heading=heading, text=body, chars=len(body), order=order,
             )))
 
-        print(f"  {doc_id:<6} {regime:<8} {len(text):>7} chars -> {len(articles):>4} articles  {meta.get('title','')[:46]}")
+        print(f"  {doc_id:<6} {source.suffix[1:]:<5} {regime:<8} {len(text):>7} chars -> "
+              f"{len(articles):>4} articles  {meta.get('title','')[:40]}")
 
     _write(PROCESSED / "documents.jsonl", documents)
     _write(PROCESSED / "chunks.jsonl", chunks)
+
+    if skipped:
+        # Printed, not swallowed: a document that yields no text still looks like a
+        # successful run otherwise, and 31 scanned PDFs disappeared from the corpus
+        # this way before this report existed (docs/FINDINGS.md F9).
+        by_reason: dict[str, list[int]] = {}
+        for doc_id, reason in skipped:
+            key = "no extractable text" if "chars of text" in reason else reason
+            by_reason.setdefault(key, []).append(doc_id)
+        print(f"\nskipped {len(skipped)} of {len(sources)} sources:")
+        for reason, ids in sorted(by_reason.items(), key=lambda kv: -len(kv[1])):
+            sample = ", ".join(str(i) for i in ids[:6])
+            more = f" (+{len(ids) - 6} të tjera)" if len(ids) > 6 else ""
+            print(f"  {len(ids):>3}  {reason:<28} {sample}{more}")
 
     print(f"\ndocuments: {len(documents)}  regimes: {regimes}")
     print(f"chunks: {len(chunks)}")
