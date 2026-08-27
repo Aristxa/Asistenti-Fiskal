@@ -37,6 +37,12 @@ NENI_HEADING = re.compile(r"(?m)^[ \t]*Neni[ \t]*(\d+(?:[/\-]\d+)?[a-zë]?)[ \t]
 # Decimal section heading: `1.` `1.1` `2.3.4` followed by title text.
 DECIMAL_HEADING = re.compile(r"(?m)^[ \t]*(\d+(?:\.\d+){0,3})\.?[ \t]+(?=[A-ZËÇ])")
 
+# Paragraph number alone on its own line, with the body starting on the next.
+# This is how the national accounting standards are laid out, and it is invisible
+# to DECIMAL_HEADING, which requires the number and the text on one line. Without
+# it, SKK 5 — a 60k-character standard — produced no citable unit at all.
+PARAGRAPH_NUMBER = re.compile(r"(?m)^[ \t]*(\d{1,3})[ \t]*$")
+
 FIXED_WINDOW_CHARS = 1400
 FIXED_WINDOW_OVERLAP = 200
 
@@ -116,12 +122,19 @@ def read_document(path: Path) -> str:
 
 
 def detect_regime(text: str) -> str:
-    neni = len(NENI_HEADING.findall(text))
-    decimal = len(DECIMAL_HEADING.findall(text))
-    if neni >= 3:
+    """Which structural convention this document follows.
+
+    Order matters. `neni` and `decimal` are checked first because a document using
+    them may also contain stray standalone numbers (page numbers, table cells);
+    `standard` is the fallback for the accounting standards, whose paragraph
+    numbers sit alone on a line.
+    """
+    if len(NENI_HEADING.findall(text)) >= 3:
         return "neni"
-    if decimal >= 5:
+    if len(DECIMAL_HEADING.findall(text)) >= 5:
         return "decimal"
+    if len(PARAGRAPH_NUMBER.findall(text)) >= 8:
+        return "standard"
     return "flat"
 
 
@@ -154,6 +167,14 @@ def segment_articles(text: str, regime: str) -> list[tuple[str, str, str]]:
             text, matches,
             label_of=lambda m: m.group(1),
             heading_of=lambda lines: lines[0][:120],
+        )
+    if regime == "standard":
+        matches = list(PARAGRAPH_NUMBER.finditer(text))
+        return _slice_on(
+            text, matches,
+            label_of=lambda m: f"Paragrafi {m.group(1)}",
+            # line 0 is the bare number; the rubric is the text that follows it
+            heading_of=lambda lines: (lines[1][:120] if len(lines) > 1 else ""),
         )
     return []
 
@@ -251,6 +272,11 @@ def build(min_chars: int = 120) -> None:
             "doc_id": doc_id,
             "title": meta.get("title", ""),
             "category": meta.get("category", ""),
+            # Which body issued this, so a citation can say so. Rows crawled before
+            # multi-source support have no domain and default to tax legislation.
+            "domain": meta.get("domain", "tatime"),
+            "authority": meta.get("authority", "Drejtoria e Përgjithshme e Tatimeve"),
+            "archival": bool(meta.get("archival", False)),
             "url": meta.get("url", f"https://www.tatime.gov.al/shkarko.php?id={doc_id}"),
             "regime": regime,
             "chars": len(text),
