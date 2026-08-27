@@ -54,18 +54,50 @@ BOILERPLATE = re.compile(
     r"|^\s*ky (vendim|ligj|udhëzim) )"
 )
 
-DRAFT_PROMPT = """Je duke ndërtuar një bazë testimi për një sistem pyetje-përgjigje \
-mbi legjislacionin tatimor shqiptar.
+# Who is asking. A benchmark whose questions all sound like one person tests one
+# register; real users arrive as several. The persona is rotated deterministically
+# so the set is varied without being random between runs.
+PERSONAS: tuple[tuple[str, str], ...] = (
+    ("pronar biznesi i vogël",
+     "Ke një dyqan ose një biznes të vogël. Nuk ke studiuar drejtësi dhe nuk njeh "
+     "terminologjinë ligjore."),
+    ("i vetëpunësuar",
+     "Punon për vete, pa punonjës. Të interesojnë detyrimet e tua personale."),
+    ("punëdhënës",
+     "Ke disa punonjës dhe të interesojnë pagat, kontributet dhe detyrimet ndaj tyre."),
+    ("kontabilist fillestar",
+     "Sapo ke filluar punë si kontabilist dhe kërkon rregullin e saktë, por e formulon "
+     "pyetjen thjesht."),
+    ("themelues i ri biznesi",
+     "Po hap biznes dhe nuk di ende asgjë nga procedurat."),
+)
 
-Më poshtë është një nen nga legjislacioni. Shkruaj NJË pyetje në shqip që një \
-tatimpagues i zakonshëm (jo jurist) do ta bënte, dhe që përgjigjet nga ky nen.
+# How the question is shaped. Without this every draft becomes "Cilat janë ...?",
+# which tests one syntactic pattern rather than the range a real user produces.
+QUESTION_FORMS: tuple[str, ...] = (
+    "një pyetje me po/jo (fillon me 'A ...')",
+    "një pyetje për afatin (fillon me 'Kur ...' ose 'Deri kur ...')",
+    "një pyetje për shumën ose përqindjen (fillon me 'Sa ...')",
+    "një pyetje për pasojën e mospërmbushjes (fillon me 'Çfarë ndodh nëse ...')",
+    "një pyetje për procedurën (fillon me 'Si ...')",
+    "një pyetje për subjektin e detyrimit (fillon me 'Kush ...')",
+)
 
-Rregulla të detyrueshme:
-- Përdor fjalorin e një personi të zakonshëm, JO fjalët e nenit. Mos kopjo terma \
-karakteristikë nga teksti.
-- Pyetja duhet të jetë konkrete dhe praktike, jo abstrakte.
-- Mos përmend numrin e nenit apo të ligjit.
-- Kthe vetëm pyetjen, asgjë tjetër.
+DRAFT_PROMPT = """Po ndërtojmë një bazë testimi për një sistem pyetje-përgjigje mbi legjislacionin tatimor dhe kontabël shqiptar.
+
+TI JE: {persona_name}. {persona_desc}
+
+Më poshtë është një nen i legjislacionit. Shkruaj pyetjen që do t'i bëje ti një kontabilisti ose Drejtorisë së Tatimeve për situatën që trajton ky nen.
+
+FORMA E KËRKUAR: {form}
+
+RREGULLA TË DETYRUESHME:
+- Përdor gjuhën e përditshme. MOS përdor termat karakteristikë të nenit. Nëse neni thotë "subjekt i tatueshëm", ti thuaj "unë" ose "biznesi im"; nëse thotë "furnizim mallrash", ti thuaj "kur shes diçka".
+- Pyetja duhet të jetë konkrete dhe praktike — diçka që dikush e pyet vërtet.
+- Mos përmend numrin e nenit, të ligjit apo të udhëzimit.
+- Mos e kopjo strukturën e fjalisë së nenit.
+- Një pyetje e vetme, maksimumi 20 fjalë.
+- Kthe VETËM pyetjen, pa shpjegim dhe pa thonjëza.
 
 NENI:
 {text}
@@ -138,24 +170,52 @@ def select(seed: int = 20260827) -> list[dict]:
 
 
 def draft_questions(candidates: list[dict]) -> None:
-    """Ask Claude to draft each question. Author review is still required."""
+    """Draft one question per article, rotating persona and question form.
+
+    The label is not a model judgement: the question is written *from* a known
+    article, so that article is the answer by construction. What the author
+    verifies is that the draft is a sensible question which that article really
+    answers -- review rather than authoring.
+    """
     import anthropic
 
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-    for i, row in enumerate(candidates, start=1):
-        if row["question"]:
+    client = anthropic.Anthropic()
+    pending = [row for row in candidates if not row["question"]]
+
+    for i, row in enumerate(pending, start=1):
+        persona_name, persona_desc = PERSONAS[i % len(PERSONAS)]
+        form = QUESTION_FORMS[i % len(QUESTION_FORMS)]
+        try:
+            message = client.messages.create(
+                model=MODEL,
+                max_tokens=300,
+                messages=[{
+                    "role": "user",
+                    "content": DRAFT_PROMPT.format(
+                        persona_name=persona_name,
+                        persona_desc=persona_desc,
+                        form=form,
+                        text=row["source_text"],
+                    ),
+                }],
+            )
+        except anthropic.AuthenticationError as exc:
+            raise SystemExit(
+                "nuk ka kredenciale — vendos ANTHROPIC_API_KEY dhe provo sërish"
+            ) from exc
+        except anthropic.RateLimitError as exc:
+            retry = exc.response.headers.get("retry-after", "60")
+            raise SystemExit(f"kufi shpejtësie; provo sërish pas {retry}s") from exc
+
+        if message.stop_reason == "refusal":
+            print(f"  [{i}/{len(pending)}] {row['id']}: u refuzua, u kapërcye")
             continue
-        message = client.messages.create(
-            model=MODEL,
-            max_tokens=300,
-            messages=[{
-                "role": "user",
-                "content": DRAFT_PROMPT.format(text=row["source_text"]),
-            }],
-        )
-        row["question"] = message.content[0].text.strip()
+
+        text = "".join(b.text for b in message.content if b.type == "text").strip()
+        row["question"] = text.strip('"“”')
         row["drafted_by_model"] = True
-        print(f"  [{i}/{len(candidates)}] {row['id']}: {row['question'][:70]}")
+        row["persona"] = persona_name
+        print(f"  [{i}/{len(pending)}] [{persona_name}] {row['question'][:64]}")
 
 
 def report_overlap(candidates: list[dict]) -> None:
@@ -184,6 +244,31 @@ def report_overlap(candidates: list[dict]) -> None:
         print("  trivially and the benchmark will not distinguish configurations.")
 
 
+def flag_paraphrases(candidates: list[dict], threshold: float = 0.6) -> None:
+    """Mark drafts that lean too heavily on the article's own wording.
+
+    These are the rows most worth the author's attention: a question built from
+    the article's vocabulary is found by keyword matching alone, so it measures
+    string overlap rather than retrieval.
+    """
+    flagged = 0
+    for row in candidates:
+        if not row.get("question"):
+            continue
+        question = set(tokenise(row["question"]))
+        source = set(tokenise(row["source_text"]))
+        if not question:
+            continue
+        overlap = len(question & source) / len(question)
+        row["overlap"] = round(overlap, 2)
+        if overlap > threshold:
+            row["needs_rewrite"] = True
+            flagged += 1
+    if flagged:
+        print(f"\n{flagged} pyetje përsërisin fjalorin e nenit (>{threshold:.0%}).")
+        print("Janë shënuar 'needs_rewrite' — rishikoji këto të parat.")
+
+
 def main() -> None:
     import argparse
 
@@ -200,6 +285,7 @@ def main() -> None:
         draft_questions(candidates)
 
     report_overlap(candidates)
+    flag_paraphrases(candidates)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("w", encoding="utf-8") as handle:
