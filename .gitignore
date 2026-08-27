@@ -10,8 +10,10 @@ data/raw/**
 !data/raw/.gitkeep
 data/processed/**
 !data/processed/.gitkeep
+# The index must ship with the Space -- it is what makes a free CPU tier viable.
+# Track it with git-lfs: the full bge-m3 index is ~130 MB.
+!data/processed/index/
+!data/processed/index/**
 .cache/
 .pytest_cache/
-*.faiss
-*.npy
 .DS_Store

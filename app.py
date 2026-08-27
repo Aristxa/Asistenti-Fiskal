@@ -12,11 +12,13 @@ defense that is the argument, made live, instead of a table on a slide.
 from __future__ import annotations
 
 import os
+import uuid
 
 import gradio as gr
 
 from src.rag.answer import ask
 from src.rag.retrieve import retrieve
+from src.web.ratelimit import limiter
 
 EXAMPLES = [
     "Kur duhet të regjistrohem si subjekt i TVSH-së?",
@@ -46,10 +48,12 @@ def format_sources(hits) -> str:
     return "\n\n".join(lines)
 
 
-def respond(question: str, strategy: str, mode: str, k: int):
+def respond(question: str, strategy: str, mode: str, k: int, session_id: str):
     question = (question or "").strip()
     if not question:
         return "Shkruaj një pyetje.", ""
+    if len(question) > 500:
+        return "Pyetja është shumë e gjatë. Shkurtoje nën 500 karaktere.", ""
 
     if not os.environ.get("ANTHROPIC_API_KEY"):
         # Retrieval works without a key; only generation needs one. Showing the
@@ -57,6 +61,10 @@ def respond(question: str, strategy: str, mode: str, k: int):
         hits = retrieve(question, strategy=strategy, mode=mode, k=k)
         return ("_Nuk ka çelës API — po shfaqen vetëm nenet e gjetura, pa përgjigje "
                 "të gjeneruar._", format_sources(hits))
+
+    allowed, message = limiter.check(session_id)
+    if not allowed:
+        return message, ""
 
     try:
         result = ask(question, strategy=strategy, mode=mode, k=k)
@@ -104,7 +112,10 @@ def build() -> gr.Blocks:
 
         gr.Examples(examples=EXAMPLES, inputs=question)
 
-        inputs = [question, strategy, mode, k]
+        # Per-browser-session id, so the rate limit is per visitor rather than global.
+        session_id = gr.State(lambda: uuid.uuid4().hex)
+
+        inputs = [question, strategy, mode, k, session_id]
         submit.click(respond, inputs=inputs, outputs=[answer, sources])
         question.submit(respond, inputs=inputs, outputs=[answer, sources])
 
