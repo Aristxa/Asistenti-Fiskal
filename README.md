@@ -24,23 +24,33 @@ questions.
 It does **not** give personalised tax advice, compute anyone's liability, or substitute
 for a licensed accountant.
 
-## Design questions
+## The claim
 
-The project is built to thesis standard, around three questions that are not
-foregone conclusions:
+One sentence, and the whole project defends it:
 
-- **RQ1** — Does hybrid retrieval (dense + BM25) beat either component alone on Albanian
-  legal queries? Albanian is morphologically rich, which hurts lexical matching; multilingual
-  encoders have thin Albanian coverage. Neither is obviously dominant.
-- **RQ2** — Does structure-aware chunking (one chunk = one *nen*) beat fixed-window
-  chunking at equal retrieved-token budget? The retrieval unit and the citation unit
-  coincide for legal text, which is the property being tested.
-- **RQ3** — Under an explicit citation contract, what are the unsupported-claim rate and
-  the false-refusal rate? Both directions must be measured; a system that refuses
-  everything is trivially faithful.
+> **In Albanian legal question answering, correctness is decided by retrieval, not by
+> the language model — and segmenting documents on their legal structure rather than on
+> fixed character windows is what makes retrieval find the right article.**
 
-See [`docs/PLAN.md`](docs/PLAN.md) for the full methodology and evaluation design, and
-[`docs/FINDINGS.md`](docs/FINDINGS.md) for the empirical findings log.
+Three contributions support it, chosen because each is a thing that visibly *exists*
+rather than a conclusion that has to be argued for:
+
+1. **A benchmark** — the first public Albanian tax-law QA set, questions paired with the
+   controlling article. Albanian is low-resource and has essentially no legal QA resources.
+2. **A measured finding** — whether structure-aware chunking beats fixed-window chunking
+   at finding that article.
+3. **A working public system** — deployed, citing its sources, usable during a defense.
+
+### How results are reported
+
+No p-values, no significance tests. In their place a rule fixed before any result was
+seen: **a difference under 10 percentage points is reported as "no clear difference,"**
+and every number is printed as `n/N` beside its percentage so the sample size is always
+visible. That is honest about what a benchmark of this size can distinguish, and it can
+be defended out loud in one sentence.
+
+See [`docs/PLAN.md`](docs/PLAN.md) for the full design, and
+[`docs/FINDINGS.md`](docs/FINDINGS.md) for the dated findings log.
 
 ## Pipeline
 
