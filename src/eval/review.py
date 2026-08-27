@@ -25,6 +25,11 @@ CANDIDATES = GOLD / "candidates.jsonl"
 WORKBOOK = GOLD / "rishikim.csv"
 QUESTIONS = GOLD / "questions.jsonl"
 
+# The out-of-scope slice needs no tax expertise, so it is authored directly rather
+# than reviewed. It is merged in on import: without it a system that refuses every
+# question would score perfectly on refusal accuracy.
+OUT_OF_SCOPE = GOLD / "jashte_teme.jsonl"
+
 COLUMNS = [
     "id",
     "kategoria",
