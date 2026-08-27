@@ -52,6 +52,18 @@ be defended out loud in one sentence.
 See [`docs/PLAN.md`](docs/PLAN.md) for the full design, and
 [`docs/FINDINGS.md`](docs/FINDINGS.md) for the dated findings log.
 
+## The thesis
+
+The written thesis lives in [`docs/teza/`](docs/teza/), in Albanian, following the
+official Universiteti i Tiranës / FEUT format. It is kept as one file per chapter,
+mirroring the system's components, because the system keeps growing and a document
+written from memory at the end would be wrong.
+
+Every chapter declares a status, and `python scripts/build_teza.py` assembles the
+document and reports how complete it actually is. Chapters that depend on unperformed
+measurements stay empty by rule — the evaluation chapter contains its measurement plan
+and blank tables, not estimated results.
+
 ## Pipeline
 
 ```

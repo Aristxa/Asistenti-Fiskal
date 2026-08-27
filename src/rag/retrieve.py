@@ -2,8 +2,8 @@
 
 Three configurations are exposed because deciding between them is a research
 question, not an implementation detail. Albanian's rich inflection hurts the
-lexical arm (no stemmer exists); the dense arm is a multilingual model with thin
-Albanian representation. Either could win.
+lexical arm (no stemmer ships in standard retrieval toolchains); the dense arm is
+a multilingual model with thin Albanian representation. Either could win.
 
 Fusion is Reciprocal Rank Fusion, which combines rankings rather than scores.
 Dense cosine similarities and BM25 scores are on incomparable scales, so

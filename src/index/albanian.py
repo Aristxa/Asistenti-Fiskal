@@ -13,8 +13,11 @@ retrieved nothing in common. Folding both sides makes matching diacritic-blind.
 **Albanian is morphologically rich.** Nouns inflect for case, number and
 definiteness, so the single concept *tatim* (tax) appears as `tatim`, `tatimi`,
 `tatimit`, `tatimin`, `tatime`, `tatimet`, `tatimeve`. Exact-token BM25 treats
-all seven as unrelated. There is no reliable open Albanian stemmer, so this
-module implements a deliberately conservative suffix stripper.
+all seven as unrelated. Albanian lemmatisation research does exist — Kote et al.
+(2019) report 89.95% lemmatisation accuracy with neural models — but it is a
+research artefact trained on a ~118k-token corpus, not a component packaged for
+retrieval pipelines; no Albanian stemmer ships with Snowball, NLTK or Lucene. This
+module therefore implements a deliberately conservative suffix stripper.
 
 Both transformations apply to the BM25 arm only. The dense arm keeps the original
 text: multilingual encoders are trained on correctly written language, and folding
