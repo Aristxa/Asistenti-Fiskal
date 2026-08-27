@@ -21,18 +21,25 @@ HOW TO RUN
        !wget -q https://huggingface.co/datasets/aristeaaa/asistenti-fiskal-korpus/resolve/main/build_index_gpu.py
        exec(open("build_index_gpu.py").read())
 
-   ~10 min including the model download.
+   ~45 min on a T4 for the full corpus (measured, not estimated).
 
-4. Download `index.zip` from the Files pane (right-click → Download).
-   Unzip it so you have `data/processed/index/article/…` and `…/fixed/…`.
+3. Getting the result off the machine. Colab VMs are ephemeral — when the runtime
+   disconnects the filesystem is discarded, and a 151 MB index left sitting there
+   is simply gone. That happened once already and cost 43 minutes of GPU time.
 
-5. Back on this machine:
+   Preferred: add a Hugging Face write token to Colab's secret manager once —
+   key icon in the left sidebar → New secret → name it `HF_TOKEN` → paste the
+   token → enable "Notebook access". The script then uploads the index itself
+   and nothing depends on the tab staying open.
 
+   Otherwise: download `index.zip` from the Files pane immediately, before the
+   runtime idles.
+
+4. Back on this machine:
+
+       python scripts/fetch_index.py        # if it went to the Hub
        python -m src.index.build --bm25-only
        python scripts/prepare_space.py
-
-   That builds the lexical index and the diacritic-restoration map in seconds,
-   against the real Albanian tokeniser, and stages the Space.
 
 WHAT THIS DOES NOT BUILD
 ------------------------
@@ -55,6 +62,8 @@ BATCH_SIZE = 64          # the T4 has the memory; larger batches are much faster
 MAX_SEQ_LENGTH = 512
 
 INDEX_ROOT = Path("index")
+
+HUB_REPO = "aristeaaa/asistenti-fiskal-korpus"
 
 CANDIDATE_INPUTS = [
     Path("chunks.jsonl.gz"),
@@ -108,6 +117,45 @@ def install() -> None:
          "sentence-transformers", "faiss-cpu"],
         check=True,
     )
+
+
+def push_to_hub() -> bool:
+    """Upload the finished index to the Hub, if a token is available.
+
+    Colab machines are ephemeral: when the runtime disconnects the filesystem is
+    discarded. A 151 MB artifact left sitting there is lost the moment the tab
+    idles, which is exactly what happened on the first run -- 43 minutes of GPU
+    time thrown away. Pushing it as soon as it exists makes the work survive.
+
+    The token is read from Colab's secret manager, never from the notebook text.
+    Add it once: key icon in the left sidebar -> New secret -> name HF_TOKEN ->
+    paste a write token -> enable "Notebook access".
+    """
+    try:
+        from google.colab import userdata  # type: ignore
+        token = userdata.get("HF_TOKEN")
+    except Exception:
+        import os
+        token = os.environ.get("HF_TOKEN")
+
+    if not token:
+        print("\n(pa HF_TOKEN — indeksi mbetet vetëm në këtë makinë)")
+        return False
+
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "huggingface_hub"],
+                   check=True)
+    from huggingface_hub import HfApi
+
+    print("po ngarkohet indeksi në Hub ...")
+    HfApi().upload_file(
+        path_or_fileobj="index.zip",
+        path_in_repo="index.zip",
+        repo_id=HUB_REPO,
+        repo_type="dataset",
+        token=token,
+    )
+    print(f"  u ngarkua te {HUB_REPO}")
+    return True
 
 
 def main() -> None:
