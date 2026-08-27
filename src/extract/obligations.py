@@ -53,7 +53,7 @@ DUTY = re.compile(
 RELATIVE_DEADLINE = re.compile(
     r"(?i)\b(?:brenda|jo\s+m[ëe]\s+von[ëe]\s+se)\s+"
     r"(\d+|nj[ëe]|dy|tre|tri|kat[ëe]r|pes[ëe]|gjasht[ëe]|shtat[ëe]|tet[ëe]|n[ëe]nt[ëe]|dhjet[ëe])"
-    r"\s*(dit[ëe]ve?|dit[ëe]sh|muaj[ie]?v?e?|jav[ëe]ve?|vite?ve?)"
+    r"\s*(dit[ëe](?:ve|sh)?|muaj[ie]?v?e?|jav[ëe](?:ve)?|vite?ve?)"
 )
 ABSOLUTE_DEADLINE = re.compile(
     r"(?i)\b(?:deri\s+m[ëe]|jo\s+m[ëe]\s+von[ëe]\s+se|brenda\s+dat[ëe]s)\s+"
