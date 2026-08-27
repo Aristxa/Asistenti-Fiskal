@@ -1,37 +1,47 @@
-"""Build the full index on a GPU, then bring the result back.
+"""Build the dense index on a Colab GPU, then bring the result back.
 
-The build machine for this project has 4 CPU cores and no GPU, where encoding the
-31k-chunk corpus takes roughly 3 hours with a small model and 10 with a good one.
-On a free Colab T4 the same job with BAAI/bge-m3 — the best Albanian coverage of
-the candidates — takes a few minutes. Indexing is a one-off, so it is worth moving.
+WHY THIS EXISTS
+---------------
+The build machine has four CPU cores and no GPU. A real run of the full corpus
+there measured ~20 s per batch of 32 — roughly 2 h 50 for the article arm alone,
+five to six hours for both, and only by using a weaker encoder. On a free Colab
+T4 the same job with BAAI/bge-m3 — much better Albanian coverage — finishes in
+minutes at full sequence length.
+
+Indexing happens once. It is worth moving.
 
 HOW TO RUN
 ----------
-1. Open https://colab.research.google.com, new notebook,
-   Runtime -> Change runtime type -> T4 GPU.
+1. https://colab.research.google.com → New notebook
+   Runtime → Change runtime type → **T4 GPU** → Save
 
-2. Upload `data/processed/chunks.jsonl` and `data/processed/documents.jsonl`
-   (left sidebar -> Files -> Upload). They are ~40 MB together.
+2. Left sidebar → Files (folder icon) → Upload →
+   `data/processed/chunks.jsonl.gz`   (8 MB, compressed from 45 MB)
 
-3. Paste this whole file into a cell and run it. It installs dependencies,
-   encodes both chunking arms on the GPU, and writes `index.zip`.
+3. Paste this entire file into a cell and run it. ~10 min including the model
+   download.
 
-4. Download `index.zip`, unzip it into `data/processed/` so you have
-   `data/processed/index/article/...` and `data/processed/index/fixed/...`.
+4. Download `index.zip` from the Files pane (right-click → Download).
+   Unzip it so you have `data/processed/index/article/…` and `…/fixed/…`.
 
-5. Locally, run `python -m src.index.build --bm25-only`. This builds the lexical
-   index and the diacritic-restoration map in seconds.
+5. Back on this machine:
 
-Only the dense index is built here. BM25 and the restoration map depend on the
-Albanian tokeniser in `src/index/albanian.py`, and duplicating that into this
-standalone script would let the two copies drift — a silent mismatch between the
-tokeniser that built the index and the one that queries it. Building them locally
-against the real module removes that risk entirely.
+       python -m src.index.build --bm25-only
+       python scripts/prepare_space.py
 
-The Space never runs this. It loads the committed index and encodes one query per
-request, which is fast on CPU.
+   That builds the lexical index and the diacritic-restoration map in seconds,
+   against the real Albanian tokeniser, and stages the Space.
+
+WHAT THIS DOES NOT BUILD
+------------------------
+Only the dense index. BM25 and the restoration map depend on the Albanian
+tokeniser in `src/index/albanian.py`; copying that into a standalone Colab script
+would let the two versions drift, and a mismatch between the tokeniser that built
+the index and the one that queries it fails silently rather than loudly. Building
+them locally against the real module removes that risk entirely.
 """
 
+import gzip
 import json
 import shutil
 import subprocess
@@ -39,14 +49,37 @@ import sys
 from pathlib import Path
 
 MODEL_NAME = "BAAI/bge-m3"
-BATCH_SIZE = 64          # GPU has the memory; larger batches are much faster
+BATCH_SIZE = 64          # the T4 has the memory; larger batches are much faster
 MAX_SEQ_LENGTH = 512
 
-PROCESSED = Path("data/processed") if Path("data/processed").exists() else Path(".")
 INDEX_ROOT = Path("index")
+
+CANDIDATE_INPUTS = [
+    Path("chunks.jsonl.gz"),
+    Path("chunks.jsonl"),
+    Path("data/processed/chunks.jsonl.gz"),
+    Path("data/processed/chunks.jsonl"),
+]
+
+
+def find_input() -> Path:
+    for path in CANDIDATE_INPUTS:
+        if path.exists():
+            return path
+    raise SystemExit(
+        "Nuk u gjet 'chunks.jsonl.gz'.\n"
+        "Ngarkoje nga paneli Files majtas (data/processed/chunks.jsonl.gz)."
+    )
+
+
+def load_chunks(path: Path) -> list[dict]:
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8") as handle:
+        return [json.loads(line) for line in handle if line.strip()]
 
 
 def embed_text(chunk: dict) -> str:
+    """Must match src/index/build.py — the index and the queries share this."""
     heading = chunk.get("heading") or ""
     label = chunk.get("cite") or chunk.get("label") or ""
     prefix = f"{label}. {heading}".strip(" .")
@@ -56,7 +89,7 @@ def embed_text(chunk: dict) -> str:
 def install() -> None:
     subprocess.run(
         [sys.executable, "-m", "pip", "install", "-q",
-         "sentence-transformers==3.3.1", "faiss-cpu==1.9.0"],
+         "sentence-transformers", "faiss-cpu"],
         check=True,
     )
 
@@ -71,32 +104,30 @@ def main() -> None:
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     if device == "cpu":
-        print("WARNING: no GPU detected — this will be slow. "
-              "Runtime -> Change runtime type -> T4 GPU")
+        print("KUJDES: nuk u gjet GPU. Runtime → Change runtime type → T4 GPU.")
+        print("Pa GPU kjo zgjat orë, jo minuta.")
+    else:
+        print(f"GPU: {torch.cuda.get_device_name(0)}")
 
-    chunks_path = PROCESSED / "chunks.jsonl"
-    rows = [
-        json.loads(line)
-        for line in chunks_path.read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    ]
-    print(f"loaded {len(rows)} chunks from {chunks_path}")
+    source = find_input()
+    rows = load_chunks(source)
+    print(f"u lexuan {len(rows):,} copëza nga {source}")
 
-    print(f"loading {MODEL_NAME} on {device} ...")
+    print(f"po ngarkohet {MODEL_NAME} ...")
     model = SentenceTransformer(MODEL_NAME, device=device)
     model.max_seq_length = MAX_SEQ_LENGTH
 
     for strategy in ("article", "fixed"):
         subset = [r for r in rows if r["strategy"] == strategy]
         if not subset:
-            print(f"  {strategy}: no chunks, skipping")
+            print(f"  {strategy}: pa copëza, u kapërcye")
             continue
 
         out = INDEX_ROOT / strategy
         out.mkdir(parents=True, exist_ok=True)
 
         texts = [embed_text(c) for c in subset]
-        print(f"  {strategy}: encoding {len(texts)} chunks ...")
+        print(f"  {strategy}: po ngulitën {len(texts):,} copëza ...")
         vectors = model.encode(
             texts,
             batch_size=BATCH_SIZE,
@@ -114,13 +145,19 @@ def main() -> None:
                 handle.write(json.dumps(chunk, ensure_ascii=False) + "\n")
 
         np.save(out / "dim.npy", np.array([vectors.shape[1]]))
-        print(f"  {strategy}: done, dim {vectors.shape[1]}")
+        print(f"  {strategy}: u ndërtua, dimensioni {vectors.shape[1]}")
 
+    # Read by src/rag/retrieve.py so queries are always encoded by the model the
+    # corpus was encoded with. A dimension mismatch would raise; two different
+    # models of the same dimension would not, and that is the failure to prevent.
     (INDEX_ROOT / "model.txt").write_text(MODEL_NAME, encoding="utf-8")
-    shutil.make_archive("index", "zip", INDEX_ROOT.parent, INDEX_ROOT.name)
-    print("\nwrote index.zip — download it and unzip into data/processed/")
-    print(f"IMPORTANT: set EMBED_MODEL={MODEL_NAME} when running the app locally,")
-    print("so queries are encoded with the same model the index was built with.")
+
+    shutil.make_archive("index", "zip", ".", str(INDEX_ROOT))
+    size = Path("index.zip").stat().st_size / 1e6
+    print(f"\nu shkrua index.zip ({size:.0f} MB)")
+    print("Shkarkoje nga paneli Files, shpaketoje në data/processed/, pastaj:")
+    print("  python -m src.index.build --bm25-only")
+    print("  python scripts/prepare_space.py")
 
 
 if __name__ == "__main__":

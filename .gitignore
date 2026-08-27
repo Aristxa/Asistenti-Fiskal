@@ -9,6 +9,7 @@ venv/
 data/raw/**
 !data/raw/.gitkeep
 data/processed/**
+!data/processed/chunks.jsonl.gz
 !data/processed/.gitkeep
 # The index must ship with the Space -- it is what makes a free CPU tier viable.
 # Track it with git-lfs: the full bge-m3 index is ~130 MB.

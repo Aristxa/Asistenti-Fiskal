@@ -87,7 +87,8 @@ tatime.gov.al  ──crawl──▶  data/raw/       PDFs + manifest.jsonl
 ```
 
 Indexing runs on a free Colab GPU (`scripts/build_index_gpu.py`) because the build
-machine has no GPU — see `docs/FINDINGS.md` F6. The index is committed; the Space
+machine has no GPU — a measured run of the full corpus locally came to 5–6 hours,
+against minutes on a T4 with a better encoder. See `docs/FINDINGS.md` F6. The index is committed; the Space
 encodes only the question, so a free CPU tier is enough.
 
 ## Running it
