@@ -15,10 +15,8 @@ numpy==1.26.4
 # --- generation ---
 anthropic==0.40.0
 
-# --- app ---
-fastapi==0.115.6
-uvicorn[standard]==0.34.0
-jinja2==3.1.4
+# --- app (Hugging Face Space) ---
+gradio==5.9.1
 python-dotenv==1.0.1
 
 # --- eval ---

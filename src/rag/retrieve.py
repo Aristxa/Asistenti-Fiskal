@@ -75,11 +75,30 @@ def get_index(strategy: str) -> Index:
     return Index(strategy)
 
 
+def index_model_name() -> str:
+    """The model the index was actually built with.
+
+    Queries must be encoded by the same model as the corpus. `model.txt` is written
+    at build time and is authoritative — reading it here means switching encoders
+    cannot silently produce meaningless similarities. A dimension mismatch would
+    raise, but a same-dimension mismatch between two different models would not,
+    and that is the failure worth preventing.
+    """
+    stamp = INDEX_ROOT / "model.txt"
+    if stamp.exists():
+        return stamp.read_text(encoding="utf-8").strip()
+    return MODEL_NAME
+
+
 @lru_cache(maxsize=1)
 def get_encoder():
     from sentence_transformers import SentenceTransformer
 
-    return SentenceTransformer(MODEL_NAME, device="cpu")
+    name = index_model_name()
+    if name != MODEL_NAME:
+        print(f"note: encoding queries with {name} (the model the index was built "
+              f"with), not {MODEL_NAME}")
+    return SentenceTransformer(name, device="cpu")
 
 
 def encode_query(query: str) -> np.ndarray:
@@ -107,18 +126,30 @@ def retrieve(query: str, strategy: str = "article", mode: str = "hybrid", k: int
     """
     index = get_index(strategy)
 
+    # Search deeper than k, then deduplicate: a long article is stored as several
+    # parts under one citation, and without this a single article can occupy every
+    # slot in the result set — crowding out the article that actually answers the
+    # question and inflating nothing but redundancy.
     if mode == "dense":
-        scored = index.search_dense(encode_query(query), k)
+        scored = index.search_dense(encode_query(query), pool)
     elif mode == "bm25":
-        scored = index.search_bm25(query, k)
+        scored = index.search_bm25(query, pool)
     elif mode == "hybrid":
         dense_ids = [i for i, _ in index.search_dense(encode_query(query), pool)]
         bm25_ids = [i for i, _ in index.search_bm25(query, pool)]
-        scored = rrf([dense_ids, bm25_ids], k)
+        scored = rrf([dense_ids, bm25_ids], pool)
     else:
         raise ValueError(f"unknown mode {mode!r}")
 
-    return [
-        Hit(chunk=index.chunks[i], score=s, rank=rank)
-        for rank, (i, s) in enumerate(scored, start=1)
-    ]
+    hits: list[Hit] = []
+    seen: set[tuple[int, str]] = set()
+    for i, score in scored:
+        chunk = index.chunks[i]
+        key = (chunk["doc_id"], chunk.get("cite") or chunk.get("label", ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        hits.append(Hit(chunk=chunk, score=score, rank=len(hits) + 1))
+        if len(hits) == k:
+            break
+    return hits

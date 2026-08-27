@@ -4,8 +4,9 @@
 > where every factual claim is bound to the legal article that supports it — or the
 > system refuses to answer.
 
-**Status:** early build. Corpus acquisition and structure-aware segmentation are
-working end-to-end; retrieval, generation and evaluation are not yet built.
+**Status:** pipeline complete end-to-end and validated on a subset. The benchmark
+(the part that requires domain judgement) is not built yet — that is the next step,
+and it is the thesis's main contribution.
 
 ---
 
@@ -56,10 +57,16 @@ tatime.gov.al  ──crawl──▶  data/raw/       PDFs + manifest.jsonl
               data/processed/chunks.jsonl
               (article-aware AND fixed-window, both arms)
                               │
-                  dense (FAISS) + BM25 ──▶ RRF fusion     [not built]
+                  dense (FAISS) + BM25 ──▶ RRF fusion
                               │
-              Claude under citation contract              [not built]
+              Claude under citation contract
+                              │
+                    answer + citations, or refusal
 ```
+
+Indexing runs on a free Colab GPU (`scripts/build_index_gpu.py`) because the build
+machine has no GPU — see `docs/FINDINGS.md` F6. The index is committed; the Space
+encodes only the question, so a free CPU tier is enough.
 
 ## Running it
 
@@ -80,23 +87,31 @@ python -m venv .venv
 Windows note: set `PYTHONIOENCODING=utf-8` before running, or the console mangles
 Albanian diacritics on output (the data itself is fine).
 
-## Current corpus sample
+## Current corpus
 
-15 documents → 1,583 chunks (508 article-aware, 1,075 fixed-window).
-Regimes: 9 decimal, 3 flat, 3 `neni`. The VAT law segments into 165 articles.
+**253 documents, 262 MB, 31,083 chunks** (16,917 article-aware, 14,166 fixed-window)
+across 11 categories of Albanian tax legislation.
+Structural regimes: 129 decimal, 78 `neni`, 46 flat. The VAT law segments into 165
+articles with sequential labels.
+
+Five of 258 crawled files are `.docx`/`.doc` rather than PDF and are not yet
+extracted (~2% of the corpus).
 
 ## Layout
 
 ```
 src/ingest/crawl.py     rate-limited resumable crawler, magic-byte type sniffing
 src/ingest/extract.py   PyMuPDF extraction, regime detection, dual segmentation
-src/index/              dense + BM25 + fusion            [not built]
-src/rag/                retrieval, citation contract     [not built]
-src/eval/               gold set, metrics, significance  [not built]
-src/web/                interface                        [not built]
-docs/PLAN.md            methodology and evaluation design
+src/index/build.py      dense + BM25 index construction
+src/rag/retrieve.py     dense / BM25 / RRF hybrid, deduplicated by citation
+src/rag/answer.py       citation contract, cached system prompt
+src/eval/retrieval_eval.py   hit-rate measurement, no API needed
+src/eval/make_candidates.py  benchmark candidates + overlap guard
+scripts/build_index_gpu.py   run this on Colab to index the full corpus
+app.py                  Gradio Space entry point
+docs/PLAN.md            the claim, contributions, and how results are reported
 docs/FINDINGS.md        dated findings log
-eval/gold/              gold-standard QA set             [not built]
+eval/gold/              benchmark                        [next step]
 ```
 
 ## Data and licensing

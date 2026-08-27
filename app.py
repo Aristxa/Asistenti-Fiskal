@@ -1,0 +1,115 @@
+"""Asistenti Fiskal — Hugging Face Space entry point.
+
+Gradio app. Loads the committed indexes and encodes one question per request,
+which is why this runs on a free CPU Space: nothing is embedded at request time.
+
+The retrieval controls are exposed on purpose. The thesis claim is that retrieval
+decides correctness, so the demo lets anyone switch chunking strategy and
+retrieval mode on the same question and watch the cited articles change. At a
+defense that is the argument, made live, instead of a table on a slide.
+"""
+
+from __future__ import annotations
+
+import os
+
+import gradio as gr
+
+from src.rag.answer import ask
+from src.rag.retrieve import retrieve
+
+EXAMPLES = [
+    "Kur duhet të regjistrohem si subjekt i TVSH-së?",
+    "Cilat janë afatet për deklarimin e tatimit mbi të ardhurat?",
+    "Si llogaritet kontributi i sigurimeve shoqërore për të vetëpunësuarit?",
+    "Çfarë detyrimesh kam nëse mbyll biznesin?",
+    "A duhet të lëshoj faturë fiskale për çdo shitje?",
+]
+
+DISCLAIMER = """
+**Asistenti Fiskal** përgjigjet vetëm mbi bazën e legjislacionit tatimor shqiptar
+të publikuar në [tatime.gov.al](https://www.tatime.gov.al), me citime te neni përkatës.
+
+⚠️ Ky nuk është këshillë tatimore. Ligji tatimor ndryshon shpesh — verifikoni gjithmonë
+në burimin zyrtar përpara se të veproni.
+"""
+
+
+def format_sources(hits) -> str:
+    if not hits:
+        return ""
+    lines = ["\n---\n### Burimet"]
+    for i, hit in enumerate(hits, start=1):
+        chunk = hit.chunk
+        url = f"https://www.tatime.gov.al/shkarko.php?id={chunk['doc_id']}"
+        lines.append(f"**[S{i}]** {hit.citation}  \n[Dokumenti zyrtar]({url})")
+    return "\n\n".join(lines)
+
+
+def respond(question: str, strategy: str, mode: str, k: int):
+    question = (question or "").strip()
+    if not question:
+        return "Shkruaj një pyetje.", ""
+
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        # Retrieval works without a key; only generation needs one. Showing the
+        # retrieved articles keeps the Space useful (and demonstrable) regardless.
+        hits = retrieve(question, strategy=strategy, mode=mode, k=k)
+        return ("_Nuk ka çelës API — po shfaqen vetëm nenet e gjetura, pa përgjigje "
+                "të gjeneruar._", format_sources(hits))
+
+    try:
+        result = ask(question, strategy=strategy, mode=mode, k=k)
+    except RuntimeError as exc:
+        return f"Gabim: {exc}", ""
+
+    return result.text, format_sources(result.sources)
+
+
+def build() -> gr.Blocks:
+    with gr.Blocks(title="Asistenti Fiskal", theme=gr.themes.Soft()) as demo:
+        gr.Markdown("# 🧾 Asistenti Fiskal")
+        gr.Markdown(DISCLAIMER)
+
+        with gr.Row():
+            question = gr.Textbox(
+                label="Pyetja jote",
+                placeholder="p.sh. Kur duhet të regjistrohem për TVSH?",
+                lines=2,
+                scale=4,
+            )
+            submit = gr.Button("Pyet", variant="primary", scale=1)
+
+        with gr.Accordion("Cilësimet e kërkimit (për demonstrim)", open=False):
+            gr.Markdown(
+                "Këto kontrolle ekzistojnë për të treguar tezën: **cilësia e "
+                "kërkimit përcakton saktësinë e përgjigjes.** Ndrysho strategjinë "
+                "dhe shiko si ndryshojnë nenet e cituara për të njëjtën pyetje."
+            )
+            with gr.Row():
+                strategy = gr.Radio(
+                    ["article", "fixed"], value="article",
+                    label="Ndarja e dokumentit",
+                    info="article = një copë për çdo nen; fixed = copa me gjatësi fikse",
+                )
+                mode = gr.Radio(
+                    ["hybrid", "dense", "bm25"], value="hybrid",
+                    label="Mënyra e kërkimit",
+                    info="hybrid = semantik + fjalëkyç",
+                )
+                k = gr.Slider(1, 10, value=5, step=1, label="Sa nene të merren")
+
+        answer = gr.Markdown(label="Përgjigja")
+        sources = gr.Markdown()
+
+        gr.Examples(examples=EXAMPLES, inputs=question)
+
+        inputs = [question, strategy, mode, k]
+        submit.click(respond, inputs=inputs, outputs=[answer, sources])
+        question.submit(respond, inputs=inputs, outputs=[answer, sources])
+
+    return demo
+
+
+if __name__ == "__main__":
+    build().launch()

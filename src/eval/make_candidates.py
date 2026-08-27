@@ -26,6 +26,8 @@ from pathlib import Path
 
 from src.index.build import tokenise
 
+MODEL = "claude-opus-5"
+
 PROCESSED = Path("data/processed")
 OUT = Path("eval/gold/candidates.jsonl")
 
@@ -129,8 +131,8 @@ def draft_questions(candidates: list[dict]) -> None:
         if row["question"]:
             continue
         message = client.messages.create(
-            model="claude-sonnet-5",
-            max_tokens=200,
+            model=MODEL,
+            max_tokens=300,
             messages=[{
                 "role": "user",
                 "content": DRAFT_PROMPT.format(text=row["source_text"]),
