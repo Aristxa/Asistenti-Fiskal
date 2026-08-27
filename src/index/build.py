@@ -14,7 +14,6 @@ from __future__ import annotations
 import json
 import os
 import pickle
-import re
 from pathlib import Path
 
 import numpy as np
@@ -33,20 +32,15 @@ MODEL_NAME = os.environ.get("EMBED_MODEL", "BAAI/bge-m3")
 BATCH_SIZE = int(os.environ.get("EMBED_BATCH", "16"))
 MAX_SEQ_LENGTH = int(os.environ.get("EMBED_SEQ", "512"))
 
-# Albanian keeps ë and ç; everything else non-alphanumeric is a separator.
-TOKEN = re.compile(r"[a-z0-9ëç]+")
-
-
-def tokenise(text: str) -> list[str]:
-    """Lowercase word tokens for BM25.
-
-    No stemming: Albanian is morphologically rich (nominal declension, definite
-    and indefinite forms) and there is no reliable open Albanian stemmer. Lexical
-    matching therefore misses inflected variants, which is precisely the weakness
-    the dense arm is expected to cover — and the reason the hybrid comparison is
-    worth running rather than assuming.
-    """
-    return TOKEN.findall(text.lower())
+# BM25 tokenisation is Albanian-aware: diacritic folding plus conservative suffix
+# stripping. Both matter — see src/index/albanian.py and docs/FINDINGS.md F8.
+# Re-exported here so retrieval imports one tokeniser and cannot drift from the
+# one the index was built with.
+from src.index.albanian import (  # noqa: E402
+    learn_restoration,
+    save_restoration,
+    tokenise,
+)
 
 
 def load_chunks(strategy: str, categories: set[str] | None = None) -> list[dict]:
@@ -121,6 +115,48 @@ def build_strategy(strategy: str, model, categories: set[str] | None = None) -> 
     print(f"  {strategy}: {len(chunks)} chunks, dim {vectors.shape[1]} -> {out}")
 
 
+def build_restoration() -> None:
+    """Learn the diacritic-restoration map from the corpus and store it.
+
+    Used to repair unaccented queries before dense encoding, so a question typed
+    `per` retrieves the same thing as one typed `për`.
+    """
+    texts = []
+    for line in (PROCESSED / "chunks.jsonl").read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            texts.append(json.loads(line)["text"])
+    mapping = learn_restoration(texts)
+    INDEX_ROOT.mkdir(parents=True, exist_ok=True)
+    save_restoration(mapping, INDEX_ROOT / "restoration.json")
+    print(f"  restoration map: {len(mapping)} entries")
+
+
+def rebuild_bm25() -> None:
+    """Rebuild only the lexical index, from chunks already stored in the index dir.
+
+    The dense index takes hours on CPU; BM25 takes seconds. Keeping them separable
+    means the Albanian tokenisation can be tuned and re-measured without touching
+    the embeddings.
+    """
+    from rank_bm25 import BM25Okapi
+
+    for strategy in ("article", "fixed"):
+        out = INDEX_ROOT / strategy
+        stored = out / "chunks.jsonl"
+        if not stored.exists():
+            print(f"  {strategy}: no index yet, skipping")
+            continue
+        chunks = [
+            json.loads(line)
+            for line in stored.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+        texts = [embed_text(c) for c in chunks]
+        (out / "bm25.pkl").write_bytes(pickle.dumps(BM25Okapi([tokenise(t) for t in texts])))
+        print(f"  {strategy}: BM25 rebuilt over {len(texts)} chunks")
+    build_restoration()
+
+
 def main(categories: set[str] | None = None, device: str = "cpu",
          threads: int | None = None) -> None:
     import torch
@@ -152,6 +188,11 @@ if __name__ == "__main__":
                         help="restrict to these categories (default: whole corpus)")
     parser.add_argument("--device", default="cpu", help="cpu or cuda")
     parser.add_argument("--threads", type=int)
+    parser.add_argument("--bm25-only", action="store_true",
+                        help="rebuild only the lexical index (seconds, no encoding)")
     args = parser.parse_args()
 
-    main(set(args.categories) if args.categories else None, args.device, args.threads)
+    if args.bm25_only:
+        rebuild_bm25()
+    else:
+        main(set(args.categories) if args.categories else None, args.device, args.threads)

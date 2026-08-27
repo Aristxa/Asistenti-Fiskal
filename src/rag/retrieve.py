@@ -21,6 +21,7 @@ from pathlib import Path
 
 import numpy as np
 
+from src.index.albanian import load_restoration, restore
 from src.index.build import MODEL_NAME, tokenise
 
 INDEX_ROOT = Path("data/processed/index")
@@ -101,7 +102,16 @@ def get_encoder():
     return SentenceTransformer(name, device="cpu")
 
 
+@lru_cache(maxsize=1)
+def get_restoration() -> dict:
+    return load_restoration(INDEX_ROOT / "restoration.json")
+
+
 def encode_query(query: str) -> np.ndarray:
+    # Repair missing diacritics before encoding. The lexical arm folds both sides
+    # and is already diacritic-blind; the dense arm needs correct orthography
+    # instead, because `per` and `për` do not embed to the same point.
+    query = restore(query, get_restoration())
     return get_encoder().encode(
         [query], normalize_embeddings=True, convert_to_numpy=True
     ).astype("float32")[0]

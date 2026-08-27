@@ -19,13 +19,20 @@ HOW TO RUN
 4. Download `index.zip`, unzip it into `data/processed/` so you have
    `data/processed/index/article/...` and `data/processed/index/fixed/...`.
 
+5. Locally, run `python -m src.index.build --bm25-only`. This builds the lexical
+   index and the diacritic-restoration map in seconds.
+
+Only the dense index is built here. BM25 and the restoration map depend on the
+Albanian tokeniser in `src/index/albanian.py`, and duplicating that into this
+standalone script would let the two copies drift — a silent mismatch between the
+tokeniser that built the index and the one that queries it. Building them locally
+against the real module removes that risk entirely.
+
 The Space never runs this. It loads the committed index and encodes one query per
 request, which is fast on CPU.
 """
 
 import json
-import pickle
-import re
 import shutil
 import subprocess
 import sys
@@ -38,13 +45,6 @@ MAX_SEQ_LENGTH = 512
 PROCESSED = Path("data/processed") if Path("data/processed").exists() else Path(".")
 INDEX_ROOT = Path("index")
 
-TOKEN = re.compile(r"[a-z0-9ëç]+")
-
-
-def tokenise(text: str) -> list[str]:
-    """Must stay identical to src/index/build.py — the BM25 index depends on it."""
-    return TOKEN.findall(text.lower())
-
 
 def embed_text(chunk: dict) -> str:
     heading = chunk.get("heading") or ""
@@ -56,7 +56,7 @@ def embed_text(chunk: dict) -> str:
 def install() -> None:
     subprocess.run(
         [sys.executable, "-m", "pip", "install", "-q",
-         "sentence-transformers==3.3.1", "faiss-cpu==1.9.0", "rank-bm25==0.2.2"],
+         "sentence-transformers==3.3.1", "faiss-cpu==1.9.0"],
         check=True,
     )
 
@@ -67,7 +67,6 @@ def main() -> None:
     import faiss
     import numpy as np
     import torch
-    from rank_bm25 import BM25Okapi
     from sentence_transformers import SentenceTransformer
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -109,8 +108,6 @@ def main() -> None:
         index = faiss.IndexFlatIP(vectors.shape[1])
         index.add(vectors)
         faiss.write_index(index, str(out / "dense.faiss"))
-
-        (out / "bm25.pkl").write_bytes(pickle.dumps(BM25Okapi([tokenise(t) for t in texts])))
 
         with (out / "chunks.jsonl").open("w", encoding="utf-8") as handle:
             for chunk in subset:
