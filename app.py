@@ -1,7 +1,8 @@
 """Asistenti Fiskal — Hugging Face Space entry point.
 
-Gradio app. Loads the committed indexes and encodes one question per request,
-which is why this runs on a free CPU Space: nothing is embedded at request time.
+Gradio app. Loads the committed indexes and encodes one question per request —
+nothing is embedded at request time, which is what keeps the hosted cost near
+zero regardless of tier.
 
 The retrieval controls are exposed on purpose. The thesis claim is that retrieval
 decides correctness, so the demo lets anyone switch chunking strategy and
@@ -19,6 +20,23 @@ import gradio as gr
 from src.rag.answer import ask
 from src.rag.retrieve import retrieve
 from src.web.ratelimit import limiter
+
+# The Space runs on ZeroGPU hardware, which refuses to start unless at least one
+# entry point is GPU-decorated. This application does not need a GPU — the corpus
+# is embedded offline and only the question is encoded here — but the platform
+# requires the decorator, and free CPU Gradio Spaces need a PRO subscription on
+# this account. Since a GPU is attached anyway, the encoder picks it up
+# (src/rag/retrieve.py chooses its device at load time) rather than idling it.
+#
+# `spaces` only exists on Hugging Face infrastructure, so locally this degrades
+# to a no-op and the app runs unchanged.
+try:
+    import spaces
+
+    gpu = spaces.GPU(duration=60)
+except ImportError:  # running locally
+    def gpu(fn):
+        return fn
 
 EXAMPLES = [
     "Kur duhet të regjistrohem si subjekt i TVSH-së?",
@@ -48,6 +66,7 @@ def format_sources(hits) -> str:
     return "\n\n".join(lines)
 
 
+@gpu
 def respond(question: str, strategy: str, mode: str, k: int, session_id: str):
     question = (question or "").strip()
     if not question:

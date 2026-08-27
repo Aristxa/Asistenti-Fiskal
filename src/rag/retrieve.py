@@ -93,13 +93,22 @@ def index_model_name() -> str:
 
 @lru_cache(maxsize=1)
 def get_encoder():
+    """Load the query encoder, on GPU when one is actually present.
+
+    The corpus is embedded offline, so this only ever encodes a single short
+    question and CPU is sufficient — that is what makes the deployment cheap.
+    The device is still chosen dynamically because the hosting tier may attach a
+    GPU, and there is no reason to ignore it when it is there.
+    """
+    import torch
     from sentence_transformers import SentenceTransformer
 
     name = index_model_name()
     if name != MODEL_NAME:
         print(f"note: encoding queries with {name} (the model the index was built "
               f"with), not {MODEL_NAME}")
-    return SentenceTransformer(name, device="cpu")
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    return SentenceTransformer(name, device=device)
 
 
 @lru_cache(maxsize=1)

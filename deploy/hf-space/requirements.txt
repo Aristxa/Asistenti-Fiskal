@@ -5,11 +5,16 @@
 # and encodes one question per request. Shipping httpx, selectolax, pymupdf and
 # pytest would only slow the boot.
 #
-# torch is pinned to a ZeroGPU-supported version. The Space was created on
-# zero-a10g hardware, which rejects other versions at config time, and
-# downgrading the hardware needs a PRO subscription. The application itself
-# asks for no GPU: everything runs on CPU by design, since the corpus is
-# embedded offline and only the query is encoded here.
+# NOT listed here, on purpose:
+#   gradio  -- the builder installs the version named by sdk_version in README.md
+#   spaces  -- the builder installs it automatically for ZeroGPU hardware
+# Pinning either one collides with the version the builder appends to its own
+# pip install line, and the build fails.
+#
+# torch is pinned within the range ZeroGPU accepts (the builder adds
+# "torch<=2.11.0"). The application asks for no GPU -- the corpus is embedded
+# offline -- but the hardware requires a GPU-decorated entry point, and free CPU
+# Gradio Spaces need a PRO subscription on this account.
 torch==2.8.0
 sentence-transformers==3.3.1
 faiss-cpu==1.9.0
@@ -17,4 +22,3 @@ rank-bm25==0.2.2
 numpy==1.26.4
 
 anthropic==0.40.0
-gradio==5.9.1

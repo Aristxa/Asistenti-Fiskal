@@ -1,8 +1,27 @@
 # Deploying to Hugging Face Spaces
 
-The Space runs on the **free CPU tier**. That is possible only because nothing
-heavy happens at request time: the corpus is indexed offline and committed, and
-the Space encodes one short question per request.
+Live: **https://aristeaaa-assistent.hf.space**
+
+Nothing heavy happens at request time: the corpus is indexed offline and committed,
+and the Space encodes one short question per request.
+
+## Hardware, and three things that bit
+
+The Space runs on **ZeroGPU**, not CPU basic. Not by choice — on a non-PRO account,
+hosting a Gradio Space on free `cpu-basic` is refused with HTTP 402, and an existing
+Space cannot be downgraded to it either. ZeroGPU is what a free account actually gets.
+
+That has consequences the deployment has to respect:
+
+1. **ZeroGPU refuses to start without a `@spaces.GPU` entry point.** The application
+   does not need a GPU. `app.py` imports `spaces` behind a `try/except` so local runs
+   are unaffected, and decorates the request handler. Since a GPU is attached anyway,
+   `src/rag/retrieve.py` picks its device at load time rather than idling it.
+2. **Do not pin `gradio` or `spaces` in requirements.** The builder appends its own
+   `gradio[oauth]==<sdk_version>` and `spaces==<current>` to the pip line; pinning
+   either collides and the build fails with exit code 1.
+3. **`short_description` must be 60 characters or fewer**, or the push is rejected at
+   the pre-receive hook after the whole upload has finished.
 
 ## What ships
 
@@ -29,7 +48,8 @@ directory already holds the chunk text it needs.
    which builds the lexical index and the diacritic-restoration map in seconds
    against the real Albanian tokeniser.
 
-2. **Create the Space** — huggingface.co → New Space → Gradio SDK → CPU basic.
+2. **Create the Space** — huggingface.co → New Space → Gradio SDK. On a free account
+   this lands on ZeroGPU; see the section above.
 
 3. **Track the index with git-lfs.** The bge-m3 index is ~130 MB.
 
