@@ -8,7 +8,7 @@ sdk_version: 5.9.1
 app_file: app.py
 pinned: false
 license: mit
-short_description: Pyetje-përgjigje me citime mbi legjislacionin tatimor shqiptar
+short_description: Pyetje-përgjigje me citime mbi legjislacionin tatimor
 ---
 
 # Asistenti Fiskal

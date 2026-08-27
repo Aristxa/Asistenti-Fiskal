@@ -1,0 +1,20 @@
+# Runtime dependencies for the Hugging Face Space only.
+#
+# Deliberately smaller than the project's requirements.txt. The Space never
+# crawls, never opens a PDF and never runs tests -- it loads a committed index
+# and encodes one question per request. Shipping httpx, selectolax, pymupdf and
+# pytest would only slow the boot.
+#
+# torch is pinned to a ZeroGPU-supported version. The Space was created on
+# zero-a10g hardware, which rejects other versions at config time, and
+# downgrading the hardware needs a PRO subscription. The application itself
+# asks for no GPU: everything runs on CPU by design, since the corpus is
+# embedded offline and only the query is encoded here.
+torch==2.8.0
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
+rank-bm25==0.2.2
+numpy==1.26.4
+
+anthropic==0.40.0
+gradio==5.9.1

@@ -19,8 +19,14 @@ STAGE = Path("build/space")
 # Copied verbatim.
 FILES = [
     "app.py",
-    "requirements.txt",
 ]
+
+# The Space gets its own, smaller requirements: it never crawls, never opens a
+# PDF and never runs tests, and its torch version is constrained by the hardware
+# the Space was created on. Mapping is source path -> name in the staged directory.
+RENAMED = {
+    "deploy/hf-space/requirements.txt": "requirements.txt",
+}
 
 DIRS = [
     "src",
@@ -77,6 +83,26 @@ def main() -> None:
         size = tree_size(src)
         total += size
         print(f"  {name + '/':<28} {human(size):>9}")
+
+    for source, target in RENAMED.items():
+        src = ROOT / source
+        if not src.exists():
+            missing.append(source)
+            continue
+        shutil.copy2(src, STAGE / target)
+        size = tree_size(src)
+        total += size
+        print(f"  {target + ' (space-only)':<28} {human(size):>9}")
+
+    # Written here rather than left to the operator: the index files exceed the
+    # Hub's plain-blob limit, and a staging run that forgets this produces a push
+    # rejected only at the far end, after the whole upload.
+    (STAGE / ".gitattributes").write_text(
+        "*.faiss filter=lfs diff=lfs merge=lfs -text\n"
+        "*.pkl filter=lfs diff=lfs merge=lfs -text\n",
+        encoding="utf-8",
+    )
+    print(f"  {'.gitattributes (lfs)':<28} {'—':>9}")
 
     if SPACE_README.exists():
         shutil.copy2(SPACE_README, STAGE / "README.md")
