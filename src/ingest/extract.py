@@ -39,13 +39,21 @@ DECIMAL_HEADING = re.compile(r"(?m)^[ \t]*(\d+(?:\.\d+){0,3})\.?[ \t]+(?=[A-ZÃ‹Ã
 FIXED_WINDOW_CHARS = 1400
 FIXED_WINDOW_OVERLAP = 200
 
+# Long articles are split so that no article chunk dwarfs a fixed window. Without
+# this the two arms of the chunking comparison carry very different amounts of text
+# per retrieved chunk and the comparison is confounded (docs/FINDINGS.md F4).
+# Parts keep the article label, so a citation stays article-level regardless of
+# which part was retrieved.
+MAX_ARTICLE_CHARS = FIXED_WINDOW_CHARS
+
 
 @dataclass
 class Chunk:
     chunk_id: str
     doc_id: int
     strategy: str          # "article" | "fixed"
-    label: str             # "Neni 12" | "1.1" | "window 3"
+    label: str             # "Neni 12" | "Neni 12 (2/3)" | "1.1" | "window 3"
+    cite: str              # canonical citation unit, part suffix stripped: "Neni 12"
     heading: str
     text: str
     chars: int
@@ -115,6 +123,33 @@ def segment_articles(text: str, regime: str) -> list[tuple[str, str, str]]:
     return []
 
 
+def split_long_article(label: str, heading: str, body: str) -> list[tuple[str, str, str]]:
+    """Break an over-long article into parts that all keep the article label."""
+    if len(body) <= MAX_ARTICLE_CHARS:
+        return [(label, heading, body)]
+
+    parts, start = [], 0
+    while start < len(body):
+        end = min(start + MAX_ARTICLE_CHARS, len(body))
+        if end < len(body):
+            nearest = body.rfind("\n", start + MAX_ARTICLE_CHARS // 2, end)
+            if nearest != -1:
+                end = nearest
+        block = body[start:end].strip()
+        if block:
+            parts.append(block)
+        if end >= len(body):
+            break
+        start = end
+
+    total = len(parts)
+    # Repeat the heading on every part so a mid-article chunk still says what it is.
+    return [
+        (f"{label} ({i}/{total})", heading, f"{label}\n{heading}\n{block}" if i > 1 else block)
+        for i, block in enumerate(parts, start=1)
+    ]
+
+
 def segment_fixed(text: str) -> list[tuple[str, str, str]]:
     out, start, index = [], 0, 0
     while start < len(text):
@@ -174,14 +209,18 @@ def build(min_chars: int = 120) -> None:
             "n_articles": len(articles),
         })
 
-        for order, (label, heading, body) in enumerate(articles):
-            if len(body) < min_chars:
-                continue
-            chunks.append(asdict(Chunk(
-                chunk_id=f"{doc_id}:article:{order}",
-                doc_id=doc_id, strategy=strategy_label, label=label,
-                heading=heading, text=body, chars=len(body), order=order,
-            )))
+        order = 0
+        for label, heading, body in articles:
+            for part_label, part_heading, part_body in split_long_article(label, heading, body):
+                if len(part_body) < min_chars:
+                    continue
+                chunks.append(asdict(Chunk(
+                    chunk_id=f"{doc_id}:article:{order}",
+                    doc_id=doc_id, strategy=strategy_label, label=part_label,
+                    cite=label, heading=part_heading, text=part_body,
+                    chars=len(part_body), order=order,
+                )))
+                order += 1
 
         for order, (label, heading, body) in enumerate(segment_fixed(text)):
             if len(body) < min_chars:
@@ -189,7 +228,7 @@ def build(min_chars: int = 120) -> None:
             chunks.append(asdict(Chunk(
                 chunk_id=f"{doc_id}:fixed:{order}",
                 doc_id=doc_id, strategy="fixed", label=label,
-                heading=heading, text=body, chars=len(body), order=order,
+                cite=label, heading=heading, text=body, chars=len(body), order=order,
             )))
 
         print(f"  {doc_id:<6} {regime:<8} {len(text):>7} chars -> {len(articles):>4} articles  {meta.get('title','')[:46]}")
@@ -197,10 +236,17 @@ def build(min_chars: int = 120) -> None:
     _write(PROCESSED / "documents.jsonl", documents)
     _write(PROCESSED / "chunks.jsonl", chunks)
 
-    art = sum(1 for c in chunks if c["strategy"] == "article")
-    fix = sum(1 for c in chunks if c["strategy"] == "fixed")
     print(f"\ndocuments: {len(documents)}  regimes: {regimes}")
-    print(f"chunks: {len(chunks)} (article-aware {art}, fixed-window {fix})")
+    print(f"chunks: {len(chunks)}")
+    # Chunk size per arm is reported every run: if the two arms drift apart again,
+    # the chunking comparison is confounded and the numbers say so immediately.
+    for arm in ("article", "fixed"):
+        sizes = sorted(c["chars"] for c in chunks if c["strategy"] == arm)
+        if not sizes:
+            continue
+        median = sizes[len(sizes) // 2]
+        print(f"  {arm:<8} n={len(sizes):<6} median={median:<6} max={sizes[-1]:<6} "
+              f"mean={sum(sizes) // len(sizes)}")
 
 
 def _write(path: Path, rows: list[dict]) -> None:
