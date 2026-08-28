@@ -164,7 +164,9 @@ def select(seed: int = 20260827) -> list[dict]:
                 "source_title": meta.get("title", ""),
                 "source_url": meta.get("url", ""),
                 "source_heading": chunk.get("heading", ""),
-                "source_text": chunk["text"][:1200],
+                # Full text, not an excerpt: the author cannot judge whether an article
+                # answers a question while seeing only part of it.
+                "source_text": chunk["text"],
             })
     return candidates
 

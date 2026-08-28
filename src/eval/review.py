@@ -89,7 +89,9 @@ def do_export() -> None:
                 "po" if row.get("reviewed") else "jo",
                 "",
                 row.get("source_heading", ""),
-                (row.get("source_text", "") or "")[:900],
+                # Not truncated. 54% of articles exceed 900 characters, and a
+                # reviewer shown a fragment is being asked to judge blind.
+                row.get("source_text", "") or "",
             ])
 
     print(f"shkruar: {WORKBOOK}  ({len(rows)} rreshta)")
