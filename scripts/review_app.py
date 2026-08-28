@@ -56,6 +56,16 @@ class Session:
         self.index = self._first_unreviewed()
 
     def _first_unreviewed(self) -> int:
+        """First unreviewed row that actually has a draft.
+
+        Starting on one of the three undrafted articles makes the first thing the
+        reviewer sees an empty box, which looks broken. Those rows are still
+        reachable by paging through; they are just not where the session opens.
+        """
+        for i, row in enumerate(self.data):
+            if ((row[COL_REVIEWED] or "").strip().lower() != "po"
+                    and (row[COL_QUESTION] or "").strip()):
+                return i
         for i, row in enumerate(self.data):
             if (row[COL_REVIEWED] or "").strip().lower() != "po":
                 return i
@@ -90,8 +100,12 @@ session = Session()
 
 def render() -> tuple:
     row = session.current()
+    # Three articles produced no draft. Without saying so, the empty box reads as
+    # a loading failure rather than an expected state, and the reviewer stalls.
+    has_draft = bool((row[COL_QUESTION] or "").strip())
+    note = "" if has_draft else "  ·  _pa draft — shkruaje vetë ose kaloje_"
     progress = (f"### Neni {session.index + 1} nga {session.total}  ·  "
-                f"**{session.done} të përfunduara**")
+                f"**{session.done} të përfunduara**{note}")
     context = (
         f"**Kategoria:** {row[COL_CATEGORY]}  ·  **Neni:** {row[COL_GOLD]}\n\n"
         f"**{row[COL_HEADING]}**\n\n---\n\n{row[COL_TEXT]}"
