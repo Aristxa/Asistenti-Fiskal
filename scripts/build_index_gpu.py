@@ -119,6 +119,35 @@ def install() -> None:
     )
 
 
+def push_file(filename: str) -> bool:
+    """Upload one file to the corpus dataset, if a token is available."""
+    token = _token()
+    if not token:
+        print(f"  (pa HF_TOKEN — {filename} mbetet vetëm në këtë makinë)")
+        return False
+    try:
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "huggingface_hub"],
+                       check=True)
+        from huggingface_hub import HfApi
+
+        HfApi().upload_file(path_or_fileobj=filename, path_in_repo=filename,
+                            repo_id=HUB_REPO, repo_type="dataset", token=token)
+        print(f"  u ngarkua {filename} te {HUB_REPO}")
+        return True
+    except Exception as exc:
+        print(f"  ngarkimi i {filename} dështoi: {exc}")
+        return False
+
+
+def _token() -> str | None:
+    try:
+        from google.colab import userdata  # type: ignore
+        return userdata.get("HF_TOKEN")
+    except Exception:
+        import os
+        return os.environ.get("HF_TOKEN")
+
+
 def push_to_hub() -> bool:
     """Upload the finished index to the Hub, if a token is available.
 
@@ -210,6 +239,13 @@ def main() -> None:
 
         np.save(out / "dim.npy", np.array([vectors.shape[1]]))
         print(f"  {strategy}: u ndërtua, dimensioni {vectors.shape[1]}")
+
+        # Upload this arm now rather than at the end. The article arm takes ~19
+        # minutes and the fixed arm ~23; a disconnect during the second one used
+        # to destroy both. Shipping each as it completes halves the window in
+        # which 45 minutes of GPU work can vanish.
+        shutil.make_archive(f"index-{strategy}", "zip", ".", str(out))
+        push_file(f"index-{strategy}.zip")
 
     # Read by src/rag/retrieve.py so queries are always encoded by the model the
     # corpus was encoded with. A dimension mismatch would raise; two different

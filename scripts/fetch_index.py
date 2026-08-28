@@ -16,30 +16,40 @@ PROCESSED = Path("data/processed")
 INDEX_ROOT = PROCESSED / "index"
 ARCHIVE = PROCESSED / "index.zip"
 
-HUB_URL = (
-    "https://huggingface.co/datasets/aristeaaa/asistenti-fiskal-korpus/"
-    "resolve/main/index.zip"
-)
+BASE = "https://huggingface.co/datasets/aristeaaa/asistenti-fiskal-korpus/resolve/main"
+
+# Each arm is uploaded separately as soon as it is built, so a disconnect during
+# the second cannot destroy the first. Both are fetched and unpacked into the
+# same index directory.
+ARMS = ("article", "fixed")
 
 
-def download() -> Path:
+def download() -> list[Path]:
     import urllib.request
 
     PROCESSED.mkdir(parents=True, exist_ok=True)
-    print(f"po shkarkohet indeksi nga Hub ...")
-    urllib.request.urlretrieve(HUB_URL, ARCHIVE)
-    print(f"  {ARCHIVE}  ({ARCHIVE.stat().st_size / 1e6:.0f} MB)")
-    return ARCHIVE
+    paths = []
+    for arm in ARMS:
+        target = PROCESSED / f"index-{arm}.zip"
+        if target.exists():
+            print(f"  {target.name} ekziston, po përdoret")
+        else:
+            print(f"po shkarkohet index-{arm}.zip ...")
+            urllib.request.urlretrieve(f"{BASE}/index-{arm}.zip", target)
+            print(f"  {target.name}  ({target.stat().st_size / 1e6:.0f} MB)")
+        paths.append(target)
+    return paths
 
 
-def unpack(archive: Path) -> None:
+def unpack(archives: list[Path]) -> None:
     # Replace rather than merge: a half-old index whose vectors no longer match
     # its chunks.jsonl would still load and would still return results.
     if INDEX_ROOT.exists():
         shutil.rmtree(INDEX_ROOT)
-    with zipfile.ZipFile(archive) as zf:
-        zf.extractall(PROCESSED)
-    print(f"  u shpaketua në {INDEX_ROOT}")
+    for archive in archives:
+        with zipfile.ZipFile(archive) as zf:
+            zf.extractall(PROCESSED)
+    print(f"  u shpaketuan {len(archives)} arkiva në {INDEX_ROOT}")
 
 
 def verify() -> None:
@@ -65,10 +75,13 @@ def verify() -> None:
 
 
 def main() -> None:
-    archive = ARCHIVE if ARCHIVE.exists() else download()
-    if ARCHIVE.exists():
-        print(f"po përdoret {ARCHIVE}")
-    unpack(archive)
+    unpack(download())
+    # The GPU script does not write model.txt per arm, so stamp it here. Retrieval
+    # reads this to encode queries with the model the corpus was encoded with.
+    stamp = INDEX_ROOT / "model.txt"
+    if not stamp.exists():
+        stamp.write_text("BAAI/bge-m3", encoding="utf-8")
+        print("  u shënua modeli: BAAI/bge-m3")
     verify()
 
 

@@ -108,6 +108,13 @@ def get_encoder():
         print(f"note: encoding queries with {name} (the model the index was built "
               f"with), not {MODEL_NAME}")
     device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    # BAAI/bge-m3 ships only pytorch_model.bin at its current revision, so loading
+    # goes through torch.load, which transformers refuses below torch 2.6
+    # (CVE-2025-32434). Hence torch>=2.6 in requirements rather than pinning an
+    # older model revision that happens to carry safetensors: a different revision
+    # could hold different weights, and querying an index with weights other than
+    # the ones that built it degrades retrieval silently.
     return SentenceTransformer(name, device=device)
 
 
