@@ -10,7 +10,9 @@ publishes under the author's account and needs their credentials.
 
 from __future__ import annotations
 
+import os
 import shutil
+import stat
 from pathlib import Path
 
 ROOT = Path(".")
@@ -54,9 +56,20 @@ def tree_size(path: Path) -> int:
     return sum(f.stat().st_size for f in path.rglob("*") if f.is_file())
 
 
+def _force_remove(func, path, _exc):
+    """rmtree handler for Windows read-only files.
+
+    Git marks objects under .git read-only, and shutil.rmtree cannot delete them
+    without clearing the flag first. Staging is re-run often enough that failing
+    on a leftover git directory would be a recurring papercut.
+    """
+    os.chmod(path, stat.S_IWRITE)
+    func(path)
+
+
 def main() -> None:
     if STAGE.exists():
-        shutil.rmtree(STAGE)
+        shutil.rmtree(STAGE, onerror=_force_remove)
     STAGE.mkdir(parents=True)
 
     missing = []
@@ -97,9 +110,13 @@ def main() -> None:
     # Written here rather than left to the operator: the index files exceed the
     # Hub's plain-blob limit, and a staging run that forgets this produces a push
     # rejected only at the far end, after the whole upload.
+    # *.jsonl is tracked too. With the VAT subset the chunk files were a couple of
+    # megabytes and pushed fine as plain blobs; at full corpus they cross the Hub's
+    # 10 MiB limit, and the push is rejected only after the entire upload finishes.
     (STAGE / ".gitattributes").write_text(
         "*.faiss filter=lfs diff=lfs merge=lfs -text\n"
-        "*.pkl filter=lfs diff=lfs merge=lfs -text\n",
+        "*.pkl filter=lfs diff=lfs merge=lfs -text\n"
+        "*.jsonl filter=lfs diff=lfs merge=lfs -text\n",
         encoding="utf-8",
     )
     print(f"  {'.gitattributes (lfs)':<28} {'—':>9}")
