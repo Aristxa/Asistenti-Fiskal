@@ -33,7 +33,7 @@ from src.web.ratelimit import limiter
 try:
     import spaces
 
-    gpu = spaces.GPU(duration=60)
+    gpu = spaces.GPU(duration=120)
 except ImportError:  # running locally
     def gpu(fn):
         return fn
@@ -144,5 +144,24 @@ def build() -> gr.Blocks:
     return demo
 
 
+def warm_up() -> None:
+    """Load the encoder and both indexes before the app accepts a request.
+
+    Left lazy, the first click pays for a 2.3 GB model download plus index load.
+    On ZeroGPU that click runs inside a bounded GPU allocation, so it expires
+    before returning and the button appears simply not to work — no error, no
+    output. Paying the cost at startup makes boot slower and every query fast.
+    """
+    from src.rag.retrieve import get_encoder, get_index
+
+    print("po ngarkohet modeli dhe indekset ...")
+    get_encoder()
+    for strategy in ("article", "fixed"):
+        index = get_index(strategy)
+        print(f"  {strategy}: {len(index.chunks):,} copëza")
+    print("gati")
+
+
 if __name__ == "__main__":
+    warm_up()
     build().launch()
