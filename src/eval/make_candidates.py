@@ -85,15 +85,19 @@ PERSONAS: tuple[tuple[str, str], ...] = (
      "Po hap biznes dhe nuk di ende asgjë nga procedurat."),
 )
 
-# How the question is shaped. Without this every draft becomes "Cilat janë ...?",
-# which tests one syntactic pattern rather than the range a real user produces.
+# Question shapes offered as options, not assigned. Forcing a shape was a mistake:
+# rotating a "what happens if you fail to" form onto an article that contains no
+# penalty made the model invent the framing, and 25 of 26 such drafts asked about
+# a consequence their article never mentions. The same held for deadline and
+# amount forms. The model now picks the shape the article can actually support,
+# which is a decision only the article's content can make.
 QUESTION_FORMS: tuple[str, ...] = (
-    "një pyetje me po/jo (fillon me 'A ...')",
-    "një pyetje për afatin (fillon me 'Kur ...' ose 'Deri kur ...')",
-    "një pyetje për shumën ose përqindjen (fillon me 'Sa ...')",
-    "një pyetje për pasojën e mospërmbushjes (fillon me 'Çfarë ndodh nëse ...')",
-    "një pyetje për procedurën (fillon me 'Si ...')",
-    "një pyetje për subjektin e detyrimit (fillon me 'Kush ...')",
+    "A ... (po/jo)",
+    "Kur / Deri kur ... (afat)",
+    "Sa ... (shumë ose përqindje)",
+    "Çfarë ndodh nëse ... (pasojë e mospërmbushjes)",
+    "Si ... (procedurë)",
+    "Kush ... (subjekti i detyrimit)",
 )
 
 DRAFT_PROMPT = """Po ndërtojmë një bazë testimi për një sistem pyetje-përgjigje mbi legjislacionin tatimor dhe kontabël shqiptar.
@@ -102,9 +106,16 @@ TI JE: {persona_name}. {persona_desc}
 
 Më poshtë është një nen i legjislacionit. Shkruaj pyetjen që do t'i bëje ti një kontabilisti ose Drejtorisë së Tatimeve për situatën që trajton ky nen.
 
-FORMA E KËRKUAR: {form}
+ZGJIDH VETË FORMËN e pyetjes, atë që ky nen mund ta përgjigjet vërtet:
+{form}
 
-RREGULLA TË DETYRUESHME:
+RREGULL KRYESOR — MOS E SHKEL:
+Pyetja duhet t'i përgjigjet VETËM nga ky nen. Mos pyet për një afat nëse neni
+nuk jep afat. Mos pyet "çfarë ndodh nëse" nëse neni nuk përmend pasojë apo
+sanksion. Mos pyet për shumë ose përqindje nëse neni nuk përmban asnjë.
+Nëse neni thjesht përshkruan një rregull, pyet për vetë rregullin.
+
+RREGULLA TË TJERA:
 - Përdor gjuhën e përditshme. MOS përdor termat karakteristikë të nenit. Nëse neni thotë "subjekt i tatueshëm", ti thuaj "unë" ose "biznesi im"; nëse thotë "furnizim mallrash", ti thuaj "kur shes diçka".
 - Pyetja duhet të jetë konkrete dhe praktike — diçka që dikush e pyet vërtet.
 - Mos përmend numrin e nenit, të ligjit apo të udhëzimit.
@@ -204,7 +215,7 @@ def draft_questions(candidates: list[dict]) -> None:
 
     for i, row in enumerate(pending, start=1):
         persona_name, persona_desc = PERSONAS[i % len(PERSONAS)]
-        form = QUESTION_FORMS[i % len(QUESTION_FORMS)]
+        form = "\n".join(f"  - {f}" for f in QUESTION_FORMS)
         try:
             message = client.messages.create(
                 model=MODEL,
@@ -264,6 +275,51 @@ def report_overlap(candidates: list[dict]) -> None:
         print("  trivially and the benchmark will not distinguish configurations.")
 
 
+# A question's premise must exist in its article. Asking "what happens if you
+# fail to" against an article containing no penalty produces a question with no
+# answer, and in evaluation that counts as a retrieval failure -- the system is
+# blamed for correctly failing to answer the unanswerable. Detected here so the
+# drafting run reports it rather than leaving it for a human to notice.
+FORM_REQUIREMENTS: tuple[tuple[str, str, str], ...] = (
+    ("pasojë",
+     r"(?i)^\s*[ÇC]far[ëe]\s+ndodh",
+     r"(?i)\b(gjob|sanksion|d[ëe]noh|d[ëe]nim|kamat|p[ëe]rgjegj[ëe]si|shkelje"
+     r"|kund[ëe]rvajtje|mas[ëa]\s+administrative|nuk\s+njihet|refuzoh|humb)"),
+    ("afat",
+     r"(?i)^\s*(Kur|Deri\s+kur)\b",
+     r"(?i)\b(brenda|deri m[ëe]|afat|dat[ëe]s|\d+\s*dit|\d+\s*muaj|çdo\s+muaj|vjetor)"),
+    ("shumë",
+     r"(?i)^\s*Sa\b",
+     r"(\d+\s?%|\blek[ëe]\b|\bshkall[ëe]\b|\bnorm[ëa]\b|\bp[ëe]rqindj)"),
+)
+
+
+def unsupported_form(row: dict) -> str | None:
+    """Which question form this article cannot answer, if any."""
+    question = row.get("question") or ""
+    text = row.get("source_text") or ""
+    for name, opener, evidence in FORM_REQUIREMENTS:
+        if re.search(opener, question) and not re.search(evidence, text):
+            return name
+    return None
+
+
+def report_unsupported(candidates: list[dict]) -> None:
+    from collections import Counter
+
+    flagged = [(r, unsupported_form(r)) for r in candidates if r.get("question")]
+    flagged = [(r, name) for r, name in flagged if name]
+    for row, name in flagged:
+        row["unsupported_form"] = name
+    if not flagged:
+        print("\nforma e pyetjeve: të gjitha mbështeten nga neni përkatës")
+        return
+    print(f"\n{len(flagged)} pyetje kërkojnë diçka që neni nuk e përmban:")
+    for name, count in Counter(n for _, n in flagged).most_common():
+        print(f"    {name:<10} {count}")
+    print("  Këto do të numëroheshin si dështime kërkimi edhe kur sistemi ka të drejtë.")
+
+
 def flag_paraphrases(candidates: list[dict], threshold: float = 0.6) -> None:
     """Mark drafts that lean too heavily on the article's own wording.
 
@@ -306,6 +362,7 @@ def main() -> None:
 
     report_overlap(candidates)
     flag_paraphrases(candidates)
+    report_unsupported(candidates)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("w", encoding="utf-8") as handle:

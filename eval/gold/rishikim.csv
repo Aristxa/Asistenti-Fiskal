@@ -7,7 +7,7 @@
 "# 5. Nëse neni nuk jep pyetje të dobishme, lëre 'rishikuar' = jo; do të hiqet."
 
 id;kategoria;pyetja;neni_gold;dokumenti;e_pergjigjshme;rishikuar;shenime;titulli_i_nenit;teksti_i_nenit
-fiskalizimi-14536-Neni35;fiskalizimi;Deri kur mund të kontrolloj nëse fatura që mora nga furnitori është regjistruar vërtet te tatimet?;Neni 35;14536;po;jo;;Verifikimi i faturës;"Neni 35
+fiskalizimi-14536-Neni35;fiskalizimi;Deri kur mund të kontrolloj nëse fatura që mora nga furnitori është regjistruar vërtet te tatimet?;Neni 35;14536;po;po;;Verifikimi i faturës;"Neni 35
 Verifikimi i faturës
 1. Të gjithë blerësit ose marrësit e faturave mund të verifikojnë nëse fatura e tyre është
 fiskalizuar dhe raportuar në administratën tatimore qendrore brenda 60 ditëve, nga data e
@@ -20,7 +20,7 @@ dorëzohen nga blerësit ose marrësit e faturës në zyrat përkatëse të admi
 qendrore për qëllime verifikimi.
 4. Ministri përgjegjës për financat përcakton me udhëzim mënyrën e verifikimit të
 faturave të lëshuara sipas këtij neni."
-fiskalizimi-14536-Neni33;fiskalizimi;Sa njoftime për detyrimin e faturës duhet të vendos në dyqan, nëse kam tre arka ku paguajnë klientët?;Neni 33;14536;po;jo;;Njoftimi për faturën;"Neni 33
+fiskalizimi-14536-Neni33;fiskalizimi;Sa njoftime për detyrimin e faturës duhet të vendos në dyqan, nëse kam tre arka ku paguajnë klientët?;Neni 33;14536;po;po;;Njoftimi për faturën;"Neni 33
 Njoftimi për faturën
 1. Tatimpaguesi, që lëshon faturë, detyrohet të afishojë një njoftim në secilën pajisje
 elektronike të pagesës ose në një vend tjetër të dukshëm në ambientet e brendshme të biznesit,
@@ -32,7 +32,7 @@ detyruar të afishojë në çdo pajisje vetëshërbimi një njoftim për fiskali
 këtyre pajisjeve.
 3. Ministri përgjegjës për financat përcakton, me udhëzim, përmbajtjen dhe pamjen e
 njoftimit të përmendur në pikat 1 e 2 të këtij neni."
-fiskalizimi-14536-Neni41;fiskalizimi;Çfarë ndodh nëse dërgoj mallin me një fletë-shoqërimi të shkruar me dorë, pa e kaluar në sistem?;Neni 41;14536;po;jo;;Zbatimi i procedurës së fiskalizimit të faturës shoqëruese;"Neni 41
+fiskalizimi-14536-Neni41;fiskalizimi;Çfarë ndodh nëse dërgoj mallin me një fletë-shoqërimi të shkruar me dorë, pa e kaluar në sistem?;Neni 41;14536;po;po;;Zbatimi i procedurës së fiskalizimit të faturës shoqëruese;"Neni 41
 Zbatimi i procedurës së fiskalizimit të faturës shoqëruese
 1. Tatimpaguesit, që lëshojnë fatura shoqëruese, duhet të instalojnë një pajisje
 elektronike dhe një printer, nëse pajisja dhe printeri nuk janë të integruara, për të printuar kodin
@@ -42,7 +42,7 @@ mënyrë që të kryhet procedura fiskalizuese për lëshimin e faturës shoqër
 2. Procedura e fiskalizimit, marrja e certifikatës elektronike, si dhe dispozitat e veçanta
 të procedurës së fiskalizimit për tatimpaguesit, që lëshojnë fatura shoqëruese, bëhet në
 përputhje me nenet 18, 19, 20, 29, 30 dhe 31 të këtij ligji."
-fiskalizimi-14536-Neni19;fiskalizimi;Si e marr certifikatën elektronike që më duhet për të lëshuar fatura dhe sa kushton ajo?;Neni 19;14536;po;jo;;Certifikata elektronike;"Neni 19
+fiskalizimi-14536-Neni19;fiskalizimi;Si e marr certifikatën elektronike që më duhet për të lëshuar fatura dhe sa kushton ajo?;Neni 19;14536;po;po;;Certifikata elektronike;"Neni 19
 Certifikata elektronike
 1. Me qëllim të zbatimit të procedurës së fiskalizimit të faturës, tatimpaguesi, që lëshon
 fatura, duhet
@@ -56,7 +56,7 @@ nivel të lartë sigurie, duke mos cenuar konformitetin dhe konfidencialitetin e
 3. Për certifikatën elektronike të lëshuar aplikohet tarifa e përcaktuar me vendim të
 Këshillit të Ministrave për shërbimet elektronike të ofruara nga AKSHI, për subjektet sipas
 pikës 1 të këtij neni."
-fiskalizimi-8169-Neni13;fiskalizimi;Kush duhet ta kalojë faturën nga sistemi para se t'ia dërgojë klientit, unë apo blerësi?;Neni 13;8169;po;jo;;Fiskalizimi si kërkesë paraprake për lëshimin e një fature elektronike;"Neni 13 
+fiskalizimi-8169-Neni13;fiskalizimi;Kush duhet ta kalojë faturën nga sistemi para se t'ia dërgojë klientit, unë apo blerësi?;Neni 13;8169;po;po;;Fiskalizimi si kërkesë paraprake për lëshimin e një fature elektronike;"Neni 13 
 Fiskalizimi si kërkesë paraprake për lëshimin e një fature elektronike 
  
 1. Procedura e fiskalizimit të faturave dhe procedura e thjeshtuar e fiskalizimit, të cilat kryhen 
@@ -70,7 +70,7 @@ kërkesën e pikës 1 të këtij neni.
 gjithashtu mund të përdoret për t’u lidhur dhe komunikuar me platformën qendrore të faturave 
 për mjedisin e punës, si dhe për caktimin dhe regjistrimin të cilit i referohet neni 12 i këtij 
 udhëzimi."
-fiskalizimi-13635-Neni29;fiskalizimi;A duhet t'i printoj faturën në letër klientit që porosit online dhe paguan me kartë?;Neni 29;13635;po;jo;;Fatura për pagesat me para në dorë;"Neni 29 
+fiskalizimi-13635-Neni29;fiskalizimi;A duhet t'i printoj faturën në letër klientit që porosit online dhe paguan me kartë?;Neni 29;13635;po;po;;Fatura për pagesat me para në dorë;"Neni 29 
 Fatura për pagesat me para në dorë 
  
 
@@ -90,7 +90,7 @@ me postë elektronike në formë PDF.
 mund të printohet në letër ose të dërgohet me postë elektronike ose si faturë elektronike. 
 Blerësi duhet të japë pëlqimin e tij për marrjen e faturës me postë elektronike ose në formë 
 elektronike."
-fiskalizimi-8169-Neni6;fiskalizimi;Kur duhet ta lëshoj faturën në formatin elektronik që e lexon sistemi — menjëherë kur shes diçka apo më vonë?;Neni 6;8169;po;jo;;Sintaksa;"Neni 6 
+fiskalizimi-8169-Neni6;fiskalizimi;;Neni 6;8169;po;jo;;Sintaksa;"Neni 6 
 Sintaksa 
  
 Sintaksa është gjuhë ose dialekt i lexueshëm nga makina që përdoret për të përfaqësuar 
@@ -98,7 +98,7 @@ elementët e informacionit që përmban një faturë elektronike. Lista e sintak
 standardet shqiptare të cilat janë adaptime të pjesës së 2-të e standardit evropian, lista e sintaksave 
 që përputhen DS dhe me EN 16931-1. Rregullat sintaksore janë udhëzime se si një model 
 semantik i të dhënave për një faturë elektronike mund të përfaqësohet në sintaksa të ndryshme."
-fiskalizimi-11026-9;fiskalizimi;Sa lekë garanci duhet të lë në bankë nëse programin tim e përdorin rreth 600 biznese?;9;11026;po;jo;;9. Shoqëritë që do të certifikohen për prodhimin dhe mirëmbajtjen e zgjidhjeve softwareike, duhet të përmbushin të gjith;"9. Shoqëritë që do të certifikohen për prodhimin dhe mirëmbajtjen e zgjidhjeve softwareike, duhet të përmbushin të gjitha kërkesat si më sipër, si dhe do të depozitojnë një garanci 
+fiskalizimi-11026-9;fiskalizimi;Sa lekë garanci duhet të lë në bankë nëse programin tim e përdorin rreth 600 biznese?;9;11026;po;po;;9. Shoqëritë që do të certifikohen për prodhimin dhe mirëmbajtjen e zgjidhjeve softwareike, duhet të përmbushin të gjith;"9. Shoqëritë që do të certifikohen për prodhimin dhe mirëmbajtjen e zgjidhjeve softwareike, duhet të përmbushin të gjitha kërkesat si më sipër, si dhe do të depozitojnë një garanci 
 bankare ose nga shoqëritë e sigurimit në emër të Drejtorisë së Përgjithshme të Tatimeve 
 (DPT), e vlefshme për gjatë gjithë periudhës së regjistrimit, duke filluar nga data e aplikimit 
 për regjistrim në regjistër, në vlerat, si më poshtë vijon: 
@@ -117,7 +117,7 @@ aktivizohet që me thirrjen e parë të DPT-së, nëse shfuqizohet certifikata e
 mospërmbushje të detyrimeve ligjore dhe të detyrimeve që rrjedhim nga ky vendim. Garancia, 
 si më sipër, është e ndryshueshme/e rinovueshme në varësi të ndryshimit të numrit të 
 bizneseve në të cilat është instaluar programi."
-fiskalizimi-13635-Neni12;fiskalizimi;Çfarë ndodh nëse faturat që u jap klientëve dalin pa atë katrorin me pika për verifikim?;Neni 12;13635;po;jo;;Gjenerimi i Kodit QR;"Neni 12 
+fiskalizimi-13635-Neni12;fiskalizimi;A duhet ta ketë faturën me kod QR edhe kur nuk kam internet dhe nuk arrij ta dërgoj?;Neni 12;13635;po;jo;;Gjenerimi i Kodit QR;"Neni 12 
 Gjenerimi i Kodit QR 
  
 1. Për të siguruar lehtësisht verifikimin e faturës së lëshuar, duhet të gjenerohet një kod 
@@ -132,7 +132,7 @@ kodi QR i printuar shërben si një dokument transporti për mallrat e furnizuar
 3. Zgjidhja software-ike e përdorur për lëshimin e faturave dhe fiskalizimin e tyre duhet të 
 krijojë automatikisht një URL në formatin e specifikuar në specifikimet teknike të publikuara 
 në faqen e internetit të administratës tatimore qendrore."
-fiskalizimi-14536-Neni27;fiskalizimi;Si mund t'i bëj faturat e mia direkt në portalin e faturave pa blerë program ose pajisje fiskale?;Neni 27;14536;po;jo;;Procedura e thjeshtuar për lëshimin, pranimin e faturave elektronike dhe për;"Neni 27
+fiskalizimi-14536-Neni27;fiskalizimi;Si mund t'i bëj faturat e mia direkt në portalin e faturave pa blerë program ose pajisje fiskale?;Neni 27;14536;po;po;;Procedura e thjeshtuar për lëshimin, pranimin e faturave elektronike dhe për;"Neni 27
 Procedura e thjeshtuar për lëshimin, pranimin e faturave elektronike dhe për
 fiskalizimin
 1. Tatimpaguesit në rastet e lëshimit ose pranimit të faturave elektronike, sipas
@@ -159,18 +159,18 @@ lëshimit të faturave, marrjen e informacionit të pagesave, cerfitikimin dhe m
 zbatimit të këtij ligji.
 2. Dispozitat e këtij ligji garantojnë vijimësinë e funksionimit të pajisjeve fiskale
 përpara hyrjes në fuqi të këtij ligji."
-fiskalizimi-8169-Neni7;fiskalizimi;A duhet ta bëj faturën elektronike sipas një formati të gatshëm që gjendet në faqen e tatimeve?;Neni 7;8169;po;jo;;Modeli bazë i faturës elektronike;"Neni 7 
+fiskalizimi-8169-Neni7;fiskalizimi;A duhet ta bëj faturën elektronike sipas një formati të gatshëm që gjendet në faqen e tatimeve?;Neni 7;8169;po;po;;Modeli bazë i faturës elektronike;"Neni 7 
 Modeli bazë i faturës elektronike 
  
 Modeli bazë i faturës elektronike duhet të përmbajë një model semantik të të dhënave për 
 elementet bazë të një fature elektronike të përmendur në nenin 5 të këtij udhëzimi, i cili është 
 shtjelluar imtësisht në Dokumentin për Specifikimet Bazë të Përdorimit të Faturave, të publikuar 
 në faqen zyrtare të internetit të Drejtorisë së Përgjithshme të Tatimeve."
-kkk-928795-Paragrafi17;kkk;Kur duhet ta shënoj një blerje si pasuri në bilanc dhe kur si shpenzim direkt?;Paragrafi 17;928795;po;jo;;Aktivi njihet në pasqyrën e pozicionit financiar të njësisë ekonomike, vetëm nëse është e mundur që prej tij të gjeneroh;"17 
+kkk-928795-Paragrafi17;kkk;Kur duhet ta shënoj një blerje si pasuri në bilanc dhe kur si shpenzim direkt?;Paragrafi 17;928795;po;po;;Aktivi njihet në pasqyrën e pozicionit financiar të njësisë ekonomike, vetëm nëse është e mundur që prej tij të gjeneroh;"17 
 Aktivi njihet në pasqyrën e pozicionit financiar të njësisë ekonomike, vetëm nëse është e mundur që prej tij të gjenerohen përfitime ekonomike në të ardhmen. Nëse këto 
 përfitime ekonomike janë të mundshme, por nuk ka siguri të mjaftueshme, ai aktiv nuk do të njihet në pasqyrën e pozicionit financiar. Një transaksion i tillë rezulton në 
 njohjen e një shpenzimi në pasqyrën e performancës financiare. Megjithatë, aktive të tilla do të paraqiten në shënimet shpjeguese si aktive të kushtëzuara."
-kkk-928795-Paragrafi117;kkk;Sa shumë duhet të tregoj se kanë ndryshuar numrat e bilancit nëse ndryshoj mënyrën si i mbaj llogaritë?;Paragrafi 117;928795;po;jo;;Nëse mënyra e paraqitjes së politikave kontabël dhe/ose informacionit kontabël ka ndryshuar, atëherë në shënimet shpjegu;"117 
+kkk-928795-Paragrafi117;kkk;Sa shumë duhet të tregoj se kanë ndryshuar numrat e bilancit nëse ndryshoj mënyrën si i mbaj llogaritë?;Paragrafi 117;928795;po;po;;Nëse mënyra e paraqitjes së politikave kontabël dhe/ose informacionit kontabël ka ndryshuar, atëherë në shënimet shpjegu;"117 
 Nëse mënyra e paraqitjes së politikave kontabël dhe/ose informacionit kontabël ka ndryshuar, atëherë në shënimet shpjeguese do të shpjegohet: 
 (a) përshkrimi i ndryshimit dhe arsyeja e ndryshimit; (b) efekti i tij mbi zërat e pasqyrës së pozicionit financiar dhe pasqyrës së performancës financiare; (c) nëse ndryshimi 
 nuk është njohur në retrospektivë, do të jepet shpjegimi i situatës, përshkrimi i efektit të politikës së re, si dhe ushtrimet e mëparshme të ndikuara nga ndryshimi."
@@ -210,7 +210,7 @@ përfaqësojnë shumat e papaguara nga klientët;
 (b) shuma totale e tepricave negative të punës në proces përfshihet në detyrimet afatshkurtra brenda grupit të detyrimeve të pagueshme nga aktiviteti dhe detyrime 
 të tjera të pagueshme. Këto teprica përfaqësojnë të ardhura të shtyra dhe duhet të përshkruhen si shuma që njësia ekonomike u detyrohet klientëve; 
 (c) shumat e faturuara klientëve, arkëtime të cilat nuk janë marrë deri në datën e raportimit, paraqiten si kërkesa të arkëtueshme nga aktiviteti."
-kkk-981276-18;kkk;Kur duhet t'i shënoj në kontabilitet paratë, faturat e paarkëtuara nga klientët dhe aksionet që kam blerë?;18;981276;po;jo;;18 Aktivi financiar është çdo aktiv që është:;"18 Aktivi financiar është çdo aktiv që është: 
+kkk-981276-18;kkk;Cilat gjëra të biznesit tim numërohen si aktive financiare — paratë, faturat e paarkëtuara, apo aksionet e blera?;18;981276;po;jo;;18 Aktivi financiar është çdo aktiv që është:;"18 Aktivi financiar është çdo aktiv që është: 
 (a) para 
 (b) një e drejtë kontraktuale për të marrë 
 para ose një aktiv tjetër financiar nga njësi 
@@ -225,7 +225,7 @@ tregu);
 (d) një instrument kapitali i një njësie 
 ekonomike tjetër (për shembull investimet 
 në aksionet e një njësie ekonomike tjetër)."
-kkk-972009-6.8;kkk;Sa kohë mund ta mbaj të njëjtën normë interesi në llogaritë e kredisë sime para se ta ndryshoj?;6.8;972009;po;jo;;6.8 Përjashtime të përkohshme nga zbatimi i kërkesave specifike të;"6.8 Përjashtime të përkohshme nga zbatimi i kërkesave specifike të 
+kkk-972009-6.8;kkk;Deri kur mund ta përdor lehtësimin e përkohshëm që kam për mbrojtjen nga luhatjet e normave të interesit?;6.8;972009;po;jo;;6.8 Përjashtime të përkohshme nga zbatimi i kërkesave specifike të;"6.8 Përjashtime të përkohshme nga zbatimi i kërkesave specifike të 
 kontabilitetit mbrojtës 
 Fundi i zbatimit 
  
@@ -240,7 +240,7 @@ zbatimit të paragrafit 6.9.1; ose
 (b) 
 kohës kur ndërpritet marrëdhënia mbrojtëse në të cilën është përcaktuar komponenti i rrezikut të 
 specifikuar jo-kontraktual."
-kkk-913065-Paragrafi38;kkk;Çfarë ndodh nëse zëvendësoj një pjesë të makinerisë sime dhe nuk e heq pjesën e vjetër nga librat?;Paragrafi 38;913065;po;jo;;Nëse një pjesë e një elementi të AAM-së zëvendësohet, kosto e pjesës së re i shtohet vlerës kontabël neto të elementit t;"38 
+kkk-913065-Paragrafi38;kkk;Kur ndërroj një pjesë të prishur të një makinerie në dyqan, si e regjistroj koston e pjesës së re?;Paragrafi 38;913065;po;jo;;Nëse një pjesë e një elementi të AAM-së zëvendësohet, kosto e pjesës së re i shtohet vlerës kontabël neto të elementit t;"38 
 Nëse një pjesë e një elementi të AAM-së zëvendësohet, kosto e pjesës së re i shtohet vlerës kontabël neto të elementit të AAM-së, nëse ajo përmbush kriteret e 
 përkufizimit të AAM-së dhe kriteret e njohjes së aktiveve në pasqyrën e pozicionit financiar. Pjesa e zëvendësuar do të hiqet nga pasqyra e pozicionit financiar, 
 nëse ajo është kontabilizuar si pjesë më vete. Nëse kosto fillestare (rrjedhimisht, edhe vlera kontabël aktuale) e pjesës së zëvendësuar nuk dihet, ajo mund të 
@@ -263,7 +263,7 @@ shpjeguese si në vijim:
 (c) vlerën kontabël të aktiveve ose, nëse nxjerrja jashtë përdorimit përfshin një grup të aktiveve dhe detyrimeve, vlerat kontabël të këtyre aktiveve dhe detyrimeve. 
  
 Kompensimi i aktiveve dhe detyrimeve (njohja në shumën neto)"
-kontributet-e-sigurimeve-14440-Neni6;kontributet-e-sigurimeve;Kur duhet t'i paguaj unë sigurimet për veten, punonjësit dhe familjarët që më ndihmojnë pa pagesë?;Neni 6;14440;po;jo;;Detyrimet e personave që paguajnë kontributet;"Neni 6 
+kontributet-e-sigurimeve-14440-Neni6;kontributet-e-sigurimeve;Kush duhet t'i paguajë kontributet për familjarët që më ndihmojnë në punë pa pagesë?;Neni 6;14440;po;jo;;Detyrimet e personave që paguajnë kontributet;"Neni 6 
 Detyrimet e personave që paguajnë kontributet 
 (Ndryshuar pika 3, me ligjin nr. 143/2015, datë 17.12.2015 dhe aktin normativ 
 nr. 1, datë 25.1.2017) 
@@ -281,7 +281,7 @@ kontributet-e-sigurimeve-14444-5;kontributet-e-sigurimeve;Sa lekë në muaj do t
 persona të vetëpunësuar në bujqësi ose kanë më shumë se 6 muaj të periudhës së fundit të sigurimit nga data e lindjes së të drejtës
 për pagesë, si persona të vetëpunësuar në bujqësi, duke filluar nga 1.8.2016 e në vazhdim, të jetë 8 652 (tetë mijë e gjashtëqind
 e pesëdhjetë e dy) lekë në muaj."
-kontributet-e-sigurimeve-334-3;kontributet-e-sigurimeve;Çfarë ndodh nëse punonjësve u shkruaj profesione me emra të miat, jo si në listën zyrtare të shtetit?;3;334;po;jo;;3. Lista kombëtare e profesioneve të zbatohet në këto veprimtari:;"3. Lista kombëtare e profesioneve të zbatohet në këto veprimtari: 
+kontributet-e-sigurimeve-334-3;kontributet-e-sigurimeve;Kur regjistroj punonjës të re dhe caktoj pagat e tyre, duhet t'i mbështet në listën zyrtare të profesioneve?;3;334;po;jo;;3. Lista kombëtare e profesioneve të zbatohet në këto veprimtari:;"3. Lista kombëtare e profesioneve të zbatohet në këto veprimtari: 
  
 a) Mbledhjen, klasifikimin dhe publikimin e të dhënave statistikore në fushën e profesioneve; 
  
@@ -320,7 +320,7 @@ sistemin informatik të deklarimit elektronik të të dhënave të listëpagesë
 muaji kanë punuar njëkohësisht në dy ose më shumë tatimpagues sistemi informatik bën evidentimin e 
 punonjësve sipas tatimpaguesve ku kanë punuar gjatë muajit përkatës, bazuar kjo në numrin personal të 
 letërnjoftimit të deklaruar në listëpagesa."
-kontributet-e-sigurimeve-14664-9.7;kontributet-e-sigurimeve;Kur duhet ta deklaroj bashkëshorten që më ndihmon pa pagë, nëse punon edhe te biznesi i vëllait tim?;9.7;14664;po;jo;;9.7 Për rastet kur punonjësi i papaguar i familjes (pjesëtari i familjes, që nuk trajtohet me pagë), që punon;"9.7 Për rastet kur punonjësi i papaguar i familjes (pjesëtari i familjes, që nuk trajtohet me pagë), që punon 
+kontributet-e-sigurimeve-14664-9.7;kontributet-e-sigurimeve;Nëse im vëlla punon pa pagë në dy bizneset tona familjare, a duhet të paguajmë kontribute te të dyja?;9.7;14664;po;jo;;9.7 Për rastet kur punonjësi i papaguar i familjes (pjesëtari i familjes, që nuk trajtohet me pagë), që punon;"9.7 Për rastet kur punonjësi i papaguar i familjes (pjesëtari i familjes, që nuk trajtohet me pagë), që punon 
 e bashkëjeton ligjërisht me të vetëpunësuarin, gjatë muajit punon në dy tatimpagues persona fizikë, të 
 regjistruar në emër të familjarëve të tij me të cilët ai punon e bashkëjeton ligjërisht, të dy tatimpaguesit bëjnë 
 deklarimin e punonjësit të papaguar të familjes, me të dhënat sipas rubrikave të deklaratës “Pasqyra e të 
@@ -331,7 +331,7 @@ familjarëve të tij, në nivelin e pagës minimale, sipas përkatësisë për k
 për të vetëpunësuarit. Tatimpaguesi tjetër (person fizik) te emri përkatës i familjarit, në rubrikat e vlerave të 
 kontributit shoqëror dhe shëndetësor të listëpagesës vendos zero dhe në rubrikën “Shënime” të listëpagesës 
 bën shënimin “Deklaruar kontribute si punonjës i papaguar i familjes te personi fizik “x” me NIPT..........”."
-kontributet-e-sigurimeve-14664-1.2.1;kontributet-e-sigurimeve;Sa duhet të paguaj çdo muaj për sigurimet e një punonjëseje që mban shtëpinë time?;1.2.1;14664;po;jo;;1.2.1 Organizatat jofitimprurëse, entet publike kombëtare apo vendore, fondacionet e ndryshme,;"1.2.1 Organizatat jofitimprurëse, entet publike kombëtare apo vendore, fondacionet e ndryshme, 
+kontributet-e-sigurimeve-14664-1.2.1;kontributet-e-sigurimeve;Si e marr numrin e identifikimit tatimor, nëse hap një shoqatë pa fitim që nuk regjistrohet në regjistrin tregtar?;1.2.1;14664;po;jo;;1.2.1 Organizatat jofitimprurëse, entet publike kombëtare apo vendore, fondacionet e ndryshme,;"1.2.1 Organizatat jofitimprurëse, entet publike kombëtare apo vendore, fondacionet e ndryshme, 
 organizatat politike apo shoqërore, përfaqësuesit tatimorë, personat e tjerë juridikë të cilët nuk regjistrohen në 
 Regjistrin Tregtar pranë Qendrës Kombëtare të Regjistrimit, përfaqësitë dhe ambasadat e huaja, njësitë e 
 zbatimit të projekteve të veçanta dhe persona të tjerë të ngjashëm me to, personat “i vetëpunësuar në 
@@ -339,7 +339,7 @@ veprimtari tregtare apo shërbimi ambulant”, si dhe “kryefamiljari, që pun�
 regjistrohen dhe pajisen me numrin e identifikimit të personit të tatueshëm (NIPT-i) në administratën tatimore 
 sipas përcaktimeve në ligjin nr.9920, datë 19.5.2008 “Për procedurat tatimore në Republikën e Shqipërisë”, të 
 ndryshuar”."
-kontributet-e-sigurimeve-14664-3.2.4;kontributet-e-sigurimeve;Çfarë ndodh nëse nuk kam bërë kontratë me punonjësit dhe nuk mbaj asnjë regjistër për pagat e tyre?;3.2.4;14664;po;jo;;3.2.4 Në mbështetje të Kodit të Punës, tatimpaguesit, persona juridikë dhe fizikë, punëdhënës janë të;"3.2.4 Në mbështetje të Kodit të Punës, tatimpaguesit, persona juridikë dhe fizikë, punëdhënës janë të 
+kontributet-e-sigurimeve-14664-3.2.4;kontributet-e-sigurimeve;A duhet të kem kontratë dhe një regjistër me pagat për punëtorët që punojnë vetëm disa orë?;3.2.4;14664;po;jo;;3.2.4 Në mbështetje të Kodit të Punës, tatimpaguesit, persona juridikë dhe fizikë, punëdhënës janë të;"3.2.4 Në mbështetje të Kodit të Punës, tatimpaguesit, persona juridikë dhe fizikë, punëdhënës janë të 
 detyruar të nënshkruajnë kontratë pune me punëmarrësit e tyre, me kohë të plotë ose të pjesshme. Gjithashtu 
 
  
@@ -371,7 +371,7 @@ në të cilin regjistron të gjithë personat e siguruar në sigurimin e detyrue
 shëndetësor, sipas kategorive përkatëse, me qëllim që të evidentohen, në mënyrë të saktë, të 
 gjithë personat e siguruar në mënyrë të detyrueshme dhe veçoritë e sigurimit të tyre (masa e 
 kontributit, kohëzgjatja e sigurimit etj.)."
-lojrat-e-fatit-14452-Neni11;lojrat-e-fatit;Kur duhet të lidh kontratë sipas Kodit të Punës me punonjësit e mi dhe kur zbatohen rregulla të tjera?;Neni 11;14452;po;jo;;Struktura dhe organika e AMLF-së;"Neni 11
+lojrat-e-fatit-14452-Neni11;lojrat-e-fatit;Kush e miraton strukturën dhe organikën e këtij institucioni që kontrollon lojërat e fatit?;Neni 11;14452;po;jo;;Struktura dhe organika e AMLF-së;"Neni 11
 Struktura dhe organika e AMLF-së
 1. Struktura dhe organika e AMLF-së miratohen nga Kryeministri, me propozimin e ministrit të
 Financave, në përputhje me legjislacionin në fuqi.
@@ -381,7 +381,7 @@ Përgjithshëm rregullohen sipas legjislacionit për nëpunësin civil.
 nëpunësin civil” dhe me aktet nënligjore të nxjerra në zbatim të tij, përveç inspektorëve të cilët, sipas këtij
 ligji mbajnë armë. Marrëdhënia e tyre e punës rregullohet në përputhje me ligjin nr. 7961, datë 12.7.1995,
 “Kodi i Punës i Republikës së Shqipërisë”, të ndryshuar."
-lojrat-e-fatit-747-5;lojrat-e-fatit;Sa përqind të aksioneve të firmës sime me lojëra fati mund t'ia shes dikujt pa kërkuar miratim paraprak?;5;747;po;jo;;5. Shoqëritë e licencuara në fushën e lojërave të fatit me qëllim marrjen e miratimit nga AMLF-ja;"5. Shoqëritë e licencuara në fushën e lojërave të fatit me qëllim marrjen e miratimit nga AMLF-ja 
+lojrat-e-fatit-747-5;lojrat-e-fatit;Çfarë dokumentesh duhet të dorëzoj që të më lejohet shitja e aksioneve të kompanisë sime të lojërave të fatit?;5;747;po;jo;;5. Shoqëritë e licencuara në fushën e lojërave të fatit me qëllim marrjen e miratimit nga AMLF-ja;"5. Shoqëritë e licencuara në fushën e lojërave të fatit me qëllim marrjen e miratimit nga AMLF-ja 
 përpara shitjes, lënies peng, dhurimit, si dhe çdo formë tjetër të disponimit të aksioneve, duhet të 
 paraqesin dokumentacionin e mëposhtëm: 
 a) njoftimin nga shoqëria e licencuar në fushën e lojërave të fatit për shitjen, transferimin, lënien peng, 
@@ -392,7 +392,7 @@ dhe shoqëritë tregtare dhe dispozitave të statutit të shoqërisë;
 c) vërtetim nga organet tatimore, sipas legjislacionit në fuqi, që shoqëria nuk ka detyrime tatimore të 
 papaguara ndaj shtetit; 
 d) dokument që vërteton që shoqëria nuk është në proces likuidimi dhe/ose falimentimi."
-lojrat-e-fatit-14452-Neni69;lojrat-e-fatit;Çfarë ndodh nëse nuk i identifikoj klientët e mi dhe nuk raportoj pagesat e dyshimta te autoritetet?;Neni 69;14452;po;jo;;Parandalimi i pastrimit të parave dhe financimit të terrorizmit në veprimtarinë e lojërave të;"Neni 69
+lojrat-e-fatit-14452-Neni69;lojrat-e-fatit;Kush duhet t'i identifikojë e t'i verifikojë lojtarët dhe të raportojë transaksionet e dyshimta në lojërat e fatit?;Neni 69;14452;po;jo;;Parandalimi i pastrimit të parave dhe financimit të terrorizmit në veprimtarinë e lojërave të;"Neni 69
 Parandalimi i pastrimit të parave dhe financimit të terrorizmit në veprimtarinë e lojërave të
 fatit
 1. Organizatorët e lojërave të fatit, përfshirë në këtë ligj, ushtrojnë veprimtarinë e tyre në
@@ -463,7 +463,7 @@ c) pasurinë që sekuestrohet;
 punëdhënësit të subjektit.
 3. Nëse sekuestrimi bëhet për shkak të shkeljes së masës së bllokimit, zbatohet menjëherë dhe
 prek vetëm sendet, të cilat përdoren për zhvillimin e paligjshëm të lojërave të fatit."
-lojrat-e-fatit-747-8;lojrat-e-fatit;Sa dokumente duhet të dorëzoj për të marrë lejen para se të shes pajisjet e biznesit tim?;8;747;po;jo;;8. Shoqëritë e licencuara në fushën e lojërave të fatit, me qëllim marrjen e miratimit paraprak nga;"8. Shoqëritë e licencuara në fushën e lojërave të fatit, me qëllim marrjen e miratimit paraprak nga 
+lojrat-e-fatit-747-8;lojrat-e-fatit;Nëse kam një biznes lojërash fati dhe dua të shes pasurinë e tij, çfarë dokumente duhet të dorëzoj për leje paraprake?;8;747;po;jo;;8. Shoqëritë e licencuara në fushën e lojërave të fatit, me qëllim marrjen e miratimit paraprak nga;"8. Shoqëritë e licencuara në fushën e lojërave të fatit, me qëllim marrjen e miratimit paraprak nga 
 AMLF-ja përpara shitjes, lënies peng, dhurimit, si dhe çdo formë tjetër të disponimit të pasurisë, aseteve 
 duhet të paraqesin dokumentacionin e mëposhtëm: 
 a) certifikatën e regjistrimit me numrin unik të identifikimit të shoqërisë në rastin kur përfituesi është i 
@@ -474,7 +474,7 @@ vërtetohet se shoqëria është në status aktiv dhe nuk është në procedurë
 d) vërtetim nga organet tatimore që shoqëria nuk ka detyrime të pashlyera; 
 e) vërtetimin e pronësisë së pasurisë/aseteve në rastin kur lëshimi i certifikatës së pronësisë është i 
 parashikuar nga legjislacioni në fuqi."
-lojrat-e-fatit-747-15;lojrat-e-fatit;Çfarë ndodh nëse i shes dyqanin ose pajisjet e mia pa marrë më parë lejen me shkrim?;15;747;po;jo;;15. Në rast se AMLF pas shqyrtimit konstaton se dokumentacioni është në përputhje me;"15. Në rast se AMLF pas shqyrtimit konstaton se dokumentacioni është në përputhje me 
+lojrat-e-fatit-747-15;lojrat-e-fatit;Kush duhet të më lejojë para se t'i shes ose t'i lë peng pajisjet dhe aksionet e biznesit tim të bastave?;15;747;po;jo;;15. Në rast se AMLF pas shqyrtimit konstaton se dokumentacioni është në përputhje me;"15. Në rast se AMLF pas shqyrtimit konstaton se dokumentacioni është në përputhje me 
 parashikimet e këtij udhëzimi, ligjit nr. 155/2015 “Për lojërat e fatit në Republikën e Shqipërisë” dhe 
 legjislacionit në fuqi, lëshon miratimin paraprak për shitjen, lënien peng, dhurimin dhe çdo forme tjetër të 
 disponimit të aksioneve, aseteve, pasurisë apo makinave të organizatorit të lejuar për zhvillimin e lojërave 
@@ -508,7 +508,7 @@ c) të dhëna për numrin, llojin/tipin, sasinë e makinerive e të pajisjeve q�
 qëllimin e përdorimit të mjeteve të lojërave të fatit; 
 ç) dokumentacionin përkatës që shoqërojnë mjetet që shërbejnë për lojëra fati, që vërtetojnë 
 plotësimin e specifikimeve teknike të përcaktuara në aktet ligjore apo nënligjore në fuqi."
-marreveshje-nderkombetare-348-2;marreveshje-nderkombetare;Kur duhet të paguaj tatim jashtë shtetit nëse shes pajisjet ose vetë zyrën që kam hapur atje?;2;348;po;jo;;2. Fitimet nga tjetërsimi i pasurive të luajtshme që bëjnë pjesë;"2. Fitimet nga tjetërsimi i pasurive të luajtshme që bëjnë pjesë 
+marreveshje-nderkombetare-348-2;marreveshje-nderkombetare;A mund të ma tatojë shteti tjetër fitimin nga shitja e pajisjeve të zyrës që kam atje?;2;348;po;jo;;2. Fitimet nga tjetërsimi i pasurive të luajtshme që bëjnë pjesë;"2. Fitimet nga tjetërsimi i pasurive të luajtshme që bëjnë pjesë 
 në pasuritë aktive të një selie të përhereshme që një 
 sipërmarrje e një Shteti Kontraktues ka në Shtetin tjetër 
 Kontraktues ose i pasurive të luajtshme që i përkasin një baze 
@@ -517,7 +517,7 @@ tjetër Kontraktues për të kryer shërbime personale të pavarura,
 përfshirë edhe fitimet nga tjetërsimi i vetë selisë së 
 përhereshme (vetëm ose bashkë me sipërmarrjen) ose i bazës 
 fikse, mund të tatohen në këtë Shtet tjetër."
-marreveshje-nderkombetare-366-3;marreveshje-nderkombetare;Sa nga shpenzimet që më faturon zyra kryesore jashtë shtetit mund t'i zbres si biznes këtu?;3;366;po;jo;;3. Në përcaktimin e fitimeve të një selie të përherëshme, do të lejohet;"3. Në përcaktimin e fitimeve të një selie të përherëshme, do të lejohet 
+marreveshje-nderkombetare-366-3;marreveshje-nderkombetare;A mund t'i zbres nga fitimi i degës sime këtu pagesat që i dërgoj zyrës qendrore jashtë për patenta?;3;366;po;jo;;3. Në përcaktimin e fitimeve të një selie të përherëshme, do të lejohet;"3. Në përcaktimin e fitimeve të një selie të përherëshme, do të lejohet 
 zbritja e shpenzimeve që janë kryer për qëllimet e aktivitetit të selisë së 
 përherëshme, përfshirë shpenzimet e përgjithshme administrative dhe 
 ekzekutive si në Shtetin ku ndodhet selia e përherëshme ashtu edhe gjetkë. 
@@ -601,14 +601,14 @@ me mirëkuptim reciprok mënyrën e zbatimit të këtyre kufizimeve.
  
 Ky paragraf nuk do të ketë efekt mbi tatimin e kompanisë lidhur 
 me fitimet nga të cilat janë paguar dividentët."
-marreveshje-nderkombetare-366-2;marreveshje-nderkombetare;Kur duhet ta ndal dhe ta paguaj tatimin kur i dërgoj para një firme jashtë shtetit për markën?;2;366;po;jo;;2. Megjithatë, këto të ardhura mund të tatohen gjithashtu në Shtetin;"2. Megjithatë, këto të ardhura mund të tatohen gjithashtu në Shtetin 
+marreveshje-nderkombetare-366-2;marreveshje-nderkombetare;Sa tatim maksimal mund t'i mbaj në burim një firme të huaj kur i paguaj për përdorimin e markës?;2;366;po;jo;;2. Megjithatë, këto të ardhura mund të tatohen gjithashtu në Shtetin;"2. Megjithatë, këto të ardhura mund të tatohen gjithashtu në Shtetin 
 Kontraktues ku krijohen dhe në përputhje me ligjet e këtij Shteti, por nëse 
 pronari përfitues i honorareve është resident i Shtetit tjetër Kontraktues, 
 tatimi i ngarkuar nuk duhet të kalojë 10 përqind të shumës bruto të 
 honorarit. 
 Autoritetet kompetente të Shteteve Kontraktuese do të vendosin me 
 mirëkuptim reciprok për mënyrën e zbatimit të këtij kufizimi."
-marreveshje-nderkombetare-348-3;marreveshje-nderkombetare;Sa nga interesat dhe pagesat që i bëj një bashkëpunëtori jashtë shtetit mund t'i njoh si shpenzim?;3;348;po;jo;;3. Përjashtuar rastet kur zbatohen dispozitat e paragrafit 1 të;"3. Përjashtuar rastet kur zbatohen dispozitat e paragrafit 1 të 
+marreveshje-nderkombetare-348-3;marreveshje-nderkombetare;A mund t'i njoh si shpenzim interesat që i paguaj një huadhënësi të huaj, njësoj si një vendas?;3;348;po;jo;;3. Përjashtuar rastet kur zbatohen dispozitat e paragrafit 1 të;"3. Përjashtuar rastet kur zbatohen dispozitat e paragrafit 1 të 
 Nenit 9, paragrafit 6 të Nenit 11, ose paragrafit 6 të Nenit 12, 
 interesat, honoraret dhe shpërblime të tjera të paguara nga një 
 sipërmarrje e një Shteti Kontraktues një rezidenti të Shtetit 
@@ -622,7 +622,7 @@ përcaktimit të kapitalit të tatueshëm të kësaj sipërmarrje, do
 të jetë i reduktueshëm nën të njëjtat kondita njëlloj sikur 
 sipërmarrja të kishte kontraktuar me një rezident të Shtetit të 
 përmendur në fillim."
-marreveshje-nderkombetare-338-3;marreveshje-nderkombetare;Çfarë ndodh nëse punonjësit e mi punojnë mbi nëntë muaj në një kantier jashtë shtetit dhe nuk regjistrohem atje?;3;338;po;jo;;"3. Termi ""seli e përhereshme"" do të përfshijë gjithashtu:";"3. Termi ""seli e përhereshme"" do të përfshijë gjithashtu: 
+marreveshje-nderkombetare-338-3;marreveshje-nderkombetare;Sa kohë duhet të zgjasë një punim ndërtimi te ne, që firma e huaj të quhet e vendosur tek ne?;3;338;po;jo;;"3. Termi ""seli e përhereshme"" do të përfshijë gjithashtu:";"3. Termi ""seli e përhereshme"" do të përfshijë gjithashtu: 
  
 a) një shesh ndërtimi, një konstruksion, projekt montimi apo instalimi ose projekte 
 mbikqyrjeje të lidhura me to, por vetëm kur një shesh i tillë, projekte apo aktivitete 
@@ -688,7 +688,7 @@ publikuar.
 5. Për përditësimin e shërbimeve elektronike, institucioni ofrues i shërbimit i përcjell 
 AKSHI-t kërkesën për ndryshimet përkatëse brenda 3 (tri) ditëve pune nga hyrja në fuqi e 
 ndryshimeve ligjore apo procedurale."
-procedurat-tatimore-14527-Neni6;procedurat-tatimore;Sa më kushton të regjistroj në gjykatë ndryshimet e të dhënave, dhe sa dokumente duhet të dorëzoj?;Neni 6;14527;po;jo;;Mënyra e regjistrimit;"Neni 6
+procedurat-tatimore-14527-Neni6;procedurat-tatimore;Ku duhet ta dorëzoj kërkesën për t'u regjistruar ose për të ndryshuar të dhënat e mia, dhe në ç'formë?;Neni 6;14527;po;jo;;Mënyra e regjistrimit;"Neni 6
 Mënyra e regjistrimit
 (Ndryshuar togfjalësh në pikën 1 me ligjin nr. 90/2025, datë 12.12.2025)
 1. Regjistrimi për herë të parë dhe çdo regjistrim i ndryshimeve të të dhënave kryhet
@@ -698,7 +698,7 @@ në formë elektronike, sipas përcaktimeve të këtij ligji.
 2. Këshilli i Lartë Gjyqësor miraton formularët e kërkesave për regjistrim, si dhe listën e
 dokumenteve shoqëruese për çdo regjistrim që kryhet në regjistër sipas kërkesave të
 legjislacionit në fuqi."
-procedurat-tatimore-14432-72.1;procedurat-tatimore;Çfarë ndodh nëse tatimet nuk i besojnë shifrat e mia dhe ma llogarisin vetë fitimin sipas të dhënave që kanë?;72.1;14432;po;jo;;72.1 Në përdorimin e metodave alternative të vlerësimit tatimor administrata tatimore;"72.1 Në përdorimin e metodave alternative të vlerësimit tatimor administrata tatimore
+procedurat-tatimore-14432-72.1;procedurat-tatimore;Kur tatimet ma llogaritin vetë detyrimin pa u nisur nga librat e mi, mbi çfarë të dhënash bazohen?;72.1;14432;po;jo;;72.1 Në përdorimin e metodave alternative të vlerësimit tatimor administrata tatimore;"72.1 Në përdorimin e metodave alternative të vlerësimit tatimor administrata tatimore
 bazohet në dokumentacionin dhe informacionin që disponon, duke patur parasysh edhe faktet
 dhe rrethanat konkrete të biznesit, me synim rikarakterizimin e transaksioneve dhe llogaritjen sa
 më të saktë të detyrimeve tatimore në përputhje me legjislacionin tatimor në fuqi. Të dhënat
@@ -758,7 +758,7 @@ Në rastet kur konstatohet pamundësia e vijimit të ushtrimit të funksioneve t
 Komisionit, institucioni që e ka propozuar merr masat për zëvendësimin e tij, brenda një afati prej 7 
 ditësh kalendarike, që nga momenti i konstatimit të këtij fakti. Anëtari i ri zgjidhet për një afat 2-vjeçar, 
 me të drejtë rizgjedhjeje sipas kushteve të këtij vendimi."
-procedurat-tatimore-14471-Neni7;procedurat-tatimore;Sa vite duhet t'i mbaj të ruajtura të dhënat që marr nga tatimet pasi bëj një kërkesë për informacion?;Neni 7;14471;po;jo;;Roli i Drejtorisë së Përgjithshme të Tatimeve;"Neni 7
+procedurat-tatimore-14471-Neni7;procedurat-tatimore;Sa kohë duhet t'i mbaj të dhënat që marr me kërkesë nga regjistri i tatimeve?;Neni 7;14471;po;jo;;Roli i Drejtorisë së Përgjithshme të Tatimeve;"Neni 7
 Roli i Drejtorisë së Përgjithshme të Tatimeve
 1. Drejtoria e Përgjithshme e Tatimeve, në zbatim të këtij ligji, është përgjegjëse për:
 a) vënien në dispozicion të aksesit të regjistrit për subjektet e interesuara;
@@ -772,7 +772,7 @@ ligj.
 sipas përcaktimeve të Kodit të Procedurës Administrative. Subjektet që kanë të drejtë të marrin
 informacion me kërkesë duhet të ruajnë të dhënat e përdorura, sipas kësaj pike, për një periudhë
 10-vjeçare."
-procedurat-tatimore-14470-Neni20;procedurat-tatimore;Çfarë ndodh nëse nuk plotësoj saktë formularin ose harroj ndonjë dokument kur regjistroj biznesin tim në sportel?;Neni 20;14470;po;jo;;Mënyra e regjistrimit;"Neni 20
+procedurat-tatimore-14470-Neni20;procedurat-tatimore;Për të regjistruar biznesin, a duhet të shkoj te sporteli i zonës ku do punoj, apo kudo?;Neni 20;14470;po;jo;;Mënyra e regjistrimit;"Neni 20
 Mënyra e regjistrimit
 (ndryshuar pika 2 dhe shfuqizuar pika 3 me ligjin nr. 8/2015, datë 19.02.2015)
 1. Regjistrimi fillestar dhe çdo regjistrim tjetër bëhet me aplikim pranë çdo sporteli
@@ -811,7 +811,7 @@ Transportit Rrugor (DPSHTRR);
 b) certifikatën e pronësisë; 
 c) lejen e qarkullimit; 
 d) targat e mjetit."
-pune-946263-Neni6;pune;Kur i zbatohen rregullat e reja kontratave të punonjësve që i kam punësuar përpara se ato të hynin në fuqi?;Neni 6;946263;po;jo;;(Ndryshuar me ligjin nr. 8085, datë 13.3.1996);"Neni 6
+pune-946263-Neni6;pune;A zbatohen rregullat e reja edhe për punonjësit që i kam punësuar para se ato të dilnin?;Neni 6;946263;po;jo;;(Ndryshuar me ligjin nr. 8085, datë 13.3.1996);"Neni 6
 (Ndryshuar me ligjin nr. 8085, datë 13.3.1996)
 
 1. Dispozitat e këtij Kodi zbatohen për të gjitha kontratat e punës që do të lidhen pas hyrjes së tij
@@ -824,14 +824,14 @@ nga fillimi i marrëdhënieve të punës.
 dhe të sigurisë të vihen në jetë në mënyrë progresive, gjatë një periudhe të kufizuar në disa ndërmarrje
 të përcaktuara me vendim të Këshillit të Ministrave; këto ndërmarrje do t’u nënshtrohen dispozitave
 të veçanta."
-pune-946263-Neni149;pune;Sa duhet t'i paguaj një punonjësi nëse e largoj nga puna para datës që kishim rënë dakord?;Neni 149;946263;po;jo;;(Shtuar pika 3 me ligjin nr. 136/2015, datë 5.12.2015);"Neni 149
+pune-946263-Neni149;pune;Nëse pas mbarimit të afatit vazhdoj të punoj pa nënshkruar asgjë të re, kontrata ime bëhet pa afat?;Neni 149;946263;po;jo;;(Shtuar pika 3 me ligjin nr. 136/2015, datë 5.12.2015);"Neni 149
 (Shtuar pika 3 me ligjin nr. 136/2015, datë 5.12.2015)
 1. Kontrata me afat të caktuar përfundon në fund të kohës së parashikuar, pa zgjidhje paraprake.
 2. Kur, mbas përfundimit të afatit të caktuar, kontrata zgjatet në heshtje tej këtij afati, ajo
 konsiderohet si kontratë me afat të pacaktuar.
 3. Në rastin e zgjidhjes së kontratës me afat të caktuar, përpara përfundimit të afatit, zbatohet
 procedura e përcaktuar në nenin 144 të këtij Kodi."
-pune-931840-2;pune;Çfarë ndodh nëse një punonjës i dyqanit tim ankohet se e ngacmojnë dhe unë nuk marr masa?;2;931840;po;jo;;2. Një mjedisi armiqësor i punës në të cilin;"2. Një mjedisi armiqësor i punës në të cilin 
+pune-931840-2;pune;Cilat sjellje mes punonjësve të mi në zyrë quhen ngacmim seksual dhe krijojnë ambient poshtërues për dikë?;2;931840;po;jo;;2. Një mjedisi armiqësor i punës në të cilin;"2. Një mjedisi armiqësor i punës në të cilin 
 sjellja krijon kushte që janë frikësuese 
 ose poshtëruese për individin. Sjelljet 
 që kualifikohen si ngacmim seksual 
@@ -885,7 +885,7 @@ fund të vitit, duke marrë parasysh cilësinë e punës së tij ose mbarëvajtj
 punëdhënësi është i detyruar të vazhdojë pagimin edhe në të ardhmen. Në këtë rast, me përjashtim të
 rezervave të shprehura nga ana e punëdhënësit, nëse marrëdhëniet e punës përfundojnë përpara
 momentit të përfitimit të shpërblimit, ky jepet përpjesëtimisht me kohën e punës së kryer."
-pune-946263-Neni197/8;pune;Kur duhet t'i paguaj punonjësit nga dita që ndalojnë punën në protestë, dhe deri kur nuk kam detyrim page?;Neni 197/8;946263;po;jo;;Efektet e grevës së ligjshme;"Neni 197/8
+pune-946263-Neni197/8;pune;A duhet t'u paguaj rrogën punonjësve për ditët që kanë qenë në grevë?;Neni 197/8;946263;po;jo;;Efektet e grevës së ligjshme;"Neni 197/8
 Efektet e grevës së ligjshme
 (Shtuar me ligjin nr. 9125, datë 29.7.2003)
 1. Gjatë zhvillimit të grevës pezullohen detyrimet dhe të drejtat, që rrjedhin nga kontrata e punës,
@@ -904,7 +904,7 @@ a) nuk bie ndesh me përcaktimet e neneve 197/4, 197/5, 197/6, të këtij Kodi, 
 tjera ligjore në fuqi; dhe
 b) ka për qëllim kundërshtimin e politikave dhe masave ekonomike e sociale të Qeverisë dhe/ose
 pushtetit vendor, të cilat kanë ndikim mbi interesat e punëmarrësve."
-pune-946263-Neni126;pune;Sa duhet t'i paguaj punonjësit tim për shpenzimet kur e dërgoj me punë jashtë qytetit?;Neni 126;946263;po;jo;;(Ndryshuar me ligjin nr. 8085, datë 13.3.1996);"Neni 126
+pune-946263-Neni126;pune;A duhet t'ia paguaj unë punonjësit shpenzimet e udhëtimit për punë, apo mund t'ia përfshij në pagë?;Neni 126;946263;po;jo;;(Ndryshuar me ligjin nr. 8085, datë 13.3.1996);"Neni 126
 (Ndryshuar me ligjin nr. 8085, datë 13.3.1996)
 1. Punëdhënësi rimburson punëmarrësin për të gjitha shpenzimet që rrjedhin nga kryerja e punës.
 Kur punëmarrësi dërgohet të punojë jashtë vendit të tij të punës, punëdhënësi i paguan atij shpenzimet
@@ -917,7 +917,7 @@ rastet kur ajo mbulon të gjitha shpenzimet e nevojshme.
 në pagën e punëmarrësit.
 4. Janë të pavlefshme kontratat, në bazë të të cilave punëmarrësi duhet të përballojë vetë të gjitha
 shpenzimet ose një pjesë të tyre."
-pune-946263-Neni18;pune;Çfarë ndodh nëse unë punoj nga shtëpia për vete dhe nuk zbatoj;Neni 18;946263;po;jo;;(Ndryshuar me ligjin nr. 8085, datë 13.3.1996);"Neni 18
+pune-946263-Neni18;pune;Kush i vendos rregullat e posaçme për punonjësit që punojnë nga shtëpia, në ndërtim ose me punë të përkohshme?;Neni 18;946263;po;jo;;(Ndryshuar me ligjin nr. 8085, datë 13.3.1996);"Neni 18
 (Ndryshuar me ligjin nr. 8085, datë 13.3.1996)
 (Shtuar fjalë me ligjin nr. 136/2015, datë 5.12.2015)
 1. Këshilli i Ministrave mund të parashikojë rregulla të veçanta që zbatohen për kontratën e punës
@@ -970,7 +970,7 @@ sindikate të krijuar në bazë të ligjit;
 b) të pushojë ose cenojë të drejtën e punëmarrësit për shkak të anëtarësimit ose jo në një sindikatë
 të krijuar në bazë të ligjit ose të pjesëmarrjes në veprimtari sindikale duke respektuar legjislacionin në
 fuqi."
-shkembimi-automatik-i-informacionit-14337-8;shkembimi-automatik-i-informacionit;Kur duhet t'i jap bankës adresën e shtëpisë, nëse tani kam vetëm një kuti postare?;8;14337;po;jo;;8. Kërkesa e parë është që Institucioni Financiar Raportues të ketë në regjistrat e tij një adresë;"8. Kërkesa e parë është që Institucioni Financiar Raportues të ketë në regjistrat e tij një adresë 
+shkembimi-automatik-i-informacionit-14337-8;shkembimi-automatik-i-informacionit;A vlen kutia postare që kam dhënë në bankë si adresa ime e banimit?;8;14337;po;jo;;8. Kërkesa e parë është që Institucioni Financiar Raportues të ketë në regjistrat e tij një adresë;"8. Kërkesa e parë është që Institucioni Financiar Raportues të ketë në regjistrat e tij një adresë 
 rezidence për Mbajtësin individual të Llogarisë (shih paragrafin 26 të Komentit për seksionin 
 I). Përgjithësisht, adresa “në vëmendje të” ose kutia postare nuk është një adresë rezidence. 
 Sidoqoftë, kutia postare përgjithësisht do të konsiderohet adresë rezidence në rastin kur është 
@@ -981,12 +981,12 @@ adresë rezidence. Juridiksionet që zbatojnë Standardin e Përbashkët të Rap
 përcaktojnë rrethana të tjera të veçanta kur një adresë “në vëmendje të” ose kuti postare mund 
 të përdoren për të identifikuar qartë një adresë rezidence, me kusht që ky përcaktim nuk cenon 
 qëllimet e Standardit të Përbashkët të Raportimit."
-shkembimi-automatik-i-informacionit-14337-1;shkembimi-automatik-i-informacionit;Sa më kushton nëse dërgoj të dhëna të gabuara dhe duhet t'i korrigjoj më vonë?;1;14337;po;jo;;1. Gjatë ecurisë së AEOI, juridiksioni dërgues mund të ketë nevojë të korrigjojë disa;"1. Gjatë ecurisë së AEOI, juridiksioni dërgues mund të ketë nevojë të korrigjojë disa 
+shkembimi-automatik-i-informacionit-14337-1;shkembimi-automatik-i-informacionit;Si i ndreq të dhënat që kam dërguar gabim më parë, dhe si fshihen ato që nuk duhen?;1;14337;po;jo;;1. Gjatë ecurisë së AEOI, juridiksioni dërgues mund të ketë nevojë të korrigjojë disa;"1. Gjatë ecurisë së AEOI, juridiksioni dërgues mund të ketë nevojë të korrigjojë disa 
 elemente të të dhënave të dërguara më parë. Seksioni më poshtë përshkruan mënyrën se 
 si të bëhen korrigjimet automatike duke dërguar dosjen e të dhënave të korrigjuara që 
 mund të përpunohen në të njëjtat sisteme si të dhënat origjinale që janë marrë. Korrigjimet 
 gjithashtu përfshijnë fshirjen e elementëve të të dhënave në seksionin vijues."
-shkembimi-automatik-i-informacionit-14337-2;shkembimi-automatik-i-informacionit;Çfarë ndodh nëse banka nuk mbledh së bashku të gjitha llogaritë e biznesit tim dhe raporton gabim gjendjen totale?;2;14337;po;jo;;2. Totalizimi i Llogarive të Njësive Ekonomike. Për qëllime të përcaktimit të bilancit;"2. Totalizimi i Llogarive të Njësive Ekonomike. Për qëllime të përcaktimit të bilancit 
+shkembimi-automatik-i-informacionit-14337-2;shkembimi-automatik-i-informacionit;Si e llogarit banka vlerën totale të llogarive të firmës sime kur kam disa llogari, përfshirë edhe të përbashkëta?;2;14337;po;jo;;2. Totalizimi i Llogarive të Njësive Ekonomike. Për qëllime të përcaktimit të bilancit;"2. Totalizimi i Llogarive të Njësive Ekonomike. Për qëllime të përcaktimit të bilancit 
 ose vlerës totale të Llogarive Financiare që mbahen nga një Njësi Ekonomike, 
 Institucionit Financiar Raportues i kërkohet të marrë në konsideratë të gjitha 
 Llogaritë Financiare që mbahen nga Institucioni Financiar Raportues, ose nga një 
@@ -1044,7 +1044,7 @@ lutemi jepni një përmbledhje.
 Çfarë politikash dhe procedurash rregullojnë autentifikimin e përdoruesve të autorizuar të administratës tatimore 
 nga sistemet e lidhura me të dhënat konfidenciale? A janë të disponueshme publikisht këto politika dhe procedura? 
 Nëse po, ju lutemi jepni referenca. Nëse jo, ju lutemi jepni një përmbledhje."
-shkembimi-automatik-i-informacionit-14662-1;shkembimi-automatik-i-informacionit;Deri kur i ruan banka kopjet e dokumenteve personale që i dorëzova kur hapa llogarinë e biznesit tim?;1;14662;po;jo;;1. Provat dokumentare;"1. Provat dokumentare 
+shkembimi-automatik-i-informacionit-14662-1;shkembimi-automatik-i-informacionit;A duhet banka të mbajë detyrimisht kopje të dokumenteve që më kërkon kur hap llogarinë?;1;14662;po;jo;;1. Provat dokumentare;"1. Provat dokumentare 
 A kërkohet sipas Standardit që një Institucion Financiar Raportues të mbajë një 
 kopje të provave të dokumentacionit, të mbledhura si pjesë e procedurave të tij të 
 vigjilencës së duhur? 
@@ -1055,7 +1055,7 @@ Një institucion financiar raportues mund të mbajë një kopje origjinale, të 
 fotokopje të provës së dokumentacionit, ose në të kundërt, një shënim të llojit të 
 dokumentacionit të shqyrtuar, datën e rishikimit të dokumentacionit dhe numrin e 
 identifikimit të dokumentit (nëse ka) (për shembull, një numër pasaporte)."
-shkembimi-automatik-i-informacionit-14662-12;shkembimi-automatik-i-informacionit;Sa para nga polica e sigurimit të jetës që kam blerë për punonjësit duhet raportuar kur ata marrin pagesën?;12;14662;po;jo;;12. Mbajtësit e llogarisë në lidhje me kontratat e sigurimit të vlerës së parasë;"12. Mbajtësit e llogarisë në lidhje me kontratat e sigurimit të vlerës së parasë 
+shkembimi-automatik-i-informacionit-14662-12;shkembimi-automatik-i-informacionit;Nëse kam hequr dorë plotësisht nga paratë e policës sime të sigurimit, a numërohem prapë unë si zotëruesi?;12;14662;po;jo;;12. Mbajtësit e llogarisë në lidhje me kontratat e sigurimit të vlerës së parasë;"12. Mbajtësit e llogarisë në lidhje me kontratat e sigurimit të vlerës së parasë 
  
 Në lidhje me një kontratë të sigurimit të vlerës së parasë, a do të trajtohen personat 
 që kanë të drejtën e aksesit në Vlerën e Parasë dhe të drejtën e ndryshimit të 
@@ -1076,7 +1076,7 @@ në kontratë.
 Pavarësisht nga sa më sipër, me maturimin e një Kontrate të Sigurimit të Vlerës së Parasë 
 (d.m.th. kur detyrimi për të paguar një shumë sipas kontratës bëhet fiks), çdo person që ka 
 të drejtë të marrë një pagesë sipas kontratës, duhet të trajtohet si një Mbajtës i Llogarisë."
-shkembimi-automatik-i-informacionit-14460-Neni10;shkembimi-automatik-i-informacionit;Çfarë ndodh nëse banka ku punoj nuk i ruan pesë vjet dokumentet e klientëve që duhen raportuar jashtë?;Neni 10;14460;po;jo;;Mbajtja e të dhënave dhe detyrimi për ruajtjen e tyre;"Neni 10
+shkembimi-automatik-i-informacionit-14460-Neni10;shkembimi-automatik-i-informacionit;Sa kohë i mban banka të dhënat që mbledh për llogarinë time, dhe çfarë bëhet më pas me to?;Neni 10;14460;po;jo;;Mbajtja e të dhënave dhe detyrimi për ruajtjen e tyre;"Neni 10
 Mbajtja e të dhënave dhe detyrimi për ruajtjen e tyre
 1. Institucioni financiar raportues në Republikën e Shqipërisë duhet të krijojë, të mbajë dhe të
 dokumentojë procedurat e vigjilencës së duhur, në zbatim të këtij ligji, të cilat janë hartuar për të
@@ -1131,7 +1131,7 @@ B. Standardi i Përbashkët i Raportimit
  
 31 dhjetor (ose dita e fundit e periudhës kontabël të vitit jokalendarik) përpara vitit në të cilin 
 bëhet përcaktimi; ose (ii) periudha gjatë së cilës Njësia Ekonomike ka ekzistuar."
-sinjalizimi-11511-Neni10;sinjalizimi;Kur duhet të krijoj njësinë që trajton ankesat e brendshme, nëse punonjësit e mi i kalojnë njëqind?;Neni 10;11511;po;jo;;Sinjalizimi i brendshëm dhe njësitë përgjegjëse;"Neni 10 
+sinjalizimi-11511-Neni10;sinjalizimi;Sa punonjës duhet të kem në biznesin tim që të detyrohem të krijoj një njësi për trajtimin e sinjalizimeve?;Neni 10;11511;po;jo;;Sinjalizimi i brendshëm dhe njësitë përgjegjëse;"Neni 10 
 Sinjalizimi i brendshëm dhe njësitë përgjegjëse 
  
  
@@ -1147,7 +1147,7 @@ strukturës së organizatës, të trajnuar posaçërisht në fushën e mbrojtjes
 punonjësve të njësisë përgjegjëse të subjekteve private. Këshilli i Ministrave përcakton me vendim 
 marrëdhëniet e punës, strukturën dhe kriteret e përzgjedhjes së punonjësve të njësisë përgjegjëse në 
 autoritetet publike."
-sinjalizimi-14540-Neni17;sinjalizimi;Sa kushte shtesë më kërkohen nëse raportoj pa dhënë emrin tim një shkelje që kam parë në punë?;Neni 17;14540;po;jo;;Sinjalizimi anonim;"Neni 17
+sinjalizimi-14540-Neni17;sinjalizimi;A shqyrtohet njoftimi për shkeljen edhe kur nuk e shkruaj emrin tim?;Neni 17;14540;po;jo;;Sinjalizimi anonim;"Neni 17
 Sinjalizimi anonim
 1. Sinjalizimet anonime trajtohen nga njësia përgjegjëse ose nga ILDKPKI-ja në të njëjtën mënyrë,
 si çdo sinjalizim tjetër, pa vendosur kushte shtesë për marrjen, shqyrtimin dhe verifikimin e tyre.
@@ -1155,7 +1155,7 @@ si çdo sinjalizim tjetër, pa vendosur kushte shtesë për marrjen, shqyrtimin 
 nëpërmjet publikimit, në përputhje me parashikimet e përcaktuara në këtë ligj.
 3. Identiteti i sinjalizuesit, në rastet kur identifikohet, mund të bëhet i njohur vetëm me pëlqimin
 e tij të shprehur ose me kërkesë të organeve procedurale kompetente, në përputhje me ligjin."
-sinjalizimi-14542-Neni20;sinjalizimi;Çfarë ndodh nëse nuk paguaj taksën për ndërtesën ku e ushtroj biznesin, edhe pse nuk e kam dokumentin e pronësisë?;Neni 20;14542;po;jo;;Përcaktimi dhe llojet;"Neni 20
+sinjalizimi-14542-Neni20;sinjalizimi;Nëse përdor një ambient që nuk e kam të regjistruar në emrin tim, taksën e pasurisë e paguaj unë apo pronari?;Neni 20;14542;po;jo;;Përcaktimi dhe llojet;"Neni 20
 Përcaktimi dhe llojet
 (Shtuar pika 3 me ligjin nr. 181/2013, datë 28.12.2013; ndryshuar pika 1 dhe shtuar shkronja
 “b” e pikës 2 me ligjin nr. 142/2015, datë 17.12.2015)
@@ -1204,7 +1204,7 @@ rremë, në dëm të personave të përfshirë në sinjalizim.
 2. Nëse gjatë shqyrtimit gjyqësor provohet se sinjalizuesi, me dijeni të plotë, ka kryer një
 sinjalizim të rremë, personave të përfshirë u lind e drejta të kërkojnë kompensimin e dëmit të
 shkaktuar."
-sinjalizimi-14542-Neni38;sinjalizimi;Kur ndalojnë së zbatuari rregullat e vjetra për taksat vendore dhe duhet të ndjek ato të reja?;Neni 38;14542;po;jo;;Shfuqizime;"Neni 38
+sinjalizimi-14542-Neni38;sinjalizimi;A vlen ende ligji i vjetër i taksës vendore për biznesin e vogël, apo është hequr fare?;Neni 38;14542;po;jo;;Shfuqizime;"Neni 38
 Shfuqizime
 Ligji nr. 7805, datë 16.3.1994 ""Për tatimin mbi pasurinë""; paragrafi i dytë i nenit 51 të
 ligjit nr. 8405, datë 17.9.1998 ""Për urbanistikën"", të ndryshuar; ligji nr. 8982, datë 12.12.2002
@@ -1214,7 +1214,7 @@ ligjit nr. 8405, datë 17.9.1998 ""Për urbanistikën"", të ndryshuar; ligji nr
 
 16
 dispozitat e tjera ligjore dhe nënligjore, për aq sa bien në kundërshtim me këtë ligj, shfuqizohen."
-sinjalizimi-14542-Neni5;sinjalizimi;Sa duhet të paguaj për taksat e bashkisë dhe a mund t'i ndaj me këste gjatë vitit?;Neni 5;14542;po;jo;;Rregulla të përbashkëta për taksat vendore;"Neni 5
+sinjalizimi-14542-Neni5;sinjalizimi;Kush vendos sa duhet të paguaj për taksat vendore dhe në sa këste mund t'i ndaj ato?;Neni 5;14542;po;jo;;Rregulla të përbashkëta për taksat vendore;"Neni 5
 Rregulla të përbashkëta për taksat vendore
 (Ndryshuar fjalë në paragrafin e parë me ligjin nr. 95/2018, datё 3.12.2018)
 Me përjashtim të rasteve kur në këtë ligj përcaktohet shprehimisht ndryshe, bashkia,
@@ -1235,7 +1235,7 @@ iv) rregullat e raportimit, të dokumentimit e kontrollit të taksave vendore;
 v) kriteret dhe procedurat e marrëdhënieve me taksapaguesit, përfshirë të drejtën e tyre
 të ankimimit;
 vi) mënyrat e zbatimit të sanksioneve për kundërvajtje administrative."
-sinjalizimi-11511-Neni6;sinjalizimi;Çfarë ndodh nëse unë raportoj një rryshfet që dyshoj te puna dhe më vonë del se e kisha gabim?;Neni 6;11511;po;jo;;Mirëbesimi i sinjalizuesit;"Neni 6 
+sinjalizimi-11511-Neni6;sinjalizimi;A mbrohet punonjësi im që raporton dyshime për korrupsion, edhe nëse më pas del se ka gabuar?;Neni 6;11511;po;jo;;Mirëbesimi i sinjalizuesit;"Neni 6 
 Mirëbesimi i sinjalizuesit 
  
  
@@ -1307,18 +1307,18 @@ korrupsionit.
  
 3. Pavarësisht nga ekzistenca e njësisë përgjegjëse pranë organizatës, sinjalizuesi mund të 
 nisë një procedurë të jashtme sinjalizimi pranë ILDKPKI-së, sipas nenit 11 të këtij ligji."
-taksat-kombetare-304-13;taksat-kombetare;Kur duhet t'i tregoj doganës dokumentet që vërtetojnë sa naftë kam marrë dhe konsumuar për peshkim?;13;304;po;jo;;13. Pritësi i regjistruar/subjekt i peshkimit duhet të justifikojë pranë autoriteteve;"13. Pritësi i regjistruar/subjekt i peshkimit duhet të justifikojë pranë autoriteteve 
+taksat-kombetare-304-13;taksat-kombetare;Me çfarë dokumentesh duhet të vërtetoj në doganë sasinë e naftës që marr për anijet e peshkimit?;13;304;po;jo;;13. Pritësi i regjistruar/subjekt i peshkimit duhet të justifikojë pranë autoriteteve;"13. Pritësi i regjistruar/subjekt i peshkimit duhet të justifikojë pranë autoriteteve 
 doganore, sasinë e karburantit (gazoil) për peshkim të furnizuar nëpërmjet 
 dokumenteve doganore, faturës së karburantit (gazoil) për peshkim të blerë, me faturat 
 tatimore me TVSH të produktit të peshkimit të shitur, regjistrit të karburantit (gazoil) të 
 anijeve të peshkimit ku janë shënuar sasitë e furnizuara, konsumi dhe lëvizjet e anijes 
 së peshkimit."
-taksat-kombetare-306-4.1;taksat-kombetare;Sa duhet të paguaj për tokën e shtetit që kam nën dyqan dhe deri kur?;4.1;306;po;jo;;4.1 Taksa mbi të drejtën e përdorimit të truallit shtetëror paguhet në bankë, për llogari të;"4.1 Taksa mbi të drejtën e përdorimit të truallit shtetëror paguhet në bankë, për llogari të 
+taksat-kombetare-306-4.1;taksat-kombetare;Deri kur duhet ta paguaj në bankë taksën vjetore për përdorimin e truallit shtetëror?;4.1;306;po;jo;;4.1 Taksa mbi të drejtën e përdorimit të truallit shtetëror paguhet në bankë, për llogari të;"4.1 Taksa mbi të drejtën e përdorimit të truallit shtetëror paguhet në bankë, për llogari të 
 organeve tatimore, brenda datës 15 shkurt të vitit pasardhës sipas udhëzimit të ministrit të 
 Financave nr. 27, datë 16.12.2014 ""Për disa shtesa dhe ndryshime në udhëzimin nr. 27, datë 
 4.9.2008, ""Për taksat kombëtare"", të ndryshuar. Ekzekutimi i marrëveshjes së pagesës me këste, 
 nuk pezullon pagesën e plotë të taksës vjetore mbi të drejtën e përdorimit të truallit shtetëror."
-taksat-kombetare-14491-2.9;taksat-kombetare;Çfarë ndodh nëse nuk deklaroj dhe nuk paguaj taksën për trollin e shtetit që po përdor?;2.9;14491;po;jo;;2.9 Taksa mbi të drejtën e përdorimit të truallit shtetëror në përdorim.;"2.9 Taksa mbi të drejtën e përdorimit të truallit shtetëror në përdorim.
+taksat-kombetare-14491-2.9;taksat-kombetare;Unë që përdor një truall të shtetit për dyqanin, a duhet ta deklaroj dhe ta paguaj taksën për të?;2.9;14491;po;jo;;2.9 Taksa mbi të drejtën e përdorimit të truallit shtetëror në përdorim.;"2.9 Taksa mbi të drejtën e përdorimit të truallit shtetëror në përdorim.
 Niveli, aplikimi dhe llogaritja e taksës mbi të drejtën e përdorimit të truallit shtetëror në përdorim, bëhet
 sipas përcaktimeve të bëra në ligjin nr. 10270, datë 22.04.2010 “Për të drejtën e privatizimit të truallit shtetëror në
 përdorim dhe për taksën mbi të drejtën e përdorimit të tij”, si dhe akteve nënligjore në zbatim të tij.
@@ -1389,7 +1389,7 @@ doganore, të gjithë vlerën e plotë të akcizës, taksës së qarkullimit dhe
 karbonit për sasinë e tejkaluar të faturimit (konsumit) të karburantit (gazoil). Nga data e 
 shlyerjes së detyrimeve të mësipërme, subjektit të peshkimit i lind e drejta të rifutet në 
 skemë, për një periudhë tjetër 6-mujore."
-taksat-kombetare-9085-18;taksat-kombetare;Çfarë ndodh nëse një punonjësi tim i skadon leja e drejtimit dhe nuk paguan tarifën e rinovimit?;18;9085;po;jo;;18. Veprime të tjera noteriale 200;"18. Veprime të tjera noteriale 200 
+taksat-kombetare-9085-18;taksat-kombetare;Sa më kushton te noteri një veprim i thjeshtë që nuk përfshihet në listën e shërbimeve të tjera?;18;9085;po;jo;;18. Veprime të tjera noteriale 200;"18. Veprime të tjera noteriale 200 
  
  
  
@@ -1452,7 +1452,7 @@ pasardhës për muajin paraardhës.
 Transferimi nga Administrata Doganore i të ardhurave të arkëtuara nga taksa, në llogarinë e të ardhurave të
 Administratës Tatimore bëhet brenda datës 15 të muajit pasardhës për muajin paraardhës, sipas deklaratës së
 taksave kombëtare."
-taksat-vendore-13539-Neni17;taksat-vendore;Kur më futin tatimet në regjistrin e tyre pasi hap biznesin tim të vogël?;Neni 17;13539;po;jo;;Administrimi i tatimit;"Neni 17
+taksat-vendore-13539-Neni17;taksat-vendore;Kush e kontrollon dhe vlerëson biznesin tim të vogël për tatimin e thjeshtuar mbi fitimin?;Neni 17;13539;po;jo;;Administrimi i tatimit;"Neni 17
 Administrimi i tatimit
 
 Drejtoria e Përgjithshme e Tatimeve nëpërmjet drejtorive rajonale tatimore është e ngarkuar me vlerësimin dhe kontrollin e tatimpaguesve, subjekt i tatimit të thjeshtuar mbi fitimin e biznesit të vogël.
@@ -1466,7 +1466,7 @@ a) 0,05% për ndërtesën që përdoret, shfrytëzohet për banim;
 b) 0,2% për ndërtesën që përdoret, shfrytëzohet për veprimtari ekonomike; 
 c) 30% e shkallës së taksës përkatëse për të gjithë sipërfaqen ndërtimore, për të cilën zhvilluesi është pajisur me leje ndërtimi dhe nuk ka arritur ta përfundojë atë sipas afatit të përcaktuar në aktin e miratimit të kërkesës për leje ndërtimi.
 (Ndryshuar me Ligj Nr. 106/2017, datë 30.11.2017. Botuar në Fletoren Zyrtare Nr.222, datë 19.12.2017)"
-taksat-vendore-319-6;taksat-vendore;Çfarë ndodh nëse nuk e vendos taksimetrin në makinën time të transportit — humbas paratë e rimbursimit?;6;319;po;jo;;6. Bizneseve, subjekt i biznesit të vogël, që operojnë në fushën e transportit sipas përcaktimeve;"6. Bizneseve, subjekt i biznesit të vogël, që operojnë në fushën e transportit sipas përcaktimeve 
+taksat-vendore-319-6;taksat-vendore;Sa lekë mund të më kthehen për taksimetrin që bleva për makinën e transportit?;6;319;po;jo;;6. Bizneseve, subjekt i biznesit të vogël, që operojnë në fushën e transportit sipas përcaktimeve;"6. Bizneseve, subjekt i biznesit të vogël, që operojnë në fushën e transportit sipas përcaktimeve 
 të bëra në aneksin 5 të ligjit për taksat vendore dhe që kanë detyrimin për t’u pajisur me 
 taksimetër, u rimbursohet pagesa e bërë për blerjen e taksimetrit, sipas faturës përkatëse, deri 
 në shumën 30 000 (tridhjetë mijë) lekë, pa TVSH. 
@@ -1516,7 +1516,7 @@ Administrata Tatimore Qendrore transferon të ardhurat nga tatimi i thjeshtuar m
 Administrata Tatimore Qendrore, për shërbimin që kryen, merr një komision. Ky komision llogaritet në përqindje të shumës së tatimit që kanë arkëtuar dhe kanë transferuar në buxhetin e njësive të qeverisjes vendore, i cili është në masën 1 për qind dhe derdhet në llogari të Administratës Tatimore Qendrore. Komisioni kalon në llogari të Buxhetit të Shtetit, në bazë të legjislacionit në fuqi mbi përdorimin e të ardhurave dytësore, të krijuara në institucionet buxhetore dhe për mbulimin e kostove të “Pullave të tatimit”.
 
 (Shfuqizuar me efekt nga 1 Janari 2021 me Ligj Nr. 122/2020, botuar në Fletoren Zyrtare Nr. 197, datë 12.11.2020)"
-taksat-vendore-317-14;taksat-vendore;Sa duhet të paguaj dhe kujt, nëse dy bashki kërkojnë taksat e njëjta për biznesin tim?;14;317;po;jo;;14. Mos marrëveshjet për çështje që kanë të bëjnë me juridiksionin apo kompetencën,;"14. Mos marrëveshjet për çështje që kanë të bëjnë me juridiksionin apo kompetencën, 
+taksat-vendore-317-14;taksat-vendore;Nëse dy bashki ose bashkia dhe tatimet nuk merren vesh se kush ka kompetencë për biznesin tim, kush e zgjidh mosmarrëveshjen?;14;317;po;jo;;14. Mos marrëveshjet për çështje që kanë të bëjnë me juridiksionin apo kompetencën,;"14. Mos marrëveshjet për çështje që kanë të bëjnë me juridiksionin apo kompetencën, 
 ndërmjet vetë bashkive, ndërmjet vetë komunave, ndërmjet bashkive dhe komunave me 
 
 DREJTORIA E PERGJITHSHME E TATIMEVE – LEGJISLACIONI TATIMOR 2014 
@@ -1528,7 +1528,7 @@ në parimin e mirëkuptimit të ndërsjelltë.
  
 Në rast se palët e mësipërme nuk arrijnë një mirëkuptim, atëherë kompetente për 
 zgjidhjen e konfliktit është gjykata, nën juridiksionin e së cilës përfshihet çështja."
-taksat-vendore-314-Neni20;taksat-vendore;Çfarë ndodh nëse fitoj garën për zonën, por nis ndërtimin pa marrë ende lejen zyrtare?;Neni 20;314;po;jo;;Dhënia e licencës;"Neni 20 
+taksat-vendore-314-Neni20;taksat-vendore;Kush ma jep lejen për të ndërtuar dhe vënë në punë një zonë ekonomike, pasi fitoj garën?;Neni 20;314;po;jo;;Dhënia e licencës;"Neni 20 
 Dhënia e licencës 
 Ministri përgjegjës për ekonominë, në mbështetje të vendimit të Këshillit të Ministrave për shpalljen 
 e zonës ekonomike, i jep licencën e zhvilluesit personit juridik, që ka paraqitur kërkesën dhe ka 
@@ -1573,19 +1573,19 @@ Llogaritja si më sipër për zbritjen e detyrimit tatimor të tatipaguesit, bë
 tatimpaguesi i regjistruar të ketë mbyllur efektivisht veprimtarinë dhe të ketë dorëzuar 
 çertifikatën e tij të regjistrimit në zyrën e taksave të bashkisë apo të komunës ku është 
 regjistruar."
-tatimi-mbi-te-ardhurat-14126-3.5;tatimi-mbi-te-ardhurat;Kur konsiderohet se firma ime kontrollon një firmë tjetër, nëse pronësia vjen përmes një firme të ndërmjetme?;3.5;14126;po;jo;;3.5 Kapitali aksionar i zotëruar nga palë të lidhura të një personi do të merret në konsideratë;"3.5 Kapitali aksionar i zotëruar nga palë të lidhura të një personi do të merret në konsideratë
+tatimi-mbi-te-ardhurat-14126-3.5;tatimi-mbi-te-ardhurat;Nëse zotëroj 60% të një firme dhe ajo mban 55% të një firme tjetër, a numërohem zotërues mbi 50% edhe atje?;3.5;14126;po;jo;;3.5 Kapitali aksionar i zotëruar nga palë të lidhura të një personi do të merret në konsideratë;"3.5 Kapitali aksionar i zotëruar nga palë të lidhura të një personi do të merret në konsideratë
 në përcaktimin nëse ai person zotëron indirekt 50% ose më shumë të kapitalit aksionar në një
 tjetër person juridik.
 Shembull. Në qoftë se shoqëria A zotëron 60% të aksioneve në shoqërinë B dhe shoqëria B zotëron 55% të
 aksioneve në shoqërinë C, atëherë shoqëria A do të konsiderohet se zotëron indirekt mbi 50% të kapitalit
 aksionar në shoqërinë C."
-tatimi-mbi-te-ardhurat-14468-2.3.5;tatimi-mbi-te-ardhurat;Sa përqind tatim më mbahet nga paratë që marr kur dikush përdor këngën apo markën time?;2.3.5;14468;po;jo;;2.3.5 Të ardhurat e përfituara nga pagesat për të drejtën e autorit dhe pronësinë intelektuale.;"2.3.5 Të ardhurat e përfituara nga pagesat për të drejtën e autorit dhe pronësinë intelektuale.
+tatimi-mbi-te-ardhurat-14468-2.3.5;tatimi-mbi-te-ardhurat;Nëse i paguaj dikujt para për të përdorur këngën, patentën ose markën e tij, a quhet kjo e ardhur për të?;2.3.5;14468;po;jo;;2.3.5 Të ardhurat e përfituara nga pagesat për të drejtën e autorit dhe pronësinë intelektuale.;"2.3.5 Të ardhurat e përfituara nga pagesat për të drejtën e autorit dhe pronësinë intelektuale.
 Këto janë të ardhura që lindin nga përdorimi apo e drejta për të përdorur të drejtat e autorit në
 letërsi, art, muzikë apo shkencë, që përfshijnë përdorimin apo të drejtën për të përdorur filmat
 kinematografikë, filmat dhe regjistrime të ndryshme për radio apo TV, çdo patentë, markë tregtare,
 skicë apo model, projekt, formulë sekrete, informacion apo proçes teknollogjik, lidhur me aktivitete
 industriale, tregtare apo shkencore."
-tatimi-mbi-te-ardhurat-14596-4.5;tatimi-mbi-te-ardhurat;Çfarë ndodh nëse nuk i deklaroj paratë që marr nga YouTube, Booking ose Amazon dhe nuk paguaj tatim për to?;4.5;14596;po;jo;;4.5 Të ardhurat me burim në Republikën e Shqipërisë mund të identifikohen, gjithashtu, edhe;"4.5 Të ardhurat me burim në Republikën e Shqipërisë mund të identifikohen, gjithashtu, edhe
+tatimi-mbi-te-ardhurat-14596-4.5;tatimi-mbi-te-ardhurat;A quhen të ardhura në Shqipëri paratë që marr nga YouTube, Facebook ose Airbnb jashtë shtetit?;4.5;14596;po;jo;;4.5 Të ardhurat me burim në Republikën e Shqipërisë mund të identifikohen, gjithashtu, edhe;"4.5 Të ardhurat me burim në Republikën e Shqipërisë mund të identifikohen, gjithashtu, edhe
 nisur nga pagesat që bëjnë personat jorezidentë tatimorë në Shqipëri për persona rezidentë tatimorë
 në Shqipëri pavarësi detyrimi i paguesit të të ardhurave për të mbajtur tatimin në burim apo
 detyrimit të përfituesit të të ardhurave për të deklaruar të ardhurën e marrë dhe për të paguar
@@ -1636,13 +1636,13 @@ tatimi-mbi-te-ardhurat-14468-2.8.7.2;tatimi-mbi-te-ardhurat;A duhet ta paguaj n�
 rubrikën “Totali për t’u paguar”, të deklaratës individuale vjetore të të ardhurave, individi dorëzon në bankë formularin
 “Urdhërpagesë e tatimit mbi të ardhurat individuale”, që i bashkëlidhet këtij vendimi dhe bën pagesën e tatimit jo më vonë se
 data 30 prill e vitit pasardhës të vitit për të cilin deklarohet."
-tatimi-mbi-te-ardhurat-14126-9.2;tatimi-mbi-te-ardhurat;Kur duhet të përdor më shumë se një mënyrë llogaritjeje për çmimet me firmat e mia të lidhura?;9.2;14126;po;jo;;9.2 Sipas nenit 34, paragrafi 3 të ligjit, një tatimpaguesi nuk i kërkohet të përcaktojë;"9.2 Sipas nenit 34, paragrafi 3 të ligjit, një tatimpaguesi nuk i kërkohet të përcaktojë
+tatimi-mbi-te-ardhurat-14126-9.2;tatimi-mbi-te-ardhurat;Kur dua të provoj se çmimet me kompaninë time të lidhur janë normale, a duhet përdorur më shumë se një metodë llogaritjeje?;9.2;14126;po;jo;;9.2 Sipas nenit 34, paragrafi 3 të ligjit, një tatimpaguesi nuk i kërkohet të përcaktojë;"9.2 Sipas nenit 34, paragrafi 3 të ligjit, një tatimpaguesi nuk i kërkohet të përcaktojë
 përputhshmërinë e kushteve të një transaksioni të kontrolluar me parimin e tregut duke aplikuar
 më shumë se një metodë. Kërkesa sipas nenit 34 është që përputhshmëria me parimin e tregut
 duhet të arrihet duke zbatuar metodën më të përshtatshme. Megjithatë tatimpaguesi ka të drejtë
 të kryqëzojë ose të mbështesë zbatimin e metodës më të përshtatshme nëpërmjet zbatimit të një
 ose më shumë prej metodave shtesë të transferimit të çmimit."
-tatimi-mbi-te-ardhurat-14596-63.1;tatimi-mbi-te-ardhurat;Sa duhet të paguaj çdo tremujor si paradhënie të tatimit, dhe si e llogaritin ata këtë shumë?;63.1;14596;po;jo;;63.1 Llogaritja e kësteve të parapagimit gjatë vitit tatimor për tatimin mbi fitimin korporativ;"63.1 Llogaritja e kësteve të parapagimit gjatë vitit tatimor për tatimin mbi fitimin korporativ
+tatimi-mbi-te-ardhurat-14596-63.1;tatimi-mbi-te-ardhurat;Deri kur duhet t'i paguaj paradhëniet e tatimit të fitimit gjatë vitit, dhe kur më njoftohen shumat?;63.1;14596;po;jo;;63.1 Llogaritja e kësteve të parapagimit gjatë vitit tatimor për tatimin mbi fitimin korporativ;"63.1 Llogaritja e kësteve të parapagimit gjatë vitit tatimor për tatimin mbi fitimin korporativ
 Tatimpaguesi subjekt i tatimit mbi fitimin korporativ, gjatë vitit tatimor, parapaguan këstet
 mujore/tremujore të tatimit mbi fitimin:
 - brenda datës 31 mars, për muajt janar, shkurt, mars;
@@ -1659,7 +1659,7 @@ Këstet e llogaritura të parapagimeve paguhen nga tatimpaguesi në fund të çd
 mund të paguhen edhe në bazë mujore, brenda datës 15 të çdo muaji. Kur këstet e parapagimeve
 paguhen në bazë tremujore, kësti i çdo tremujori llogaritet si shumë e kësteve të çdo muaji të
 tremujorit përkatës."
-tatimi-mbi-te-ardhurat-14596-61.3;tatimi-mbi-te-ardhurat;Çfarë ndodh nëse nuk e dorëzoj deklaratën vjetore të të ardhurave nga biznesi im brenda 31 marsit?;61.3;14596;po;jo;;61.3 Deklaratat tatimore vjetore, përfshijnë: i. deklaratën tatimore vjetore të fitimit të tatueshëm;"61.3 Deklaratat tatimore vjetore, përfshijnë: i. deklaratën tatimore vjetore të fitimit të tatueshëm
+tatimi-mbi-te-ardhurat-14596-61.3;tatimi-mbi-te-ardhurat;Deri kur duhet ta dorëzoj deklaratën vjetore të të ardhurave nga puna ime si i vetëpunësuar?;61.3;14596;po;jo;;61.3 Deklaratat tatimore vjetore, përfshijnë: i. deklaratën tatimore vjetore të fitimit të tatueshëm;"61.3 Deklaratat tatimore vjetore, përfshijnë: i. deklaratën tatimore vjetore të fitimit të tatueshëm
 për entitetet tatimi mbi fitimin korporativ; ii. deklaratën tatimore vjetore e të ardhurave personale
 për individin; dhe iii. deklaratën tatimore vjetore të të ardhurave biznesore për personat fizikë
 tregtarë dhe të vetëpunësuarit, të cilat dorëzohen në organin tatimor jo më vonë se data 31 mars e
@@ -1702,14 +1702,14 @@ e
 rëndësishëm
 të
 krahasueshmërisë që duhet të merren në konsideratë;"
-tatimi-mbi-vleren-e-shtuar-14534-Neni37;tatimi-mbi-vleren-e-shtuar;Kur duhet të llogaris TVSH-në mbi paratë që marr nga klienti — kur i dorëzoj mallin apo kur më paguan?;Neni 37;14534;po;jo;;Rregulli i përgjithshëm;"Neni 37
+tatimi-mbi-vleren-e-shtuar-14534-Neni37;tatimi-mbi-vleren-e-shtuar;Kur shes një mall apo shërbim, mbi cilën shumë duhet ta llogaris TVSH-në?;Neni 37;14534;po;jo;;Rregulli i përgjithshëm;"Neni 37
 Rregulli i përgjithshëm
 Për furnizimet e mallrave dhe shërbimeve, përveç atyre të parashikuara nga pika 1 deri në pikën 3,
 të nenit 38, të këtij ligji, vlera e tatueshme duhet të përfshijë gjithçka që përbën vlerën korresponduese
 që furnizuesi i mallit ose shërbimit merr ose do të marrë nga blerësi, klienti apo një i tretë, në këmbim
 të furnizimit, përfshirë edhe subvencionet e lidhura drejtpërdrejt me çmimin e këtyre furnizimeve,
 përveç TVSH-së."
-tatimi-mbi-vleren-e-shtuar-427-Neni19;tatimi-mbi-vleren-e-shtuar;Sa TVSH duhet të llogaris nëse jap me qira një dyqan timin për një muaj?;Neni 19;427;po;jo;;Furnizimet e përjashtuara;"Neni 19 
+tatimi-mbi-vleren-e-shtuar-427-Neni19;tatimi-mbi-vleren-e-shtuar;A duhet të llogaris TVSH kur jap me qira një ndërtesë, apo varet nga sa kohë e jap?;Neni 19;427;po;jo;;Furnizimet e përjashtuara;"Neni 19 
  
 Furnizimet e përjashtuara 
  
@@ -1742,7 +1742,7 @@ transportit dhe të mjeteve të tjera lëvizëse.
 3. Dhënia me qira e ndërtesave është furnizim i përjashtuar, përveç rasteve: 
 a) të dhënies me qira për një periudhë jo më shumë se dy muaj; 
 b) të strehimit në hotele ose vende pushimi."
-tatimi-mbi-vleren-e-shtuar-417-6;tatimi-mbi-vleren-e-shtuar;Çfarë ndodh nëse tatimet nuk më kthejnë përgjigje brenda javës për kërkesën e investimit, ose kam kontribute të papaguara?;6;417;po;jo;;6. Kur vërtetohet, pas verifikimit në vend të investimit dhe dokumentacionit, përputhja e;"6. Kur vërtetohet, pas verifikimit në vend të investimit dhe dokumentacionit, përputhja e 
+tatimi-mbi-vleren-e-shtuar-417-6;tatimi-mbi-vleren-e-shtuar;Sa ditë duhet të pres për konfirmimin me shkrim nga tatimet pasi dorëzoj kërkesën për investimin?;6;417;po;jo;;6. Kur vërtetohet, pas verifikimit në vend të investimit dhe dokumentacionit, përputhja e;"6. Kur vërtetohet, pas verifikimit në vend të investimit dhe dokumentacionit, përputhja e 
 kërkesës së personit të tatueshëm me situatën në fakt, drejtoria rajonale tatimore dërgon, 
 zyrtarisht, sipas formularit 1 bashkëlidhur këtij vendimi, brenda 7 (shtatë) ditëve pune nga 
 data e protokollimit të kërkesës, në adresë të personit të tatueshëm, konfirmimin e faktit që 
@@ -1791,7 +1791,7 @@ drejtoria rajonale tatimore, me autorizim të drejtorit të kësaj drejtorie. Nj
 i kthehet shoqërisë transportuese, pasi është verifikuar dhe konfirmuar përputhshmëria e 
 listës së pasagjerëve me pasagjerët e transportuar nga shoqëria dhe një kopje mbahet nga 
 punonjësi i policisë së kalimit kufitar."
-tatimi-mbi-vleren-e-shtuar-411-14.2;tatimi-mbi-vleren-e-shtuar;Deri kur duhet t'i dorëzoj online deklaratën e TVSH-së dhe të bëj pagesën për muajin e kaluar?;14.2;411;po;jo;;14.2. Deklarimi dhe pagesa në menyrë elektronike e TVSH-së.;"14.2. Deklarimi dhe pagesa në menyrë elektronike e TVSH-së. 
+tatimi-mbi-vleren-e-shtuar-411-14.2;tatimi-mbi-vleren-e-shtuar;Si mund ta marr dhe ta dorëzoj online formularin e TVSH-së dhe a mund ta paguaj nga interneti?;14.2;411;po;jo;;14.2. Deklarimi dhe pagesa në menyrë elektronike e TVSH-së.;"14.2. Deklarimi dhe pagesa në menyrë elektronike e TVSH-së. 
 Një person i tatueshëm mund të marrë nëpërmjet teknologjisë elektronike në faqen zyrtare të 
 internetit (aktualisht www.tatime.gov.al) , formularin e deklarimit dhe pagesës (FDP). Për ta marrë 
 deklaratën nga website, prej personit te tatueshem bëhet me parë regjistrimi elektronik që i jep atij 
@@ -1803,7 +1803,7 @@ mundësi hyrje në këtë shërbim të faqes së internetit. Pasi bëhet i mundu
 personi i tatueshëm zotëron një program informatik që mundeson hyrjen ne bazën e te dhenave 
 të bankës, ku do te deklarohet dhe paguhet ne menyre elektronike, përvec deklarimit ai mund të 
 bëjë edhe pagesën në mënyrë elektronike."
-tatimi-mbi-vleren-e-shtuar-14534-Neni93;tatimi-mbi-vleren-e-shtuar;Sa ditë kam kohë të njoftoj tatimet që të mbyll biznesin, pasi kam shitur për herë të fundit?;Neni 93;14534;po;jo;;Çregjistrimi;"Neni 93
+tatimi-mbi-vleren-e-shtuar-14534-Neni93;tatimi-mbi-vleren-e-shtuar;Deri kur duhet të kërkoj heqjen nga regjistri i TVSH-së pasi bëj shitjen e fundit dhe ndalo aktivitetin?;Neni 93;14534;po;jo;;Çregjistrimi;"Neni 93
 Çregjistrimi
 Personi i tatueshëm, i regjistruar në përputhje me dispozitat e këtij kreu, detyrohet të kërkojë
 çregjistrimin jo më vonë se 15 ditë nga dita e fundit kur ai ka kryer furnizime të tatueshme, si pjesë të
@@ -1812,7 +1812,7 @@ veprimtarisë së tij ekonomike.
 
 39
 procedurat tatimore në Republikën e Shqipërisë."
-tatimi-mbi-vleren-e-shtuar-14534-Neni1;tatimi-mbi-vleren-e-shtuar;Çfarë ndodh nëse unë nuk ia shtoj TVSH-në çmimit kur shes diçka te klienti?;Neni 1;14534;po;jo;;Objekti i ligjit;"Neni 1
+tatimi-mbi-vleren-e-shtuar-14534-Neni1;tatimi-mbi-vleren-e-shtuar;Si llogaritet TVSH-ja që paguaj — mbi çmimin pa tatim dhe duke zbritur atë që kam paguar në blerje?;Neni 1;14534;po;jo;;Objekti i ligjit;"Neni 1
 Objekti i ligjit
 1. Ky ligj vendos tatimin mbi vlerën e shtuar (TVSH-në).
 2. TVSH-ja është një tatim i përgjithshëm mbi konsumin e mallrave dhe shërbimeve, proporcional
