@@ -35,6 +35,19 @@ MIN_CHARS = 400          # too short to hold a real obligation
 MAX_CHARS = 3000
 PER_CATEGORY = 12        # stratify so one big law cannot dominate
 
+# Categories whose documents are compilations of scanned correspondence rather
+# than legislation. Their sections are a sentence of substance wrapped in
+# letterhead, and even after the letterhead is stripped they read as fragments of
+# a reply letter. They stay in the corpus -- they are real DPT positions and worth
+# retrieving -- but they make poor benchmark items, and asking a reviewer to judge
+# them wastes the scarcest resource in the project.
+EXCLUDED_CATEGORIES = {"akte-te-dpt", "vendime-teknike"}
+
+# An article that stops mid-sentence cannot be judged: the reviewer cannot tell
+# whether the answer was in the part that got cut. 26% of the first candidate set
+# ended without terminal punctuation.
+SENTENCE_END = tuple(".!?:;”\")")
+
 # Articles that only define terms make poor benchmark questions: they are answered
 # by a dictionary lookup rather than by locating an obligation.
 DEFINITION_ONLY = re.compile(
@@ -126,8 +139,13 @@ def load_documents() -> dict[int, dict]:
     return out
 
 
-def is_substantive(chunk: dict) -> bool:
+def is_substantive(chunk: dict, category: str = "") -> bool:
+    if category in EXCLUDED_CATEGORIES:
+        return False
     if not MIN_CHARS <= chunk["chars"] <= MAX_CHARS:
+        return False
+    body = chunk["text"].rstrip()
+    if not body or not body.endswith(SENTENCE_END):
         return False
     if "(" in chunk.get("label", ""):   # a fragment of a split article
         return False
@@ -143,9 +161,9 @@ def select(seed: int = 20260827) -> list[dict]:
     by_category: dict[str, list[dict]] = defaultdict(list)
 
     for chunk in load_article_chunks():
-        if not is_substantive(chunk):
-            continue
         meta = documents.get(chunk["doc_id"], {})
+        if not is_substantive(chunk, meta.get("category", "")):
+            continue
         by_category[meta.get("category", "unknown")].append((chunk, meta))
 
     rng = random.Random(seed)

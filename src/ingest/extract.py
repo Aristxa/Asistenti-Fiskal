@@ -74,9 +74,29 @@ def normalise(text: str) -> str:
     text = re.sub(r"\bNeni(\d)", r"Neni \1", text)
     # Soft-hyphen line breaks inside words.
     text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)
-    # Running headers/footers repeated on every page.
-    text = re.sub(r"(?m)^\s*Adresa:.*$", "", text)
-    text = re.sub(r"(?m)^\s*www\.tatime\.gov\.al\s*$", "", text)
+    # Running headers, footers and correspondence letterhead. The DPT bulletins are
+    # compilations of scanned reply letters, so every few hundred characters of real
+    # content is followed by an address block, a phone number, a protocol line and a
+    # bare page number. Left in, they pad chunks with text that means nothing, get
+    # embedded and indexed like content, and make articles unreadable to a human
+    # reviewer -- which is how they were noticed.
+    for pattern in (
+        r"(?m)^\s*Adresa:.*$",
+        r"(?m)^\s*www\.tatime\.gov\.al\.?\s*$",
+        r"(?m)^\s*Web\s*site:.*$",
+        r"(?m)^\s*Tel:.*$",
+        r"(?m)^\s*Fax:.*$",
+        r"(?m)^\s*DREJTORIA E P[ËE]RGJITHSHME E TATIMEVE\s*$",
+        r"(?m)^\s*Nr\.?_{2,}\s*Prot\.?\s*$",
+        r"(?m)^\s*L[ëe]nda:.*$",
+        r"(?m)^\s*Tiran[ëe],?\s*m[ëe]?_+.*$",
+        # A bare number on its own line is NOT stripped, tempting as it looks. That
+        # is exactly how the national accounting standards number their paragraphs,
+        # and removing it erased the `standard` regime entirely — 18 documents,
+        # including SKK 5, silently reverted to unstructured. Stray page numbers
+        # are the cheaper problem.
+    ):
+        text = re.sub(pattern, "", text)
     text = re.sub(r"[ \t]{2,}", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
