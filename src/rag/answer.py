@@ -17,6 +17,7 @@ Two cost decisions matter here and are deliberate:
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass
 
 from src.rag.retrieve import Hit, retrieve
@@ -117,9 +118,22 @@ def ask(question: str, strategy: str = "article", mode: str = "hybrid",
     text = "".join(b.text for b in response.content if b.type == "text").strip()
     refused = "nuk e gjej përgjigjen" in text.lower()
 
+    # Show exactly the sources the answer actually cites -- no more, no fewer.
+    #
+    # Dropping every source on a refusal was wrong: a refusal is rarely total. The
+    # model typically says it cannot answer *this* question and then explains what
+    # the retrieved articles do cover, citing them as it goes. Emptying the list
+    # left "[S1]" in the prose with no S1 beneath it, which reads as a broken
+    # system precisely when the system is behaving well.
+    #
+    # Filtering to cited sources also trims the confident case: retrieving five
+    # articles and using two should display two, not five with three unexplained.
+    cited = {int(n) for n in re.findall(r"\[S(\d+)\]", text)}
+    sources = [h for i, h in enumerate(hits, start=1) if i in cited] if cited else []
+
     return Answer(
         text=text,
-        sources=[] if refused else hits,
+        sources=sources,
         refused=refused,
         input_tokens=response.usage.input_tokens,
         output_tokens=response.usage.output_tokens,
@@ -138,7 +152,7 @@ if __name__ == "__main__":
     result = ask(query)
     print(result.text)
     print()
-    for i, hit in enumerate(result.sources, start=1):
-        print(f"[S{i}] {hit.citation}")
+    for hit in result.sources:
+        print(f"[S{hit.rank}] {hit.citation}")
     print(f"\ntokens: in={result.input_tokens} out={result.output_tokens} "
           f"cached={result.cached_tokens}")

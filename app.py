@@ -59,10 +59,13 @@ def format_sources(hits) -> str:
     if not hits:
         return ""
     lines = ["\n---\n### Burimet"]
-    for i, hit in enumerate(hits, start=1):
+    for hit in hits:
         chunk = hit.chunk
         url = f"https://www.tatime.gov.al/shkarko.php?id={chunk['doc_id']}"
-        lines.append(f"**[S{i}]** {hit.citation}  \n[Dokumenti zyrtar]({url})")
+        # hit.rank, not a fresh counter. The answer cites [S5] by the position the
+        # source held during retrieval, and the list is filtered to cited sources
+        # only — renumbering here would make the prose and the list disagree.
+        lines.append(f"**[S{hit.rank}]** {hit.citation}  \n[Dokumenti zyrtar]({url})")
     return "\n\n".join(lines)
 
 
