@@ -24,6 +24,11 @@ def workspace(tmp_path, monkeypatch):
     monkeypatch.setattr(review, "CANDIDATES", gold / "candidates.jsonl")
     monkeypatch.setattr(review, "WORKBOOK", gold / "rishikim.csv")
     monkeypatch.setattr(review, "QUESTIONS", gold / "questions.jsonl")
+    # Point the out-of-scope slice at the temp directory too. Left unpatched it
+    # resolves to the real 22-question file and every import test inherits those
+    # rows, so assertions about what import kept would silently be about the wrong
+    # set.
+    monkeypatch.setattr(review, "OUT_OF_SCOPE", gold / "jashte_teme.jsonl")
 
     candidates = [
         {"id": "tvsh-1", "question": "", "gold_doc_id": 14534,

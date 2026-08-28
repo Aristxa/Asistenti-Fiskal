@@ -157,6 +157,18 @@ def do_import() -> None:
             "drafted_by_model": bool(source.get("drafted_by_model")),
         })
 
+    # Merge the out-of-scope slice. It needs no tax expertise so it is authored
+    # directly, but without it refusal accuracy cannot be measured at all: a system
+    # that refuses every question would score perfectly on the answerable set alone.
+    oos = []
+    if OUT_OF_SCOPE.exists():
+        oos = [
+            json.loads(line)
+            for line in OUT_OF_SCOPE.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+        kept.extend(oos)
+
     with QUESTIONS.open("w", encoding="utf-8") as handle:
         for row in kept:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")

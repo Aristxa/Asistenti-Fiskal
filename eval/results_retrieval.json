@@ -1,0 +1,50 @@
+{
+  "dense/article": {
+    "mode": "dense",
+    "strategy": "article",
+    "article_hits": 28,
+    "doc_hits": 38,
+    "total": 54,
+    "chars_retrieved": 256037
+  },
+  "bm25/article": {
+    "mode": "bm25",
+    "strategy": "article",
+    "article_hits": 11,
+    "doc_hits": 28,
+    "total": 54,
+    "chars_retrieved": 278111
+  },
+  "hybrid/article": {
+    "mode": "hybrid",
+    "strategy": "article",
+    "article_hits": 22,
+    "doc_hits": 36,
+    "total": 54,
+    "chars_retrieved": 276660
+  },
+  "dense/fixed": {
+    "mode": "dense",
+    "strategy": "fixed",
+    "article_hits": 15,
+    "doc_hits": 35,
+    "total": 54,
+    "chars_retrieved": 364526
+  },
+  "bm25/fixed": {
+    "mode": "bm25",
+    "strategy": "fixed",
+    "article_hits": 10,
+    "doc_hits": 25,
+    "total": 54,
+    "chars_retrieved": 362694
+  },
+  "hybrid/fixed": {
+    "mode": "hybrid",
+    "strategy": "fixed",
+    "article_hits": 17,
+    "doc_hits": 33,
+    "total": 54,
+    "chars_retrieved": 365604
+  }
+}

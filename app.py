@@ -22,21 +22,32 @@ from src.rag.retrieve import retrieve
 from src.web.ratelimit import limiter
 
 # The Space runs on ZeroGPU hardware, which refuses to start unless at least one
-# entry point is GPU-decorated. This application does not need a GPU — the corpus
-# is embedded offline and only the question is encoded here — but the platform
-# requires the decorator, and free CPU Gradio Spaces need a PRO subscription on
-# this account. Since a GPU is attached anyway, the encoder picks it up
-# (src/rag/retrieve.py chooses its device at load time) rather than idling it.
+# entry point is GPU-decorated. This application does not need a GPU: the corpus
+# is embedded offline and only the question is encoded at request time, on CPU.
+# Free CPU Gradio Spaces require a PRO subscription on this account, so ZeroGPU is
+# what is available.
 #
-# `spaces` only exists on Hugging Face infrastructure, so locally this degrades
-# to a no-op and the app runs unchanged.
+# The decorator therefore goes on a probe that is never called, satisfying the
+# platform check without any request consuming GPU quota. `spaces` exists only on
+# Hugging Face infrastructure; locally the import fails and nothing changes.
 try:
     import spaces
 
-    gpu = spaces.GPU(duration=120)
-except ImportError:  # running locally
-    def gpu(fn):
-        return fn
+    @spaces.GPU(duration=1)
+    def _zerogpu_probe():
+        """Exists only so ZeroGPU finds a GPU-decorated function at startup.
+
+        It is never called. Decorating the request handler instead was a real
+        mistake: every question then requested a GPU allocation for work that runs
+        entirely on CPU, and the free daily quota drained until requests failed
+        with "exceeded your ZeroGPU quota". Gradio swallowed that error, so the
+        symptom was a button that did nothing — no output, no console error, no
+        network request that returned anything useful.
+        """
+        return None
+
+except ImportError:  # running locally, or off Hugging Face
+    pass
 
 EXAMPLES = [
     "Kur duhet të regjistrohem si subjekt i TVSH-së?",
@@ -69,7 +80,6 @@ def format_sources(hits) -> str:
     return "\n\n".join(lines)
 
 
-@gpu
 def respond(question: str, strategy: str, mode: str, k: int, session_id: str):
     question = (question or "").strip()
     if not question:
@@ -123,11 +133,16 @@ def build() -> gr.Blocks:
                     info="article = një copë për çdo nen; fixed = copa me gjatësi fikse",
                 )
                 mode = gr.Radio(
-                    ["hybrid", "dense", "bm25"], value="hybrid",
+                    # Default is dense, not hybrid, and that is a measured choice:
+                    # on the benchmark dense finds the controlling article 52% of the
+                    # time against hybrid's 41%. Albanian BM25 scores 20% on its own,
+                    # and fusing it with a strong dense ranking drags the right
+                    # article down rather than lifting it.
+                    ["dense", "hybrid", "bm25"], value="dense",
                     label="Mënyra e kërkimit",
                     info="hybrid = semantik + fjalëkyç",
                 )
-                k = gr.Slider(1, 10, value=5, step=1, label="Sa nene të merren")
+                k = gr.Slider(1, 10, value=8, step=1, label="Sa nene të merren")
 
         answer = gr.Markdown(label="Përgjigja")
         sources = gr.Markdown()
@@ -164,4 +179,9 @@ def warm_up() -> None:
 
 if __name__ == "__main__":
     warm_up()
-    build().launch()
+    # ssr_mode=False on purpose. Gradio 5 turns server-side rendering on by
+    # default on Spaces and flags it experimental in its own startup line. With it
+    # on, the page rendered correctly but the Pyet button bound no handler: a click
+    # produced no network request, no console error and no output — the failure
+    # looked like a dead button rather than a framework mode.
+    build().launch(ssr_mode=False)

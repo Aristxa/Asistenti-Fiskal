@@ -69,7 +69,7 @@ def format_context(hits: list[Hit]) -> str:
     return "\n\n---\n\n".join(blocks)
 
 
-def ask(question: str, strategy: str = "article", mode: str = "hybrid",
+def ask(question: str, strategy: str = "article", mode: str = "dense",
         k: int = 5) -> Answer:
     import anthropic
 

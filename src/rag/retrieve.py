@@ -143,7 +143,7 @@ def rrf(rankings: list[list[int]], k: int) -> list[tuple[int, float]]:
     return ordered[:k]
 
 
-def retrieve(query: str, strategy: str = "article", mode: str = "hybrid", k: int = 5,
+def retrieve(query: str, strategy: str = "article", mode: str = "dense", k: int = 5,
              pool: int = 50) -> list[Hit]:
     """Return the top `k` chunks for `query`.
 
