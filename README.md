@@ -4,6 +4,10 @@
 > where every factual claim is bound to the legal article that supports it — or the
 > system refuses to answer.
 
+**Try it:** [aristeaaa-assistent.hf.space](https://aristeaaa-assistent.hf.space) —
+free, no account needed. The Space sleeps when idle, so the first request takes a
+couple of minutes to wake it.
+
 **Status:** complete and defended, September 2026. The benchmark was built, the
 comparison was run under a rule fixed before any result was seen, and the headline
 comparison came out null — which is reported as the result rather than reframed.
