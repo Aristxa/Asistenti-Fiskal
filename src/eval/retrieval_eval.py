@@ -140,7 +140,8 @@ def main(k: int = DEFAULT_K) -> None:
                   f"{r.doc_hits:>3}/{r.total:<3} = {r.doc_rate:>3.0f}%      "
                   f"{r.mean_chars:>11}")
 
-    print(f"\nfindings (decision margin {DECISION_MARGIN:.0f}pp, fixed in advance):")
+    print(f"\nCONFIRMATORY — pre-registered comparisons "
+          f"(margin {DECISION_MARGIN:.0f}pp, fixed in advance):")
     best_mode = max(MODES, key=lambda m: results[(m, "article")].article_rate)
     print("  " + compare("chunking (hybrid)",
                          results[("hybrid", "fixed")], results[("hybrid", "article")]))
@@ -148,7 +149,25 @@ def main(k: int = DEFAULT_K) -> None:
                          results[("dense", "article")], results[("hybrid", "article")]))
     print("  " + compare("bm25 vs hybrid (article)",
                          results[("bm25", "article")], results[("hybrid", "article")]))
+
+    # Reported separately, and never promoted into the confirmatory list.
+    #
+    # The pre-registration fixed the chunking comparison on the hybrid arm, because
+    # hybrid was the deployed default when it was written. Dense became the default
+    # later, on the strength of these same results — so the dense chunking
+    # comparison is chosen with knowledge of the outcome, which is precisely what a
+    # pre-registration exists to prevent. It is the largest effect in the study and
+    # it is still exploratory. Presenting it as confirmatory would be the exact
+    # error the decision rule was adopted to avoid.
+    print("\nEXPLORATORY — chosen after seeing results, NOT confirmatory:")
+    print("  " + compare("chunking (dense)",
+                         results[("dense", "fixed")], results[("dense", "article")]))
     print(f"  best retrieval mode on article chunks: {best_mode}")
+
+    if len(questions) < 60:
+        print(f"\n  NOTE: {len(questions)} answerable questions; the pre-declared "
+              f"minimum is 60.\n  These numbers are provisional until the benchmark "
+              f"is complete.")
 
     out = Path("eval/results_retrieval.json")
     out.parent.mkdir(parents=True, exist_ok=True)

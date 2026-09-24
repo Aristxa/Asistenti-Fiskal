@@ -37,6 +37,26 @@ NENI_HEADING = re.compile(r"(?m)^[ \t]*Neni[ \t]*(\d+(?:[/\-]\d+)?[a-zë]?)[ \t]
 # Decimal section heading: `1.` `1.1` `2.3.4` followed by title text.
 DECIMAL_HEADING = re.compile(r"(?m)^[ \t]*(\d+(?:\.\d+){0,3})\.?[ \t]+(?=[A-ZËÇ])")
 
+# A line of only digits and punctuation carries no title. Some source PDFs place a
+# stray number between `Neni N` and the article rubric -- a column value in a table,
+# a running count left by the layout -- which made the rubric read as its own number
+# ("Neni 5 - 5" instead of "Neni 5 - Regjistrimi i personit te tatueshem"). Skipping
+# such lines recovers the real rubric.
+NUMERIC_LINE = re.compile(r"^[\d\W_]+$")
+
+# How far past the `Neni N` line to look for the rubric. Deliberately short: an
+# article that genuinely has no rubric must yield "" rather than its first body
+# sentence, which would read as a title the legislator never wrote.
+RUBRIC_SCAN_END = 4
+
+# A line opening with a numbered paragraph (`1. `, `2) `) is the article's body,
+# not its rubric. Many articles carry no rubric at all and run straight into their
+# first paragraph; without this the citation read `Neni 37 - 2. Ministri i
+# Financave nxjerr udhezim per zbatimin e neneve 11, 12 15, ...`. Length cannot be
+# used to tell the two apart -- ratification rubrics run past 120 characters -- but
+# this prefix is the layout convention the documents actually follow.
+BODY_PARAGRAPH = re.compile(r"^\d+[.)]\s")
+
 # Paragraph number alone on its own line, with the body starting on the next.
 # This is how the national accounting standards are laid out, and it is invisible
 # to DECIMAL_HEADING, which requires the number and the text on one line. Without
@@ -172,14 +192,31 @@ def _slice_on(text: str, matches: list, label_of, heading_of) -> list[tuple[str,
     return out
 
 
+def _article_rubric(lines: list[str]) -> str:
+    """The article's rubric, or "" when the article has none.
+
+    Skips stray numeric lines, and stops at the first numbered paragraph: once the
+    body has started there is no rubric to find, and returning a body sentence
+    would put words in the legislator's mouth.
+    """
+    for line in lines[1:RUBRIC_SCAN_END]:
+        if NUMERIC_LINE.fullmatch(line):
+            continue
+        if BODY_PARAGRAPH.match(line):
+            return ""
+        return line
+    return ""
+
+
 def segment_articles(text: str, regime: str) -> list[tuple[str, str, str]]:
     if regime == "neni":
         matches = list(NENI_HEADING.finditer(text))
         return _slice_on(
             text, matches,
             label_of=lambda m: f"Neni {m.group(1)}",
-            # line 0 is the `Neni N` heading itself; line 1 is the article rubric
-            heading_of=lambda lines: lines[1] if len(lines) > 1 else "",
+            # line 0 is the `Neni N` heading itself; the rubric is the first line
+            # after it that is not a stray number (see NUMERIC_LINE).
+            heading_of=_article_rubric,
         )
     if regime == "decimal":
         matches = list(DECIMAL_HEADING.finditer(text))

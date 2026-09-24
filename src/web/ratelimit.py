@@ -15,8 +15,17 @@ import threading
 import time
 from collections import defaultdict, deque
 
-# Per visitor
-PER_SESSION_LIMIT = 10
+# Per visitor.
+#
+# Sized for a thesis defence, not for a casual visitor. A committee working
+# through the system asks questions in a burst -- follow-ups, "try it without
+# diacritics", "now switch to fixed chunking" -- and at ten per ten minutes the
+# eleventh question is refused mid-demonstration. That happened during a scripted
+# probe of the deployed Space and would have happened in the room.
+#
+# Raising this does not raise the spend ceiling: GLOBAL_LIMIT below is what
+# actually bounds cost, and it is unchanged.
+PER_SESSION_LIMIT = 30
 PER_SESSION_WINDOW = 60 * 10       # seconds
 
 # Across everyone, so a burst of visitors cannot drain the budget either

@@ -11,11 +11,16 @@ data/raw/**
 data/processed/**
 !data/processed/chunks.jsonl.gz
 !data/processed/.gitkeep
-# The index must ship with the Space -- it is what makes a free CPU tier viable.
-# Track it with git-lfs: the full bge-m3 index is ~130 MB.
-!data/processed/index/
-!data/processed/index/**
+# The index is 226 MB and is not carried here. It lives on the Hub as a dataset,
+# and `scripts/fetch_index.py` pulls it; `scripts/prepare_space.py` stages it for
+# the Space. Keeping it out means the repository clones in seconds.
 build/
 .cache/
 .pytest_cache/
 .DS_Store
+*.build-hash
+
+# Thesis and defence material. The writing is the author's own and stays off the
+# public repository; what ships here is the system that the writing is about.
+docs/teza/
+docs/mbrojtja/

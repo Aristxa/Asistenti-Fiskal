@@ -80,7 +80,12 @@ def main() -> None:
         if not src.exists():
             missing.append(name)
             continue
-        shutil.copy2(src, STAGE / src.name)
+        # Preserve the relative path. Copying to STAGE / src.name would flatten
+        # data/processed/obligations.jsonl to the staging root, and the app looks
+        # for it by its real path — a mismatch that only shows up at request time.
+        dest = STAGE / name
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dest)
         size = tree_size(src)
         total += size
         print(f"  {name:<28} {human(size):>9}")

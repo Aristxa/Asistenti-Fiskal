@@ -3,48 +3,48 @@
     "mode": "dense",
     "strategy": "article",
     "article_hits": 28,
-    "doc_hits": 38,
-    "total": 54,
-    "chars_retrieved": 256037
+    "doc_hits": 41,
+    "total": 60,
+    "chars_retrieved": 290535
   },
   "bm25/article": {
     "mode": "bm25",
     "strategy": "article",
-    "article_hits": 11,
-    "doc_hits": 28,
-    "total": 54,
-    "chars_retrieved": 278111
+    "article_hits": 12,
+    "doc_hits": 30,
+    "total": 60,
+    "chars_retrieved": 307665
   },
   "hybrid/article": {
     "mode": "hybrid",
     "strategy": "article",
-    "article_hits": 22,
-    "doc_hits": 36,
-    "total": 54,
-    "chars_retrieved": 276660
+    "article_hits": 23,
+    "doc_hits": 37,
+    "total": 60,
+    "chars_retrieved": 307168
   },
   "dense/fixed": {
     "mode": "dense",
     "strategy": "fixed",
-    "article_hits": 15,
-    "doc_hits": 35,
-    "total": 54,
-    "chars_retrieved": 364526
+    "article_hits": 16,
+    "doc_hits": 38,
+    "total": 60,
+    "chars_retrieved": 405209
   },
   "bm25/fixed": {
     "mode": "bm25",
     "strategy": "fixed",
     "article_hits": 10,
-    "doc_hits": 25,
-    "total": 54,
-    "chars_retrieved": 362694
+    "doc_hits": 28,
+    "total": 60,
+    "chars_retrieved": 402255
   },
   "hybrid/fixed": {
     "mode": "hybrid",
     "strategy": "fixed",
-    "article_hits": 17,
-    "doc_hits": 33,
-    "total": 54,
-    "chars_retrieved": 365604
+    "article_hits": 20,
+    "doc_hits": 38,
+    "total": 60,
+    "chars_retrieved": 406400
   }
 }

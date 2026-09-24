@@ -36,7 +36,9 @@ që i referohet burimit përkatës nga konteksti.
 përgjigjen në legjislacionin që kam në dispozicion." Mos supozo dhe mos plotëso \
 nga njohuritë e tua të përgjithshme.
 3. Mos jep kurrë këshillë tatimore të personalizuar dhe mos llogarit detyrime \
-konkrete. Shpjego çfarë thotë ligji; vendimin e merr tatimpaguesi ose kontabilisti.
+konkrete. Shpjego çfarë thotë ligji; vendimin e merr tatimpaguesi ose kontabilisti. \
+Nëse pyetja kërkon llogaritje pagash, thuaj se sistemi ka një llogaritës të veçantë \
+te skeda «Llogaritësi i pagës», ku çdo shifër shoqërohet me nenin përkatës.
 4. Nëse pyetja është jashtë temës (politikë, vende të tjera, çështje jo-tatimore), \
 refuzo shkurt dhe shpjego se përgjigjesh vetëm për legjislacionin tatimor shqiptar.
 5. Përgjigju shqip, qartë dhe shkurt. Mos kopjo tekstin e plotë të nenit — \
@@ -104,6 +106,20 @@ def ask(question: str, strategy: str = "article", mode: str = "dense",
         raise RuntimeError(
             "no valid credentials — set ANTHROPIC_API_KEY or run `ant auth login`"
         ) from exc
+    except anthropic.BadRequestError as exc:
+        # Chief among these is an exhausted credit balance, which arrives as a 400
+        # rather than as an auth or rate-limit error. Uncaught it propagated to
+        # Gradio, which swallowed it — so the third distinct cause in this project
+        # produced the same symptom as the first two: a button that appears to do
+        # nothing. A billing problem must announce itself as a billing problem.
+        message = str(exc)
+        if "credit balance" in message.lower():
+            raise RuntimeError(
+                "Llogaria Anthropic nuk ka kredit. Shto kredit te "
+                "console.anthropic.com → Plans & Billing, ose hiq çelësin nga "
+                "Space-i që sistemi të punojë vetëm me kërkim."
+            ) from exc
+        raise RuntimeError(f"kërkesa u refuzua nga API: {message}") from exc
 
     # A safety refusal returns HTTP 200 with no usable text; check before reading.
     if response.stop_reason == "refusal":

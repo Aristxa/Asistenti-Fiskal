@@ -4,9 +4,9 @@
 > where every factual claim is bound to the legal article that supports it — or the
 > system refuses to answer.
 
-**Status:** pipeline complete end-to-end and validated on a subset. The benchmark
-(the part that requires domain judgement) is not built yet — that is the next step,
-and it is the thesis's main contribution.
+**Status:** complete and defended, September 2026. The benchmark was built, the
+comparison was run under a rule fixed before any result was seen, and the headline
+comparison came out null — which is reported as the result rather than reframed.
 
 ---
 
@@ -52,17 +52,46 @@ be defended out loud in one sentence.
 See [`docs/PLAN.md`](docs/PLAN.md) for the full design, and
 [`docs/FINDINGS.md`](docs/FINDINGS.md) for the dated findings log.
 
+## Results
+
+Sixty questions, each paired by hand with the article that answers it. Retrieval is
+measured with no call to any language model, so the headline number is reproducible by
+anyone for free.
+
+| Retrieval | Chunking | Found the article | Found the act |
+|---|---|---:|---:|
+| **semantic** | **by article** | **28/60 = 47%** | 41/60 = 68% |
+| semantic + keyword | by article | 23/60 = 38% | 62% |
+| semantic + keyword | fixed window | 20/60 = 33% | 63% |
+| semantic | fixed window | 16/60 = 27% | 63% |
+| keyword | by article | 12/60 = 20% | 50% |
+| keyword | fixed window | 10/60 = 17% | 47% |
+
+Under the pre-registered rule — a difference counts only above 10 percentage points,
+which on 60 questions is six questions:
+
+- **article vs fixed window, on the hybrid arm: 5 points. Null.** This was the
+  pre-registered comparison and it did not confirm the hypothesis.
+- The same comparison on the semantic arm gives 20 points, but that arm was chosen
+  *after* the results were seen, so it is reported as exploratory, not as proof.
+- Hybrid over keyword-only: 18 points. Pre-registered, and a clear win.
+
+One finding does not depend on the sample at all: a fixed window cites *"window 437"*,
+whose boundaries coincide with no legal unit, so that strategy cannot produce a legal
+citation even in principle.
+
+On the generation side, across 81 measured answers **no citation marker refers to a
+source that was not retrieved**, and 8 of the 9 refusals on answerable questions
+happened after retrieval had already failed — the system declines when the context
+genuinely does not hold the answer.
+
+See [`docs/FINDINGS.md`](docs/FINDINGS.md) for the dated log of all sixteen findings,
+including the two occasions when the measuring instrument itself turned out to be wrong.
+
 ## The thesis
 
-The written thesis lives in [`docs/teza/`](docs/teza/), in Albanian, following the
-official Universiteti i Tiranës / FEUT format. It is kept as one file per chapter,
-mirroring the system's components, because the system keeps growing and a document
-written from memory at the end would be wrong.
-
-Every chapter declares a status, and `python scripts/build_teza.py` assembles the
-document and reports how complete it actually is. Chapters that depend on unperformed
-measurements stay empty by rule — the evaluation chapter contains its measurement plan
-and blank tables, not estimated results.
+The written thesis is not in this repository. What is here is the system it describes,
+its evaluation data, and the findings log — enough to reproduce every number above.
 
 ## Pipeline
 
@@ -137,11 +166,14 @@ docs/PLAN.md            the claim, contributions, and how results are reported
 docs/FINDINGS.md        dated findings log
 eval/gold/candidates.jsonl   120 selected articles, stratified by category
 eval/gold/rishikim.csv       review workbook (open in Excel)
-eval/gold/questions.jsonl    the benchmark                [awaiting review]
+eval/gold/questions.jsonl    the benchmark: 82 questions, gold article assigned by hand
 ```
 
 ## Data and licensing
 
+The code is MIT licensed — see [`LICENSE`](LICENSE).
+
 Only public legislative texts are collected; no personal data. Documents remain the
-property of the Republic of Albania. Raw PDFs are gitignored — run the crawler to
-reproduce the corpus.
+property of the Republic of Albania. Raw PDFs and the built index are gitignored: run
+the crawler to reproduce the corpus, or `python scripts/fetch_index.py` to pull the
+prebuilt index from the Hub.

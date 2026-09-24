@@ -49,9 +49,55 @@ def sample(rows: list[dict]) -> list[dict]:
     return picked
 
 
+def article_texts() -> dict[tuple[int, str], str]:
+    """Full text of every article, keyed by (doc_id, cite).
+
+    Long articles are stored as several chunks under one citation, so the parts are
+    concatenated in stored order. Taking the first part instead would hand the
+    reviewer a fragment — and judging an extraction against a fragment is exactly
+    the situation that made the earlier question review unworkable.
+    """
+    index = PROCESSED / "index/article/chunks.jsonl"
+    if not index.exists():
+        return {}
+    parts: dict[tuple[int, str], list[tuple[int, str]]] = {}
+    for line in index.open(encoding="utf-8"):
+        if not line.strip():
+            continue
+        chunk = json.loads(line)
+        key = (chunk["doc_id"], chunk.get("cite") or chunk.get("label", ""))
+        parts.setdefault(key, []).append((chunk.get("order", 0), chunk["text"]))
+    return {k: "\n".join(t for _, t in sorted(v)) for k, v in parts.items()}
+
+
+def existing_judgements() -> dict[str, tuple[str, str]]:
+    """Keep any judgement already made, so re-exporting never destroys work."""
+    if not WORKBOOK.exists():
+        return {}
+    with WORKBOOK.open(encoding="utf-8-sig", newline="") as handle:
+        raw = list(csv.reader(handle, delimiter=";"))
+    head = next((i for i, r in enumerate(raw) if r and r[0].strip() == "obligation_id"), None)
+    if head is None:
+        return {}
+    header = [c.strip() for c in raw[head]]
+    kept = {}
+    for row in raw[head + 1:]:
+        if not row or not row[0].strip():
+            continue
+        record = dict(zip(header, row + [""] * (len(header) - len(row))))
+        verdict = (record.get("e_sakte") or "").strip()
+        if verdict:
+            kept[record["obligation_id"]] = (verdict, (record.get("shenime") or "").strip())
+    return kept
+
+
 def do_export() -> None:
     rows = sample(load())
+    articles = article_texts()
+    previous = existing_judgements()
     WORKBOOK.parent.mkdir(parents=True, exist_ok=True)
+    missing = 0
+
     with WORKBOOK.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.writer(handle, delimiter=";")
         writer.writerow(["# Shëno 'po' te e_sakte nëse rreshti përshkruan vërtet një"])
@@ -59,13 +105,23 @@ def do_export() -> None:
         writer.writerow([])
         writer.writerow(COLUMNS)
         for row in rows:
+            verdict, note = previous.get(row["obligation_id"], ("", ""))
+            # Whole article, never a truncated span.
+            text = articles.get((row["doc_id"], row["cite"]), "") or row["duty_span"]
+            if (row["doc_id"], row["cite"]) not in articles:
+                missing += 1
             writer.writerow([
-                row["obligation_id"], "", "", row["domain"], row["cite"],
+                row["obligation_id"], verdict, note, row["domain"], row["cite"],
                 row["subject"] or "", row["deadline_text"] or "",
                 ", ".join(row["rates"]), row["penalty"] or "",
-                row["duty_span"][:600],
+                text,
             ])
+
     print(f"shkruar: {WORKBOOK}  ({len(rows)} rreshta për rishikim)")
+    if previous:
+        print(f"  u ruajtën {len(previous)} vlerësime ekzistuese")
+    if missing:
+        print(f"  {missing} rreshta pa nen në indeks — u përdor vetëm pjesa e nxjerrë")
 
 
 def do_score() -> None:

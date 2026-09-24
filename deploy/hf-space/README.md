@@ -4,7 +4,7 @@ emoji: 🧾
 colorFrom: blue
 colorTo: green
 sdk: gradio
-sdk_version: 5.9.1
+sdk_version: 5.44.1
 app_file: app.py
 pinned: false
 license: mit
@@ -16,9 +16,9 @@ short_description: Pyetje-përgjigje me citime mbi legjislacionin tatimor
 Bëj një pyetje shqip mbi detyrimet tatimore dhe merr një përgjigje ku **çdo pohim
 është i lidhur me nenin përkatës** të legjislacionit — ose sistemi refuzon të përgjigjet.
 
-Baza: **253 dokumente** të legjislacionit tatimor nga
-[tatime.gov.al](https://www.tatime.gov.al) — ligje, VKM, udhëzime — të ndara në
-**31.083 copëza** sipas strukturës ligjore (neni / pika).
+Baza: **313 dokumente** zyrtare nga tri autoritete — Drejtoria e Përgjithshme e
+Tatimeve, Këshilli Kombëtar i Kontabilitetit dhe Inspektorati Shtetëror i Punës —
+të ndara në **20.615 copëza** sipas strukturës ligjore (neni / pika).
 
 ## Si funksionon
 

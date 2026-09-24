@@ -1,0 +1,602 @@
+[
+ {
+  "id": "fiskalizimi-14536-Neni35",
+  "question": "Deri kur mund të kontrolloj nëse fatura që mora nga furnitori është regjistruar vërtet te tatimet?",
+  "gold_doc_id": 14536,
+  "gold_article": "neni 35",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.222
+ },
+ {
+  "id": "fiskalizimi-14536-Neni33",
+  "question": "Sa njoftime për detyrimin e faturës duhet të vendos në dyqan, nëse kam tre arka ku paguajnë klientët?",
+  "gold_doc_id": 14536,
+  "gold_article": "neni 33",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.25
+ },
+ {
+  "id": "fiskalizimi-14536-Neni41",
+  "question": "Çfarë ndodh nëse dërgoj mallin me një fletë-shoqërimi të shkruar me dorë, pa e kaluar në sistem?",
+  "gold_doc_id": 14536,
+  "gold_article": "neni 41",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.154
+ },
+ {
+  "id": "fiskalizimi-14536-Neni19",
+  "question": "Si e marr certifikatën elektronike që më duhet për të lëshuar fatura dhe sa kushton ajo?",
+  "gold_doc_id": 14536,
+  "gold_article": "neni 19",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.571
+ },
+ {
+  "id": "fiskalizimi-8169-Neni13",
+  "question": "Kush duhet ta kalojë faturën nga sistemi para se t'ia dërgojë klientit, unë apo blerësi?",
+  "gold_doc_id": 8169,
+  "gold_article": "neni 13",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 18,
+  "overlap": 0.25
+ },
+ {
+  "id": "fiskalizimi-13635-Neni29",
+  "question": "A duhet t'i printoj faturën në letër klientit që porosit online dhe paguan me kartë?",
+  "gold_doc_id": 13635,
+  "gold_article": "neni 29",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.667
+ },
+ {
+  "id": "fiskalizimi-11026-9",
+  "question": "Sa lekë garanci duhet të lë në bankë nëse programin tim e përdorin rreth 600 biznese?",
+  "gold_doc_id": 11026,
+  "gold_article": "9",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.417
+ },
+ {
+  "id": "fiskalizimi-13635-Neni12",
+  "question": "A duhet ta ketë faturën me kod QR edhe kur nuk kam internet dhe nuk arrij ta dërgoj?",
+  "gold_doc_id": 13635,
+  "gold_article": "neni 12",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.375
+ },
+ {
+  "id": "fiskalizimi-14536-Neni27",
+  "question": "Si mund t'i bëj faturat e mia direkt në portalin e faturave pa blerë program ose pajisje fiskale?",
+  "gold_doc_id": 14536,
+  "gold_article": "neni 27",
+  "verdict": "rankable",
+  "rank_in_pool": 23,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.364
+ },
+ {
+  "id": "fiskalizimi-8169-Neni7",
+  "question": "A duhet ta bëj faturën elektronike sipas një formati të gatshëm që gjendet në faqen e tatimeve?",
+  "gold_doc_id": 8169,
+  "gold_article": "neni 7",
+  "verdict": "rankable",
+  "rank_in_pool": 31,
+  "doc_rank_in_pool": 4,
+  "overlap": 0.556
+ },
+ {
+  "id": "kkk-928795-Paragrafi17",
+  "question": "Kur duhet ta shënoj një blerje si pasuri në bilanc dhe kur si shpenzim direkt?",
+  "gold_doc_id": 928795,
+  "gold_article": "paragrafi 17",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 10,
+  "overlap": 0.286
+ },
+ {
+  "id": "kkk-928795-Paragrafi117",
+  "question": "Sa shumë duhet të tregoj se kanë ndryshuar numrat e bilancit nëse ndryshoj mënyrën si i mbaj llogaritë?",
+  "gold_doc_id": 928795,
+  "gold_article": "paragrafi 117",
+  "verdict": "hit",
+  "rank_in_pool": 4,
+  "doc_rank_in_pool": 4,
+  "overlap": 0.273
+ },
+ {
+  "id": "kkk-906237-48",
+  "question": "Si e ndaj nëpër vite koston e makinerisë dhe të ambientit që bleva, dhe a llogaritet edhe toka?",
+  "gold_doc_id": 906237,
+  "gold_article": "48",
+  "verdict": "rankable",
+  "rank_in_pool": 18,
+  "doc_rank_in_pool": 18,
+  "overlap": 0.3
+ },
+ {
+  "id": "kkk-947842-Paragrafi73",
+  "question": "Kush e vendos nëse kredia ime shfaqet si borxh afatgjatë apo afatshkurtër në bilanc, unë apo banka?",
+  "gold_doc_id": 947842,
+  "gold_article": "paragrafi 73",
+  "verdict": "rankable",
+  "rank_in_pool": 7,
+  "doc_rank_in_pool": 5,
+  "overlap": 0.231
+ },
+ {
+  "id": "kkk-981130-Paragrafi43",
+  "question": "A duhet t'i ndaj në bilanc punët e pambaruara që klienti s'mi ka paguar nga paratë që kam marrë paradhënie?",
+  "gold_doc_id": 981130,
+  "gold_article": "paragrafi 43",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.25
+ },
+ {
+  "id": "kkk-981276-18",
+  "question": "Cilat gjëra të biznesit tim numërohen si aktive financiare — paratë, faturat e paarkëtuara, apo aksionet e blera?",
+  "gold_doc_id": 981276,
+  "gold_article": "18",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 28,
+  "overlap": 0.083
+ },
+ {
+  "id": "kkk-972009-6.8",
+  "question": "Deri kur mund ta përdor lehtësimin e përkohshëm që kam për mbrojtjen nga luhatjet e normave të interesit?",
+  "gold_doc_id": 972009,
+  "gold_article": "6.8",
+  "verdict": "hit",
+  "rank_in_pool": 2,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.333
+ },
+ {
+  "id": "kkk-913065-Paragrafi38",
+  "question": "Kur ndërroj një pjesë të prishur të një makinerie në dyqan, si e regjistroj koston e pjesës së re?",
+  "gold_doc_id": 913065,
+  "gold_article": "paragrafi 38",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.333
+ },
+ {
+  "id": "kkk-936339-Paragrafi18",
+  "question": "Kush duhet t'i ndajë shpenzimet mes produkteve, kur nga një prodhim i vetëm më dalin disa produkte njëherësh?",
+  "gold_doc_id": 936339,
+  "gold_article": "paragrafi 18",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.364
+ },
+ {
+  "id": "kkk-946191-Paragrafi47",
+  "question": "A duhet ta shënoj diku në pasqyrat e fundvitit që kam nënshkruar një kontratë për të shitur një pajisje?",
+  "gold_doc_id": 946191,
+  "gold_article": "paragrafi 47",
+  "verdict": "rankable",
+  "rank_in_pool": 25,
+  "doc_rank_in_pool": 15,
+  "overlap": 0.1
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14440-Neni6",
+  "question": "Kush duhet t'i paguajë kontributet për familjarët që më ndihmojnë në punë pa pagesë?",
+  "gold_doc_id": 14440,
+  "gold_article": "neni 6",
+  "verdict": "hit",
+  "rank_in_pool": 2,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.222
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14444-5",
+  "question": "Sa lekë në muaj do të marr gjatë lejes së lindjes, duke qenë se punoj vetë në bujqësi?",
+  "gold_doc_id": 14444,
+  "gold_article": "5",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.333
+ },
+ {
+  "id": "kontributet-e-sigurimeve-334-3",
+  "question": "Kur regjistroj punonjës të re dhe caktoj pagat e tyre, duhet t'i mbështet në listën zyrtare të profesioneve?",
+  "gold_doc_id": 334,
+  "gold_article": "3",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.3
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14664-25",
+  "question": "Kush duhet t'i paguajë sigurimet shëndetësore për punonjësit e mi, unë apo vetë punonjësi?",
+  "gold_doc_id": 14664,
+  "gold_article": "25",
+  "verdict": "rankable",
+  "rank_in_pool": 39,
+  "doc_rank_in_pool": 3,
+  "overlap": 0.4
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14664-9.9",
+  "question": "A i shikojnë tatimet vetë në sistem se punonjësi im punon edhe në një biznes tjetër?",
+  "gold_doc_id": 14664,
+  "gold_article": "9.9",
+  "verdict": "hit",
+  "rank_in_pool": 4,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.2
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14664-9.7",
+  "question": "Nëse im vëlla punon pa pagë në dy bizneset tona familjare, a duhet të paguajmë kontribute te të dyja?",
+  "gold_doc_id": 14664,
+  "gold_article": "9.7",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.385
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14664-1.2.1",
+  "question": "Si e marr numrin e identifikimit tatimor, nëse hap një shoqatë pa fitim që nuk regjistrohet në regjistrin tregtar?",
+  "gold_doc_id": 14664,
+  "gold_article": "1.2.1",
+  "verdict": "rankable",
+  "rank_in_pool": 10,
+  "doc_rank_in_pool": 10,
+  "overlap": 0.462
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14664-3.2.4",
+  "question": "A duhet të kem kontratë dhe një regjistër me pagat për punëtorët që punojnë vetëm disa orë?",
+  "gold_doc_id": 14664,
+  "gold_article": "3.2.4",
+  "verdict": "hit",
+  "rank_in_pool": 3,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.333
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14664-26",
+  "question": "Si e llogarit tatimin që duhet t'i mbaj nga paga punonjësit tim dhe çfarë përfshij në pagë?",
+  "gold_doc_id": 14664,
+  "gold_article": "26",
+  "verdict": "hit",
+  "rank_in_pool": 2,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.333
+ },
+ {
+  "id": "kontributet-e-sigurimeve-14664-6.11",
+  "question": "Kush mund të ankohet nëse sigurimet e mbajtura nga paga nuk janë llogaritur si duhet — punonjësi apo unë?",
+  "gold_doc_id": 14664,
+  "gold_article": "6.11",
+  "verdict": "rankable",
+  "rank_in_pool": 6,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.2
+ },
+ {
+  "id": "kontributet-e-sigurimeve-331-2",
+  "question": "A regjistrohem unë automatikisht në listën e të siguruarve për shëndetin, apo duhet ta bëj vetë kërkesën?",
+  "gold_doc_id": 331,
+  "gold_article": "2",
+  "verdict": "hit",
+  "rank_in_pool": 5,
+  "doc_rank_in_pool": 5,
+  "overlap": 0.1
+ },
+ {
+  "id": "lojrat-e-fatit-14452-Neni11",
+  "question": "Kush e miraton strukturën dhe organikën e këtij institucioni që kontrollon lojërat e fatit?",
+  "gold_doc_id": 14452,
+  "gold_article": "neni 11",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.25
+ },
+ {
+  "id": "lojrat-e-fatit-747-5",
+  "question": "Çfarë dokumentesh duhet të dorëzoj që të më lejohet shitja e aksioneve të kompanisë sime të lojërave të fatit?",
+  "gold_doc_id": 747,
+  "gold_article": "5",
+  "verdict": "hit",
+  "rank_in_pool": 2,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.3
+ },
+ {
+  "id": "lojrat-e-fatit-14452-Neni69",
+  "question": "Kush duhet t'i identifikojë e t'i verifikojë lojtarët dhe të raportojë transaksionet e dyshimta në lojërat e fatit?",
+  "gold_doc_id": 14452,
+  "gold_article": "neni 69",
+  "verdict": "hit",
+  "rank_in_pool": 3,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.5
+ },
+ {
+  "id": "lojrat-e-fatit-14452-Neni32",
+  "question": "Si mund të ankohem nëse nuk fitoj garën për lotarinë dhe brenda sa kohe duhet?",
+  "gold_doc_id": 14452,
+  "gold_article": "neni 32",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.25
+ },
+ {
+  "id": "lojrat-e-fatit-14452-Neni64",
+  "question": "Kur më vjen një urdhër që më bllokon pasurinë, deri kur duhet t'i paguaj detyrimet?",
+  "gold_doc_id": 14452,
+  "gold_article": "neni 64",
+  "verdict": "rankable",
+  "rank_in_pool": 12,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.222
+ },
+ {
+  "id": "lojrat-e-fatit-747-8",
+  "question": "Nëse kam një biznes lojërash fati dhe dua të shes pasurinë e tij, çfarë dokumente duhet të dorëzoj për leje paraprake?",
+  "gold_doc_id": 747,
+  "gold_article": "8",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.143
+ },
+ {
+  "id": "lojrat-e-fatit-747-15",
+  "question": "Kush duhet të më lejojë para se t'i shes ose t'i lë peng pajisjet dhe aksionet e biznesit tim të basteve?",
+  "gold_doc_id": 747,
+  "gold_article": "15",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 3,
+  "overlap": 0.167
+ },
+ {
+  "id": "lojrat-e-fatit-14452-Neni25",
+  "question": "Si mund ta di nëse më lejohet të hap bast sportiv kur unë vetë jam pjesëtar i një klubi sportiv?",
+  "gold_doc_id": 14452,
+  "gold_article": "neni 25",
+  "verdict": "hit",
+  "rank_in_pool": 5,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.333
+ },
+ {
+  "id": "lojrat-e-fatit-14452-Neni66",
+  "question": "Kush ma kthen pjesën e mbetur të parave nëse tatimet ma shesin pajisjen e bllokuar për borxhe?",
+  "gold_doc_id": 14452,
+  "gold_article": "neni 66",
+  "verdict": "unreachable",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": null,
+  "overlap": 0.083
+ },
+ {
+  "id": "lojrat-e-fatit-748-2",
+  "question": "A duhet të marr leje paraprake nga shteti para se të sjell nga jashtë makineri lojërash që nuk do t'i përdor për shitje?",
+  "gold_doc_id": 748,
+  "gold_article": "2",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.25
+ },
+ {
+  "id": "marreveshje-nderkombetare-348-2",
+  "question": "A mund të ma tatojë shteti tjetër fitimin nga shitja e pajisjeve të zyrës që kam atje?",
+  "gold_doc_id": 348,
+  "gold_article": "2",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 13,
+  "overlap": 0.111
+ },
+ {
+  "id": "marreveshje-nderkombetare-366-3",
+  "question": "A mund t'i zbres nga fitimi i degës sime këtu pagesat që i dërgoj zyrës qendrore jashtë për patenta?",
+  "gold_doc_id": 366,
+  "gold_article": "3",
+  "verdict": "rankable",
+  "rank_in_pool": 6,
+  "doc_rank_in_pool": 6,
+  "overlap": 0.0
+ },
+ {
+  "id": "marreveshje-nderkombetare-356-1",
+  "question": "Çfarë ndodh nëse nuk i deklaroj të ardhurat që kam marrë nga jashtë dhe tatimet e atij shteti ia thonë Shqipërisë?",
+  "gold_doc_id": 356,
+  "gold_article": "1",
+  "verdict": "rankable",
+  "rank_in_pool": 25,
+  "doc_rank_in_pool": 25,
+  "overlap": 0.286
+ },
+ {
+  "id": "marreveshje-nderkombetare-355-2",
+  "question": "Si përcaktoj në cilin vend duhet t'i mbaj tatimin punonjësit tim që ka shtëpi dhe familje në dy vende?",
+  "gold_doc_id": 355,
+  "gold_article": "2",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 13,
+  "overlap": 0.182
+ },
+ {
+  "id": "marreveshje-nderkombetare-342-1",
+  "question": "Kush nga mësuesit apo studiuesit e huaj që vijnë të japin mësim këtu për pak vite nuk paguan tatim mbi pagën?",
+  "gold_doc_id": 342,
+  "gold_article": "1",
+  "verdict": "hit",
+  "rank_in_pool": 2,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.0
+ },
+ {
+  "id": "marreveshje-nderkombetare-366-2",
+  "question": "Sa tatim maksimal mund t'i mbaj në burim një firme të huaj kur i paguaj për përdorimin e markës?",
+  "gold_doc_id": 366,
+  "gold_article": "2",
+  "verdict": "unreachable",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": null,
+  "overlap": 0.083
+ },
+ {
+  "id": "marreveshje-nderkombetare-338-3",
+  "question": "Sa kohë duhet të zgjasë një punim ndërtimi te ne, që firma e huaj të quhet e vendosur tek ne?",
+  "gold_doc_id": 338,
+  "gold_article": "3",
+  "verdict": "rankable",
+  "rank_in_pool": 16,
+  "doc_rank_in_pool": 16,
+  "overlap": 0.0
+ },
+ {
+  "id": "marreveshje-nderkombetare-356-3",
+  "question": "Kush nuk paguan tatim te ne për interesat që unë i dërgoj një banke apo institucioni shtetëror jashtë vendit?",
+  "gold_doc_id": 356,
+  "gold_article": "3",
+  "verdict": "rankable",
+  "rank_in_pool": 20,
+  "doc_rank_in_pool": 20,
+  "overlap": 0.154
+ },
+ {
+  "id": "marreveshje-nderkombetare-369-2",
+  "question": "A tatohen ndryshe të ardhurat që marr nga jashtë, nëse atje kam hapur një zyrë ku punoj vërtet?",
+  "gold_doc_id": 369,
+  "gold_article": "2",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 38,
+  "overlap": 0.154
+ },
+ {
+  "id": "procedurat-tatimore-14527-Neni6",
+  "question": "Ku duhet ta dorëzoj kërkesën për t'u regjistruar ose për të ndryshuar të dhënat e mia, dhe në ç'formë?",
+  "gold_doc_id": 14527,
+  "gold_article": "neni 6",
+  "verdict": "hit",
+  "rank_in_pool": 1,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.444
+ },
+ {
+  "id": "procedurat-tatimore-14432-72.1",
+  "question": "Kur tatimet ma llogaritin vetë detyrimin pa u nisur nga librat e mi, mbi çfarë të dhënash bazohen?",
+  "gold_doc_id": 14432,
+  "gold_article": "72.1",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.308
+ },
+ {
+  "id": "procedurat-tatimore-14474-6",
+  "question": "Si duhet të regjistroj kush janë pronarët e vërtetë të biznesit tim dhe brenda çfarë afati?",
+  "gold_doc_id": 14474,
+  "gold_article": "6",
+  "verdict": "rankable",
+  "rank_in_pool": 14,
+  "doc_rank_in_pool": 9,
+  "overlap": 0.111
+ },
+ {
+  "id": "procedurat-tatimore-14432-71.4.5",
+  "question": "Kush e vendos nëse blerjet dhe shitjet e mia janë bërë vetëm për të paguar më pak tatime?",
+  "gold_doc_id": 14432,
+  "gold_article": "71.4.5",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.1
+ },
+ {
+  "id": "procedurat-tatimore-14477-2",
+  "question": "A do të vijnë paratë e ndihmës direkt në llogarinë time bankare, pa pasur nevojë të shkoj diku?",
+  "gold_doc_id": 14477,
+  "gold_article": "2",
+  "verdict": "rankable",
+  "rank_in_pool": 15,
+  "doc_rank_in_pool": 2,
+  "overlap": 0.333
+ },
+ {
+  "id": "procedurat-tatimore-740-2.2",
+  "question": "Deri kur duhet zëvendësuar një anëtar i komisionit që shqyrton ankimet e mia tatimore, kur ai nuk vazhdon më?",
+  "gold_doc_id": 740,
+  "gold_article": "2.2",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 20,
+  "overlap": 0.4
+ },
+ {
+  "id": "procedurat-tatimore-14471-Neni7",
+  "question": "Sa kohë duhet t'i mbaj të dhënat që marr me kërkesë nga regjistri i tatimeve?",
+  "gold_doc_id": 14471,
+  "gold_article": "neni 7",
+  "verdict": "wrong_article_right_doc",
+  "rank_in_pool": null,
+  "doc_rank_in_pool": 6,
+  "overlap": 0.556
+ },
+ {
+  "id": "procedurat-tatimore-14470-Neni20",
+  "question": "Për të regjistruar biznesin, a duhet të shkoj te sporteli i zonës ku do punoj, apo kudo?",
+  "gold_doc_id": 14470,
+  "gold_article": "neni 20",
+  "verdict": "rankable",
+  "rank_in_pool": 9,
+  "doc_rank_in_pool": 7,
+  "overlap": 0.25
+ },
+ {
+  "id": "procedurat-tatimore-245-12.6",
+  "question": "Si i llogaris fitimet e degës sime këtu nëse ajo blen edhe mallra vetëm për firmën mëmë jashtë?",
+  "gold_doc_id": 245,
+  "gold_article": "12.6",
+  "verdict": "rankable",
+  "rank_in_pool": 28,
+  "doc_rank_in_pool": 1,
+  "overlap": 0.333
+ },
+ {
+  "id": "procedurat-tatimore-247-1",
+  "question": "A mund ta heq përfundimisht nga regjistrimi një makinë të firmës që s'punon më, pa paguar taksat e prapambetura?",
+  "gold_doc_id": 247,
+  "gold_article": "1",
+  "verdict": "hit",
+  "rank_in_pool": 5,
+  "doc_rank_in_pool": 5,
+  "overlap": 0.182
+ }
+]
