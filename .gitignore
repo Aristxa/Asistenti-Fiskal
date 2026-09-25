@@ -32,6 +32,7 @@ docs/mbrojtja/
 scripts/build_teza.py
 scripts/build_teza_docx.py
 scripts/build_slides.py
+scripts/refresh_docx_fields.py
 
 # The author's own research writing: the thesis plan and the dated findings log
 # that the methodology chapter cites. They stay on disk, not on the repository.
