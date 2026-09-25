@@ -24,3 +24,11 @@ build/
 # public repository; what ships here is the system that the writing is about.
 docs/teza/
 docs/mbrojtja/
+
+# Authoring tooling for the thesis and the defence deck. These build the documents
+# above and carry their front matter, the supervisor's name and the deck's text, so
+# they stay off the public repository for the same reason the documents do. Nothing
+# in the system imports them.
+scripts/build_teza.py
+scripts/build_teza_docx.py
+scripts/build_slides.py
