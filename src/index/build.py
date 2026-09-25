@@ -33,7 +33,7 @@ BATCH_SIZE = int(os.environ.get("EMBED_BATCH", "16"))
 MAX_SEQ_LENGTH = int(os.environ.get("EMBED_SEQ", "512"))
 
 # BM25 tokenisation is Albanian-aware: diacritic folding plus conservative suffix
-# stripping. Both matter — see src/index/albanian.py and docs/FINDINGS.md F8.
+# stripping. Both matter — see src/index/albanian.py.
 # Re-exported here so retrieval imports one tokeniser and cannot drift from the
 # one the index was built with.
 from src.index.albanian import (  # noqa: E402

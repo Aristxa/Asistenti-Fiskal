@@ -53,8 +53,6 @@ and every number is printed as `n/N` beside its percentage so the sample size is
 visible. That is honest about what a benchmark of this size can distinguish, and it can
 be defended out loud in one sentence.
 
-See [`docs/PLAN.md`](docs/PLAN.md) for the full design, and
-[`docs/FINDINGS.md`](docs/FINDINGS.md) for the dated findings log.
 
 ## Results
 
@@ -89,8 +87,6 @@ source that was not retrieved**, and 8 of the 9 refusals on answerable questions
 happened after retrieval had already failed — the system declines when the context
 genuinely does not hold the answer.
 
-See [`docs/FINDINGS.md`](docs/FINDINGS.md) for the dated log of all sixteen findings,
-including the two occasions when the measuring instrument itself turned out to be wrong.
 
 ## The thesis
 
@@ -121,7 +117,7 @@ tatime.gov.al  ──crawl──▶  data/raw/       PDFs + manifest.jsonl
 
 Indexing runs on a free Colab GPU (`scripts/build_index_gpu.py`) because the build
 machine has no GPU — a measured run of the full corpus locally came to 5–6 hours,
-against minutes on a T4 with a better encoder. See `docs/FINDINGS.md` F6. The index is committed; the Space
+against minutes on a T4 with a better encoder. The index is committed; the Space
 encodes only the question, so a free CPU tier is enough.
 
 ## Running it
@@ -166,8 +162,6 @@ src/eval/make_candidates.py  benchmark candidates + overlap guard
 src/eval/review.py      candidate -> Excel workbook -> benchmark round trip
 scripts/build_index_gpu.py   run this on Colab to index the full corpus
 app.py                  Gradio Space entry point
-docs/PLAN.md            the claim, contributions, and how results are reported
-docs/FINDINGS.md        dated findings log
 eval/gold/candidates.jsonl   120 selected articles, stratified by category
 eval/gold/rishikim.csv       review workbook (open in Excel)
 eval/gold/questions.jsonl    the benchmark: 82 questions, gold article assigned by hand

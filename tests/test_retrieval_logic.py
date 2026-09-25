@@ -39,7 +39,7 @@ class TestDeduplication:
     """The dedup logic in `retrieve`, exercised directly on its key rule.
 
     Regression: parts of one long article filled the whole result set, crowding
-    out the article that actually answered the question (docs/FINDINGS.md F7).
+    out the article that actually answered the question.
     """
 
     @staticmethod

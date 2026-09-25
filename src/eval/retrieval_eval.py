@@ -5,7 +5,7 @@ chunking strategies) and reports, for each, how often the controlling article
 was retrieved. No language model is involved and no API is called, so this can
 be re-run freely.
 
-Reporting rules, fixed before any result is seen (docs/PLAN.md §4):
+Reporting rules, fixed before any result is seen:
 
   * every number is printed as `n/N = pp%`, so the sample size is always visible
   * a difference below DECISION_MARGIN points is reported as "no clear difference"

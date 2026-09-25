@@ -5,7 +5,7 @@ Two things are load-bearing here.
 **Extractor choice.** PyMuPDF, not pypdf. On the primary VAT law pypdf emitted
 22.4% glued tokens (`Nekuptimteketijneni`) because the source PDFs position
 glyphs instead of writing space characters; PyMuPDF reconstructs word boundaries
-from glyph positions and emits 0%. See docs/FINDINGS.md.
+from glyph positions and emits 0%.
 
 **Structural regime.** The corpus is not uniform. Laws (*ligje*), council
 decisions (*VKM*) and some guidelines are article-structured (`Neni 12`), while
@@ -68,7 +68,7 @@ FIXED_WINDOW_OVERLAP = 200
 
 # Long articles are split so that no article chunk dwarfs a fixed window. Without
 # this the two arms of the chunking comparison carry very different amounts of text
-# per retrieved chunk and the comparison is confounded (docs/FINDINGS.md F4).
+# per retrieved chunk and the comparison is confounded.
 # Parts keep the article label, so a citation stays article-level regardless of
 # which part was retrieved.
 MAX_ARTICLE_CHARS = FIXED_WINDOW_CHARS
@@ -371,7 +371,7 @@ def build(min_chars: int = 120) -> None:
     if skipped:
         # Printed, not swallowed: a document that yields no text still looks like a
         # successful run otherwise, and 31 scanned PDFs disappeared from the corpus
-        # this way before this report existed (docs/FINDINGS.md F9).
+        # this way before this report existed.
         by_reason: dict[str, list[int]] = {}
         for doc_id, reason in skipped:
             key = "no extractable text" if "chars of text" in reason else reason

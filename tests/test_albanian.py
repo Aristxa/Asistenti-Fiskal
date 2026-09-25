@@ -2,7 +2,7 @@
 
 These lock in behaviour that was arrived at by measurement, not by intuition —
 every case below corresponds to a regression that actually occurred while tuning
-the stemmer (docs/FINDINGS.md F8). Without them a future "simplification" of the
+the stemmer. Without them a future "simplification" of the
 suffix list would silently split the corpus's most common words again.
 """
 
